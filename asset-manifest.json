@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Mitra/static/css/main.e6c13ad2.css",
+    "main.js": "/Mitra/static/js/main.3990c36f.js",
+    "static/js/787.8fedd6c6.chunk.js": "/Mitra/static/js/787.8fedd6c6.chunk.js",
+    "index.html": "/Mitra/index.html",
+    "main.e6c13ad2.css.map": "/Mitra/static/css/main.e6c13ad2.css.map",
+    "main.3990c36f.js.map": "/Mitra/static/js/main.3990c36f.js.map",
+    "787.8fedd6c6.chunk.js.map": "/Mitra/static/js/787.8fedd6c6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.3990c36f.js"
+  ]
+}
