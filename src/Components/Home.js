@@ -9,9 +9,10 @@ import Intro from "./Intro";
 export default function Home() {
   return (
     <React.Fragment>
-    <Menu/>
+      <Menu />
       <Routes>
         <Route exact path="/" element={<Intro />} />
+        <Route exact path="/Intro" element={<Intro />} />
         <Route exact path="/Portfolio" element={<Portfolio />} />
         <Route path="/Knowyourshow" element={<Knowyourshow />} />
         <Route path="*" element={<Help />} />
