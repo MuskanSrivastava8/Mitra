@@ -1,0 +1,32 @@
+.menu_container{
+    height: 100%;
+    width: 100%;
+    background-color: #414535;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    // D17B88 ,D999B9 B8B3E9 90E0F3 75F4F4 // 414535
+
+}
+.menu_item{
+    margin: 0.8%;
+    margin: 0.8%;
+    font-size: 1.4rem;
+}
+
+.menu_item a{
+    color: white;
+    text-decoration: none;
+    // font-size: 1.5rem;
+}
+
+.menu_item :hover{
+    margin: 0.8%;
+    border: 1.4px solid #D999B9;
+    border-radius: 10px;
+}
+@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 479px) {}

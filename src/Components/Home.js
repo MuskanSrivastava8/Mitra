@@ -1,10 +1,10 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Knowyourshow from "./Knowyourshow";
-import Portfolio from "./Portfolio";
+import Portfolio from "./Portfolio/Portfolio";
 import Help from "./Help";
 import Menu from "./Menu";
-import Intro from "./Intro";
+import Intro from "./Intro/Intro";
 
 export default function Home() {
   return (

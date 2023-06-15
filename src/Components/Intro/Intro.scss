@@ -1,0 +1,53 @@
+.intro_container {
+    height: 100vh;
+    width: 100%;
+    background-image: url(http://localhost:3000/Mitra/static/media/bg_large.19ab9080992fa2b0af24.jpg);
+    // background-color: #D17B88;
+    // background-color: #D999B9;
+    // background-color: #B8B3E9;
+    // background-color: #90E0F3;
+    // background-color: #75F4F4;
+    // background-color: #414535;
+    // background-color: #B8B3E9;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.intro_content_box {
+    background-color: antiquewhite;
+    opacity: 0.7;
+    padding: 8px;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    margin: 4%;
+}
+
+.welcome_text {
+    font-weight: 900;
+    color: #4f3dff;
+    font-size: 1.8rem;
+    font-family: fangsong;
+    margin-bottom: -2%;
+}
+
+.greeting_text {
+    font-weight: 600;
+}
+
+.intro_content_box button {
+    color: white;
+    background-color: red;
+    border: 0px;
+    font-size: 1.2rem;
+    border-radius: 11px;
+}
+
+@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 479px) {}
+
+//D17B88 ,D999B9 B8B3E9 90E0F3 75F4F4 // 414535
