@@ -1,5 +1,11 @@
 import React from "react";
 import "./portfolio.scss";
+import { AiOutlineLaptop } from "react-icons/ai";
+import { BsFillEnvelopeAtFill } from "react-icons/bs";
+import { BsFillMortarboardFill } from "react-icons/bs";
+import { BsCodeSlash } from "react-icons/bs";
+import { BsTrophy } from "react-icons/bs";
+import { BsPencilSquare } from "react-icons/bs";
 
 export default function Summary() {
   return (
@@ -9,11 +15,20 @@ export default function Summary() {
           <div className="summary_box">
             <div class="flip-card">
               <div class="flip-card-inner">
-                <div class="flip-card-front">Skill</div>
+                <div class="flip-card-front">
+                  <div className="card_text">
+                    <div className="card_heading">Skill</div>
+                    <AiOutlineLaptop />
+                  </div>
+                </div>
                 <div class="flip-card-back">
-                  <h1>Skill</h1>
+                  <div className="points_heading">
+                    <h1>Skill</h1>
+                  </div>
+                  <div className="points_details">
                   <h4>React</h4>
                   <p>Javascript, Typescript, Redux, Sass, HTML, CSS</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -21,12 +36,70 @@ export default function Summary() {
           <div className="summary_box">
             <div class="flip-card">
               <div class="flip-card-inner">
-                <div class="flip-card-front">Education</div>
+                <div class="flip-card-front">
+                  <div className="card_text">
+                    <div className="card_heading">Project</div>
+                    <BsCodeSlash />
+                  </div>
+                </div>
                 <div class="flip-card-back">
-                  <h1>Education</h1>
-                  <p>
+                  <div className="points_heading">
+                    <h5>Project Experience (TCS)</h5>
+                  </div>
+                  <div className="points_details">
+                  <p>Medline : React Developer</p>
+                  <p>E2open : Application Developer</p>
+                  </div>
+                  <div className="points_heading">
+                    <h5>Personal Project</h5>
+                  </div>
+                  <div className="points_details">
+                  <p>Mitra</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="summary_box">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div className="card_text">
+                    <div className="card_heading">Activities</div>
+                    <BsPencilSquare />
+                  </div>
+                </div>
+                <div class="flip-card-back">
+                  <div className="points_heading">
+                    <h1>Activities</h1>
+                  </div>
+                  <div className="points_details">
+                  <p>T-factor : 1.8</p>
+                  <p>iEvolve score : 1320</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row_2">
+          <div className="summary_box">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div className="card_text">
+                    <div className="card_heading">Education</div>
+                    <BsFillMortarboardFill />
+                  </div>
+                </div>
+                <div class="flip-card-back">
+                  <div className="points_heading">
+                    <h1>Education</h1>
+                  </div>
+
+                  <div>
                     {
-                      <table>
+                      <table className="center">
                         <tr>
                           <th>B.Tech</th>
                           <td>84%</td>
@@ -43,7 +116,7 @@ export default function Summary() {
                         </tr>
                       </table>
                     }
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -51,38 +124,21 @@ export default function Summary() {
           <div className="summary_box">
             <div class="flip-card">
               <div class="flip-card-inner">
-                <div class="flip-card-front">Activities</div>
-                <div class="flip-card-back">
-                  <h1>Activities</h1>
-                  <p>T-factor : 1.8</p>
-                  <p>iEvolve score : 1320</p>
+                <div class="flip-card-front">
+                  <div className="card_text">
+                    <div className="card_heading">Awards</div>
+                    <BsTrophy />
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="row_2">
-          <div className="summary_box">
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">Project</div>
                 <div class="flip-card-back">
-                  <h1>Project</h1>
-                  <p>Know Your shows</p>
-                  <p>Music player</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="summary_box">
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">Awards</div>
-                <div class="flip-card-back">
-                  <h1>Awards</h1>
+                  <div className="points_heading">
+                    <h1>Awards</h1>
+                  </div>
+                  <div className="points_details">
                   <p>On the spot Awards</p>
                   <p>Elevate wings Awards</p>
                   <p>Xcelerate Warrior Certificate</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -90,11 +146,20 @@ export default function Summary() {
           <div className="summary_box">
             <div class="flip-card">
               <div class="flip-card-inner">
-                <div class="flip-card-front">Contact</div>
+                <div class="flip-card-front">
+                  <div className="card_text">
+                    <div className="card_heading">Contact</div>
+                    <BsFillEnvelopeAtFill />
+                  </div>
+                </div>
                 <div class="flip-card-back">
-                  <h1>Contact</h1>
-                  <p>8756719954</p>
-                  <p>muskan.srivastava@tcs.com</p>
+                  <div className="points_heading">
+                    <h1>Contact</h1>
+                  </div>
+                  <div className="points_details">
+                    <p>8756719954</p>
+                    <p>muskan.srivastava@tcs.com</p>
+                  </div>
                 </div>
               </div>
             </div>

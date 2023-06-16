@@ -10,10 +10,15 @@
     // D17B88 ,D999B9 B8B3E9 90E0F3 75F4F4 // 414535
 
 }
-.menu_item{
+.menu_item {
     margin: 0.8%;
-    margin: 0.8%;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    font-family: system-ui;
+    font-weight: 600;
+    background-color: rgb(75 64 60);
+    border-color: transparent;
+    border-radius: 12px;
+    padding: .4%;
 }
 
 .menu_item a{
@@ -23,9 +28,10 @@
 }
 
 .menu_item :hover{
-    margin: 0.8%;
-    border: 1.4px solid #D999B9;
-    border-radius: 10px;
+    // margin: 1%;
+    // border: 1px solid #d4aabf;
+    // border-radius: 8px;
+    text-shadow: 0.5px 0.5px 1px #be9fc6, 0 0 25px #b29db1, 0 0 5px #bf85b5;
 }
 @media only screen and (min-width: 992px) {}
 @media only screen and (min-width: 768px) {}
