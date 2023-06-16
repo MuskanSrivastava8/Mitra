@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/Mitra/static/css/main.fd20d898.css",
-    "main.js": "/Mitra/static/js/main.73176509.js",
+    "main.css": "/Mitra/static/css/main.d30e1bcb.css",
+    "main.js": "/Mitra/static/js/main.545319c0.js",
     "static/js/787.8fedd6c6.chunk.js": "/Mitra/static/js/787.8fedd6c6.chunk.js",
     "static/media/bg_large.jpg": "/Mitra/static/media/bg_large.19ab9080992fa2b0af24.jpg",
     "static/media/portfolio_name_bg_large_2.jpg": "/Mitra/static/media/portfolio_name_bg_large_2.7f9a27b700526389accc.jpg",
+    "static/media/portfolio_summary_small.jpg": "/Mitra/static/media/portfolio_summary_small.d92e4f9bf4faf83a24fc.jpg",
     "index.html": "/Mitra/index.html",
-    "main.fd20d898.css.map": "/Mitra/static/css/main.fd20d898.css.map",
-    "main.73176509.js.map": "/Mitra/static/js/main.73176509.js.map",
+    "main.d30e1bcb.css.map": "/Mitra/static/css/main.d30e1bcb.css.map",
+    "main.545319c0.js.map": "/Mitra/static/js/main.545319c0.js.map",
     "787.8fedd6c6.chunk.js.map": "/Mitra/static/js/787.8fedd6c6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd20d898.css",
-    "static/js/main.73176509.js"
+    "static/css/main.d30e1bcb.css",
+    "static/js/main.545319c0.js"
   ]
 }
