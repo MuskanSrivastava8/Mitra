@@ -70,6 +70,7 @@ const ProjectOneComponent = () => {
               : "black",
           }}
         >
+        {/* <div className="items_box"> */}
           <div class="container">
             <div class="row">
               <div class="col-6">
@@ -104,6 +105,7 @@ const ProjectOneComponent = () => {
               </div>
             </div>
           </div>
+          {/* </div> */}
         </div>
       </div>
     </React.Fragment>

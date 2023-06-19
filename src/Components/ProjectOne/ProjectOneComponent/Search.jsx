@@ -28,7 +28,7 @@ export default function Search({ onClick }) {
           placeholder="Search show here ...."
         ></input>
         <div className="clear_btn">
-          <Button variant="danger" onClick={clearfunc}>X</Button>
+          <Button variant="danger" className="search_btn" onClick={clearfunc}>X</Button>
         </div>
       </div>
     </React.Fragment>
