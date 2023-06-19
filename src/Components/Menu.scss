@@ -33,7 +33,7 @@
     // border-radius: 8px;
     text-shadow: 0.5px 0.5px 1px #be9fc6, 0 0 25px #b29db1, 0 0 5px #bf85b5;
 }
-@media only screen and (max-width: 904px) {
+@media only screen and (max-width: 904px) { //ipad
     .menu_container {
         width: 105%;
         height: 10vh;
@@ -43,5 +43,16 @@
         // padding: 2.4%;
     }
 }
-@media only screen and (min-width: 768px) {}
-@media only screen and (min-width: 479px) {}
+@media only screen and (max-width: 414px) { //Iphone XR
+    .menu_container {
+        width: 100%;
+    }
+    .menu_item {
+        font-size: 1.5rem;
+        // padding: 2.4%;
+    }
+}
+// @media only screen and (max-width: 390px) { //Iphone 12 pro
+// }
+// @media only screen and (max-width: 376px) { //Iphone SE
+// }

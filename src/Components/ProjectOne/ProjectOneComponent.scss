@@ -52,48 +52,6 @@
     margin-bottom: 21px;
 }
 
-// @media only screen and (max-width: 768px) {
-
-//     .main_div1 {
-//         background-color: #ebcfcf;
-//         color: white;
-//         height: 100%;
-//         width: 100%;
-//     }
-
-//     .section_1 {
-//         height: 100%;
-//         width: 100%;
-//         margin-top: 36px;
-//         margin-left: 5px;
-//     }
-
-//     .section_2 {
-//         height: 100%;
-//         width: 100%;
-//         margin-top: 36px;
-//     }
-
-//     .section_3 {
-//         height: auto;
-//         width: 92vw;
-//         margin-top: 56px;
-//     }
-
-//     .section_4 {
-//         height: auto;
-//         width: auto;
-//         margin-top: 25px;
-//     }
-
-//     .container {
-//         height: 100%;
-//         width: 100%;
-//     }
-
-
-// }
-
 @media only screen and (max-width: 904px) {
 
     //Ipad
@@ -119,7 +77,7 @@
 
     .section_3 {
         height: 100%;
-        width: 92vw;
+        width: 100%;
         margin-top: 56px;
     }
 
@@ -138,15 +96,18 @@
         height: 67px;
         width: 67px;
     }
-
-    // .items_box{
-    //     width: 90;
-    // }
 }
 
-// @media only screen and (max-width: 414px) { //Iphone XR
-// }
-// @media only screen and (max-width: 390px) { //Iphone 12 pro
-// }
+@media only screen and (max-width: 414px) { //Iphone XR
+    .main_div1 {
+        height: 150vh;
+        width: 100%; 
+    }
+}
+@media only screen and (max-width: 390px) { //Iphone 12 pro
+    .section_3 {
+        height: calc(100% - 56px);
+    }
+}
 // @media only screen and (max-width: 376px) { //Iphone SE
 // }

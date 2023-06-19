@@ -26,8 +26,7 @@ export default function Summary() {
                     <h1>Skill</h1>
                   </div>
                   <div className="points_details">
-                  <h4>React</h4>
-                  <p>Javascript, Typescript, Redux, Sass, HTML, CSS</p>
+                  <p>React, Javascript, Typescript, Redux, Sass, HTML, CSS</p>
                   </div>
                 </div>
               </div>
