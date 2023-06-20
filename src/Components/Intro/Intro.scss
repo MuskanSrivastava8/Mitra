@@ -1,5 +1,5 @@
 .intro_container {
-    height: 100vh;
+    height: 82vh;
     width: 100%;
     background-image: url(bg_large.jpg);
     background-color: #D17B88;
@@ -60,6 +60,49 @@
 }
 
 @media only screen and (max-width: 904px) {
+
+    //Ipad
+
+    .row_1 {
+        flex-direction: column;
+    }
+
+    .row_2 {
+        flex-direction: column;
+    }
+
+    .summary_box {
+        height: 33%;
+    }
+
+    .flip-card {
+        width: 70%;
+        height: 240px;
+    }
+
+    // .card_text {
+    //     font-size: 2.4rem;
+    // }
+
+    // .occupation {
+    //     font-size: 1.2rem;
+    // }
+
+    // .intro {
+    //     width: 105%;
+    // }
+
+    // .name_text {
+    //     font-size: 1.8rem;
+    // }
+
+    // .points_details {
+    //     font-size: 1.8rem;
+    // }
+
+    // .center {
+    //     font-size: 2rem;
+    // }
     .intro_container {
         width: 105%;
     }
@@ -74,8 +117,35 @@
         margin-left: 4%;
         margin-right: 7%;
     }
+
 }
-@media only screen and (min-width: 768px) {}
-@media only screen and (min-width: 479px) {}
+
+@media only screen and (max-width: 414px) {
+
+    //Iphone XR
+    .intro_container {
+        width: 100%;
+    }
+    .welcome_text {
+        font-size: 1.8rem;
+    }
+    .greeting_text {
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+
+}
+
+@media only screen and (max-width: 390px) {
+
+    //Iphone 12 pro
+
+}
+
+@media only screen and (max-width: 376px) {
+
+    //Iphone SE
+    
+}
 
 //D17B88 ,D999B9 B8B3E9 90E0F3 75F4F4 // 414535

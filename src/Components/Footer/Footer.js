@@ -1,10 +1,12 @@
 import React from "react";
 import "./footer.scss";
 import { GrLinkedinOption } from "react-icons/gr";
-import { GrMailOption } from "react-icons/gr";
+import { AiOutlineMail } from "react-icons/ai";
 import { FiPhoneCall } from "react-icons/fi";
 
 export default function Footer() {
+  const style_contact = { color: "white", fontSize: "1.5em" }
+
   return (
     <React.Fragment>
       {/* <div className="footer_container"> */}
@@ -16,7 +18,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <GrLinkedinOption />
+                <GrLinkedinOption style={style_contact}/>
               </a>
             </div>
             <div className="footer_menu_item_contact">
@@ -25,12 +27,12 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <GrMailOption />
+                <AiOutlineMail style={style_contact}/>
               </a>
             </div>
             <div className="footer_menu_item_contact">
-              <a href="tel:8756719954" target="_blank" rel="noreferrer">
-                <FiPhoneCall />
+              <a href="tel:87567XXXX4" target="_blank" rel="noreferrer">
+                <FiPhoneCall style={style_contact} />
               </a>
             </div>
           </div>

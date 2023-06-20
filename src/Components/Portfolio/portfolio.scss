@@ -19,10 +19,10 @@
 
 }
 
-.details {
+.portfolio_details {
     height: 60%;
     width: 100%;
-    // background-color: #D999B9;
+    background-color: #e9e7eb;
 }
 
 .name {
@@ -39,17 +39,20 @@
 }
 
 .name_text {
-    font-size: 1.5rem;
-    color: white;
+    font-size: 1.8rem;
+    color: red;
     font-weight: 650;
     font-family: inherit;
 }
 
 .occupation {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #000000;
     font-weight: 500;
     font-family: inherit;
+    background-color: white;
+    border: 1px solid #998b8b;
+    border-radius: 10px;
 }
 
 .address {
@@ -60,9 +63,10 @@
 .menu_item_contact {
     margin: 0.8%;
     border-color: transparent;
-    padding: .4%;
-    background-color: #a19dc6;
+    padding: 0.4%;
+    background-color: #fff;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .Portfolio_footer {
@@ -243,6 +247,7 @@ td {
 
     .occupation {
         font-size: 1.5rem;
+        background-color: white;
     }
 
     .intro {
@@ -250,7 +255,7 @@ td {
     }
 
     .name_text {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
     }
 
     .points_details {
@@ -263,7 +268,7 @@ td {
 
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 415px) {
 
     //Iphone XR
     .row_1 {
@@ -281,6 +286,27 @@ td {
     .flip-card {
         width: 70%;
         height: 200px;
+    }
+    .name_text {
+        font-size: 1.8rem;
+    }
+    .occupation {
+        font-size: 1.2rem;
+        background-color: white;
+    }
+    .intro {
+        width: 100%;
+    }
+    .card_text {
+        font-size: 1.8rem;
+    }
+    .points_details {
+        font-size: 1.2rem;
+        color: black;
+        font-weight: 700;
+    }
+    .center {
+        font-size: 1.2rem;
     }
 }
 
@@ -303,6 +329,7 @@ td {
         width: 70%;
         height: 220px;
     }
+
 }
 
 @media only screen and (max-width: 376px) {

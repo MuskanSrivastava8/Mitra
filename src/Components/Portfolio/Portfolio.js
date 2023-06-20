@@ -43,14 +43,14 @@ export default function Portfolio() {
                 </a>
               </div>
               <div className="menu_item_contact">
-                <a href="tel:8756719954" target="_blank" rel="noreferrer">
+                <a href="tel:875XXXXXX4" target="_blank" rel="noreferrer">
                   <FiPhoneCall />
                 </a>
               </div>
             </div>
           </div>
         </div>
-        <div className="details">
+        <div className="portfolio_details">
           <Summary />
         </div>
       </div>
