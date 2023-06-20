@@ -8,6 +8,7 @@ import Logo from "./ProjectOneComponent/Logo";
 import Tv_Icon from "./Image/Tv_Icon.png";
 import RecommendList from "./ProjectOneComponent/RecommendList";
 import Search from "./ProjectOneComponent/Search";
+import Footer from "../Footer/Footer";
 
 const ProjectOneComponent = () => {
   const [currTVShow, setcurrTVShow] = useState();
@@ -16,7 +17,6 @@ const ProjectOneComponent = () => {
 
   useEffect(() => {
     fetchPopulars();
-
   }, []);
   function showSpinner() {
     setshow(true);
@@ -70,7 +70,6 @@ const ProjectOneComponent = () => {
               : "black",
           }}
         >
-        {/* <div className="items_box"> */}
           <div class="container">
             <div class="row">
               <div class="col-6">
@@ -105,7 +104,9 @@ const ProjectOneComponent = () => {
               </div>
             </div>
           </div>
-          {/* </div> */}
+        </div>
+        <div className="Knowyourshow_footer">
+        <Footer/>
         </div>
       </div>
     </React.Fragment>

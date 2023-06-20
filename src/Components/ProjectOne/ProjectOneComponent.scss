@@ -51,6 +51,20 @@
 .TvShowItem {
     margin-bottom: 21px;
 }
+.Knowyourshow_footer {
+    bottom: 0;
+    // height: 100%;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-family: system-ui;
+    padding-top: .4%;
+    padding-bottom: .4%;
+}
 
 @media only screen and (max-width: 904px) {
 

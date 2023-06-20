@@ -1,0 +1,44 @@
+.footer_contact {
+    width: 8%;
+}
+
+.footer_address {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer_menu_item_contact {
+    margin: 0.8%;
+    border-color: transparent;
+    background-color: #fff;
+    cursor: pointer;
+    padding-left: 4%;
+    padding-right: 4%;
+    border-radius: 8px;
+}
+
+@media only screen and (max-width: 904px) {
+    //Ipad
+
+    .footer_contact {
+        width: 14%;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+
+    //Iphone XR
+    .footer_contact {
+        width: 24%;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    //Iphone 12 pro
+
+}
+
+@media only screen and (max-width: 376px) {
+    //Iphone SE
+
+}

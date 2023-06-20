@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Portfolio from "../Portfolio/Portfolio";
 import "./Intro.scss";
 import { Navigate } from "react-router-dom";
+import footer from "../Footer/Footer";
+import Footer from "../Footer/Footer";
+
 
 export default function Intro() {
   const [portfolioView, setportfolioView] = useState(false);
@@ -23,6 +26,10 @@ export default function Intro() {
               Gets started
             </button>
           </p>
+        </div>
+       
+        <div className="Intro_footer">
+        <Footer/>
         </div>
       </div>
     </React.Fragment>
