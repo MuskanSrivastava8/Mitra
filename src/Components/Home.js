@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Knowyourshow from "./Knowyourshow";
+import Knowyourshow from "./ProjectOne/Knowyourshow";
 import Portfolio from "./Portfolio/Portfolio";
 import Help from "./Help";
-import Menu from "./Menu";
+import Menu from "./Menu/Menu";
 import Intro from "./Intro/Intro";
 import ProjectOneComponent from "./ProjectOne/ProjectOneComponent";
 

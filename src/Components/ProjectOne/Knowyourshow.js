@@ -1,5 +1,5 @@
 import React from 'react'
-import ProjectOneComponent from './ProjectOne/ProjectOneComponent'
+import ProjectOneComponent from './ProjectOneComponent'
 
 export default function Knowyourshow() {
   return (
