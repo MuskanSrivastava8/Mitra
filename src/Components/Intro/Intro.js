@@ -18,8 +18,9 @@ export default function Intro() {
         <div className="intro_content_box">
           <p className="welcome_text">Welcome</p>
           <p className="greeting_text">
-            Greetings, have a look on my project, It consist of portfolio, IMDb
-            clone Know your show
+            Hello, Myself<span className="Intro_name_text"> <b>Muskan</b></span>
+            <br></br>
+            I am frontend developer, with experience of 1.8 month
           </p>
           <p>
             <button onClick={btn_clicked} className="btn-lg">
