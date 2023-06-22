@@ -20,7 +20,7 @@ export default function Intro() {
           <p className="greeting_text">
             Hello, Myself<span className="Intro_name_text"> <b>Muskan</b></span>
             <br></br>
-            I am frontend developer, with experience of 1.8 month
+            I am frontend developer, with experience of 1.8 months
           </p>
           <p>
             <button onClick={btn_clicked} className="btn-lg">
