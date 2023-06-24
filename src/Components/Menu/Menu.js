@@ -14,13 +14,13 @@ export default function Menu() {
           <NavLink to={"/Portfolio"}>Portfolio</NavLink>
         </div>
         <div className="menu_item">
-          <NavLink to={"/Intro"}>Intro</NavLink>
+          <NavLink to={"/Intro"}>Home</NavLink>
         </div>
         <div className="menu_item">
           <NavLink to={"/Knowyourshow"}>Knowyourshow</NavLink>
         </div>
         <div className="menu_item">
-          <NavLink to={"/Expensetracker"}>TrackYourExpense</NavLink>
+          <NavLink to={"/Expensetracker"}>TrackExpense</NavLink>
         </div>
       </div>
     </React.Fragment>

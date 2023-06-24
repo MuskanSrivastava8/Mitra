@@ -81,6 +81,9 @@
     .menu_logo {
         top: 2.8%;
     }
+    .menu_item a {
+        font-size: .8rem;
+    }
     
 }
 
@@ -91,6 +94,7 @@
     .menu_logo {
         top: 3.1%;
     }
+    
 }
 @media only screen and (max-width: 376px) { //Iphone SE
     .letter_M{
