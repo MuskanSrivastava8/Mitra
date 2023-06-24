@@ -20,7 +20,7 @@ export default function Menu() {
           <NavLink to={"/Knowyourshow"}>Knowyourshow</NavLink>
         </div>
         <div className="menu_item">
-          <NavLink to={"/Expensetracker"}>Expensetracker</NavLink>
+          <NavLink to={"/Expensetracker"}>TrackYourExpense</NavLink>
         </div>
       </div>
     </React.Fragment>
