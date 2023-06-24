@@ -6,6 +6,7 @@ import Help from "./Help";
 import Menu from "./Menu/Menu";
 import Intro from "./Intro/Intro";
 import ProjectOneComponent from "./ProjectOne/ProjectOneComponent";
+import Expensetracker from "./ExpenseTracker/Expensetracker";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Route exact path="/Intro" element={<Intro />} />
         <Route exact path="/Portfolio" element={<Portfolio />} />
         <Route path="/Knowyourshow" element={<ProjectOneComponent />} />
+        <Route exact path="/Expensetracker" element={<Expensetracker />} />
         <Route path="*" element={<Help />} />
       </Routes>
     </React.Fragment>
