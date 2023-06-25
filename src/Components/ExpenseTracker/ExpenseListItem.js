@@ -2,14 +2,15 @@ import React from "react";
 
 export default function ExpenseListItem({ item }) {
   return (
-    <div>
+    <React.Fragment>
+    <div className="Expense_History_row_container">
       <table>
         <tr>
           <th>{item.expenseName}</th>
-          <td>{item.price}</td>
-          
+          <td>&#8377;{item.price}</td>
         </tr>
       </table>
-    </div>
+      </div>
+    </React.Fragment>
   );
 }

@@ -6,7 +6,7 @@ export default function HistoryExpenseList() {
   const resItems = useSelector((store) => store.EXPENSE.expenseList);
   return (
     <div>
-      Expense History : <ExpenseList items={resItems} />
+      <h4>Expense History</h4> <ExpenseList items={resItems} />
     </div>
   );
 }

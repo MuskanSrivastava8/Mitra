@@ -1,20 +1,28 @@
 .Expense_container {
-    background-color: #392e2e;
+    background-color: #402A2C;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
-    height: 100vh;
-    width: 100%;
+    min-height: 100vh;
+    // width: 100%;
 }
-.Expense_content{    display: flex;
+
+.Expense_content {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 2%;
     margin-bottom: 2%;
+    background-color: #080808;
+    height: 100%;
+    min-width: 25%;
+    border: 1px solid white;
+    border-radius: 2rem;
 }
+
 .ExpenseTracker_footer {
     bottom: 0;
     height: 100%;
@@ -28,4 +36,138 @@
     font-family: system-ui;
     padding-top: .4%;
     padding-bottom: .4%;
+}
+
+.Income_Expense {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    // background: blue;
+    padding: 4%;
+}
+
+.Income_only {
+    background-color: red;
+    margin: 2%;
+    padding: 10%
+}
+
+.Expense_only {
+    background-color: blue;
+    margin: 2%;
+    padding: 10.1%
+}
+
+.Expense_Income_input {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.Expense_Income_Input {
+    padding: 2%
+}
+
+.Expense_Income_add_btn {
+    padding: 2%;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #f60000;
+}
+
+.Expense_Balance {
+    padding: 2%
+}
+
+.Expense_input_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Expense_input_name {
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.Expense_input_price {
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.Expense_input_btn {
+    
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #f60000;
+    color: white;
+}
+.Expense_input_box{
+    padding: 2%;
+    
+}
+.Expense_History{
+    margin-bottom: 4%;
+}
+.Expense_History_table_container {
+    background-color: white;
+}
+
+.Expense_History_row_container {
+    margin-bottom: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    background-color: rgb(155, 92, 11);
+}
+
+@media only screen and (max-width: 904px) {
+
+    //ipad
+    .Expense_content{
+        padding: 15%;
+    }
+    .Expense_container{
+        width: 105%;
+    }
+    .ExpenseTracker_footer{
+        width: 105%; 
+    }
+
+    
+
+}
+
+@media only screen and (max-width: 414px) {
+
+    //Iphone XR
+    .Expense_content{
+        padding: 15%;
+    }
+    .Expense_container{
+        width: 100%;
+    }
+    .ExpenseTracker_footer{
+        width: 100%; 
+    }
+    
+}
+
+@media only screen and (max-width: 390px) { //Iphone 12 pro
+
+    
+}
+@media only screen and (max-width: 376px) { //Iphone SE
+
 }
