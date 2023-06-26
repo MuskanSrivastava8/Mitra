@@ -1,5 +1,6 @@
 import React from "react";
 import ExpenseListItem from "./ExpenseListItem";
+import "./Expensetracker.scss";
 
 export default function ExpenseList({ items }) {
   return (

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addexpenseIncome } from "../../store/expense_slice";
+import "./Expensetracker.scss";
 
 export default function ExpenseIncomeInput() {
   const [incomeVal, setincomeVal] = useState();

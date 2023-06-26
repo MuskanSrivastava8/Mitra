@@ -3,6 +3,7 @@ import { addExpenseAction } from "../../store/expense_slice";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { Button } from "bootstrap";
+import "./Expensetracker.scss";
 
 export default function ExpenseInput() {
   const [price, setprice] = useState(null);

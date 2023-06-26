@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from "react-redux";
+import "./Expensetracker.scss";
 
 export default function ExpenseBalance() {
     const resExpenseList = useSelector((store) => store.EXPENSE.expenseList);
