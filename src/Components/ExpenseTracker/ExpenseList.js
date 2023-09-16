@@ -10,10 +10,11 @@ const rowSelected = (e)=> {
     <React.Fragment>
       <div className="Expense_History_table_container">
         <table class="table table-striped table-dark">
-          <thead>
+          <thead class="table-dark">
             <tr >
-              <th scope="col">Item</th>
-              <th scope="col">Price</th>
+              <th width="40%" scope="col">Item</th>
+              <th width="40%" scope="col">Price</th>
+              <th width="40%" scope="col">Edit</th>
             </tr>
           </thead>
         </table>

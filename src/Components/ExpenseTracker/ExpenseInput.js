@@ -14,6 +14,8 @@ export default function ExpenseInput() {
   const Submit = (e) => {
     e.preventDefault();
     dispatch(addExpenseAction({ price, expenseName }));
+    setprice("");
+    setexpenseName("");
     
   };
   const clearInput = (e) => {

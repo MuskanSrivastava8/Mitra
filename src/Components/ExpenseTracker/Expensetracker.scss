@@ -113,11 +113,13 @@
     border-radius: 10px;
 }
 .Expense_Income_add_btn {
-    padding: 2%;
     border: 1px solid white;
-    border-radius: 10px;
+    border-radius: 50px;
     cursor: pointer;
     background-color: #f60000;
+    color: white;
+    margin-right: 3px;
+    padding: 0.5%;;
 }
 
 .Expense_Balance {
@@ -148,7 +150,14 @@
 .Expense_input_btn {
     
     border: 1px solid white;
-    border-radius: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #f60000;
+    color: white;
+    margin-right: 4px;
+}
+.Expense_delete_item_btn {
+    border-radius: 50%;
     cursor: pointer;
     background-color: #f60000;
     color: white;
