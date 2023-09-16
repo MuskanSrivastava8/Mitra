@@ -26,7 +26,7 @@ export default function ExpenseIncomeInput() {
 
       <div className="Expense_Income_add_btn">    
         <span
-        onClick={submit}>Edit Income</span>
+        onClick={submit}>Save Income</span>
       </div>
     </React.Fragment>
   );
