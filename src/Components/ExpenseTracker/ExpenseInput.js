@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { Button } from "bootstrap";
 import "./Expensetracker.scss";
+import uuid from 'react-uuid';
 
 export default function ExpenseInput() {
   const [price, setprice] = useState("");
@@ -13,7 +14,8 @@ export default function ExpenseInput() {
   const dispatch = useDispatch();
   const Submit = (e) => {
     e.preventDefault();
-    dispatch(addExpenseAction({ price, expenseName }));
+    const id = uuid();
+    dispatch(addExpenseAction({id, price, expenseName }));
     setprice("");
     setexpenseName("");
     
@@ -28,27 +30,31 @@ export default function ExpenseInput() {
   return (
     <React.Fragment>
       <div className="Expense_input_container">
-        <div className="Expense_input_name">
-          <p style={{ marginRight: "2%" }}>Name</p>
+        <div class="form-group">
+          <label for="formGroupExampleInput">Item</label>
           <input
             type="text"
+            class="form-control"
             id="expenseName"
+            placeholder="Ex. Apple"
             name="expenseName"
             placeholder="Name"
             value={expenseName}
             onChange={(e) => setexpenseName(e.target.value)}
           />
         </div>
-        <div className="Expense_input_price">
-          <p style={{ marginRight: "2%" }}>Price</p>
+
+        <div class="form-group">
+          <label for="formGroupExampleInput">Price</label>
           <input
             type="text"
+            class="form-control"
             id="price"
+            placeholder="100"
             name="price"
-            placeholder="Price"
             value={price}
             onChange={(e) => setprice(e.target.value)}
-          ></input>
+          />
         </div>
         <div className="Expense_input_box">
           <button

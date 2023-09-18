@@ -8,7 +8,7 @@ export default function HistoryExpenseList() {
   return (
     <div className="Exp_History_box">
       <div><h4>Expense History</h4></div>
-      <div style={{width:'65%'}}><ExpenseList items={resItems} /></div> 
+      <div style={{width:'100%', padding:"2%"}}><ExpenseList items={resItems} /></div> 
     </div>
   );
 }

@@ -160,9 +160,24 @@
     border-radius: 50%;
     cursor: pointer;
     background-color: #f60000;
-    color: white;
+    color: black;
     margin-right: 4px;
 }
+.Expense_edit_item_btn {
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #f60000;
+    //color: blue;
+    margin-right: 4px;
+}
+.Expense_edit_name_item_btn{
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #f60000;
+    //color: blue;
+    margin-right: 4px;
+}
+
 .Expense_input_box{
     padding: 2%;
     
