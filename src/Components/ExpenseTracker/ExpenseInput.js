@@ -38,7 +38,6 @@ export default function ExpenseInput() {
             id="expenseName"
             placeholder="Ex. Apple"
             name="expenseName"
-            placeholder="Name"
             value={expenseName}
             onChange={(e) => setexpenseName(e.target.value)}
           />

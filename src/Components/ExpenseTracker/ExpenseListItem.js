@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Expensetracker.scss";
-import { deleteExpenseIncome } from "../../store/expense_slice";
+import { deleteExpenseIncome, saveEditExpenseIncome } from "../../store/expense_slice";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { GrEdit } from "react-icons/gr";
@@ -15,28 +15,35 @@ export default function ExpenseListItem({ item }) {
   const [showInputBox, setshowInputBox] = useState(false);
   const [showCheckIcon, setshowCheckIcon] = useState(false);
   const [showDeleteEditIcon, setshowDeleteEditIcon] = useState(false);
+  const [editName, seteditName] = useState("");
 
   const Submit = (e) => {
-
     setexpenseName(item.expenseName);
     setprice(item.price);
     setdeletenow(!deletenow);
   };
   const editItem = (e) => {
-    console.log("item", item);
     setshowInputBox(true);
     setshowCheckIcon(true);
     setshowDeleteEditIcon(true);
+
   };
-  const saveItem = () => {
+  const saveItemName = () => {
     setshowCheckIcon(false);
     setshowDeleteEditIcon(false);
+    console.log("item",item)
+    let ID = item.id
+    let query = { ID, editName };
+    console.log("query".query)
+    dispatch(saveEditExpenseIncome(query));
+    setshowInputBox(false)
+
   };
-  const deleteEditResp=()=>{
+  const deleteEditResp = () => {
     setshowCheckIcon(false);
     setshowDeleteEditIcon(false);
     setshowInputBox(false);
-  }
+  };
 
   useEffect(() => {
     let query = { price, expenseName };
@@ -57,8 +64,8 @@ export default function ExpenseListItem({ item }) {
                     id="editExpenseName"
                     placeholder={item.expenseName}
                     name="editExpenseName"
-                    //value={expenseName}
-                    onChange={(e) => setexpenseName(e.target.value)}
+                    // value={expenseName}
+                    onChange={(e) => seteditName(e.target.value)}
                   />
                 ) : (
                   item.expenseName
@@ -66,18 +73,22 @@ export default function ExpenseListItem({ item }) {
                 {showCheckIcon ? (
                   <button
                     className="Expense_edit_name_item_btn"
-                    onClick={saveItem}
+                    onClick={saveItemName}
                   >
                     <AiOutlineCheck />
                   </button>
                 ) : null}
                 {showDeleteEditIcon ? (
-                  <button className="Expense_delete_item_btn" onClick={deleteEditResp}>
+                  <button
+                    className="Expense_delete_item_btn"
+                    onClick={deleteEditResp}
+                  >
                     X
                   </button>
                 ) : null}
               </th>
-              <td width="40%">{item.price}</td>
+              <td width="40%">
+              {item.price}</td>
               <td width="40%">
                 <button className="Expense_delete_item_btn" onClick={Submit}>
                   X

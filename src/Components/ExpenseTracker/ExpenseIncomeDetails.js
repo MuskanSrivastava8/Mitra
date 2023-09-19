@@ -8,9 +8,7 @@ export default function ExpenseIncomeDetails() {
     const spendTotal = resExpenseList.reduce((acc, expense) => {
       return Number.parseFloat(acc) + Number.parseFloat(expense.price);
     }, 0);
-    // console.log(spendTotal>resReviewIncome)
     const incomeAlert = spendTotal>resReviewIncome;
-    // console.log('alert ', incomeAlert)
   return (
     <div>
       <h4>Income</h4>
