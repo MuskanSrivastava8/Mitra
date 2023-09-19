@@ -17,12 +17,11 @@ export const expenseSlice = createSlice({
       currentSlice.income = action.payload;
     },
     deleteExpenseIncome: (currentSlice, action) => {
-      if (currentSlice.expenseList.length !== 0) {
+      if (currentSlice.expenseList.length > 0) {
         currentSlice.expenseList = currentSlice.expenseList.filter(
           (element) => {
             return (
-              element.price + element.expenseName !==
-              action.payload.price + action.payload.expenseName
+              element.id !== action.payload.ID
             );
           }
         );

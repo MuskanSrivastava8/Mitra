@@ -12,11 +12,6 @@ import { AiOutlineCheck } from "react-icons/ai";
 
 export default function ExpenseListItem({ item }) {
   const dispatch = useDispatch();
-  const [price, setprice] = useState("");
-  const [expenseName, setexpenseName] = useState("");
-  // const [id, setid] = useState("");
-  const [deletenow, setdeletenow] = useState(false);
-  const [editid, seteditid] = useState("");
   const [showInputBox, setshowInputBox] = useState(false);
   const [showInputBoxPrice, setshowInputBoxPrice] = useState(false);
   const [showCheckIcon, setshowCheckIcon] = useState(false);
@@ -27,16 +22,12 @@ export default function ExpenseListItem({ item }) {
   const [showDeleteEditIconPrice, setshowDeleteEditIconPrice] = useState(false);
 
   const Submit = (e) => {
-    setexpenseName(item.expenseName);
-    setprice(item.price);
-    setdeletenow(!deletenow);
-  };
-  // const Submit = (e) => {
-  //   // setexpenseName(item.expenseName);
-  //   // setprice(item.price);
-  //   setid(item.ID)
-  //   setdeletenow(!deletenow);
-  // // };
+    let ID = item.id;
+    let query = {ID };
+    console.log("ID",ID)
+    dispatch(deleteExpenseIncome(query));
+   };
+  
   const editItem = (e) => {
     setshowInputBox(true);
     setshowCheckIcon(true);
@@ -71,13 +62,6 @@ export default function ExpenseListItem({ item }) {
     dispatch(saveEditExpenseIncomePrice(query));
     setshowInputBoxPrice(false);
   };
-
-  useEffect(() => {
-    let query = { price, expenseName };
-    dispatch(deleteExpenseIncome(query));
-    // dispatch(deleteExpenseIncome(id));
-
-  }, [deletenow]);
 
   return (
     <React.Fragment>

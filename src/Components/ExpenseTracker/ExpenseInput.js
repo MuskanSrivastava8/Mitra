@@ -33,10 +33,6 @@ export default function ExpenseInput() {
     let incomeVal = Number(resReviewIncome)+Number(price)
     dispatch(addExpenseIncome(Number(incomeVal)));
     dispatch(addIncomeAction({id, price, expenseName, type }));
-    console.log("resReviewIncome",resReviewIncome)
-    console.log("price",price)
-    console.log("incomeVal",incomeVal)
-    
     setprice("");
     setexpenseName("");
 
