@@ -5,7 +5,7 @@ import "./Expensetracker.scss";
 export default function ExpenseSum() {
   const resExpenseList = useSelector((store) => store.EXPENSE.expenseList);
   const spendTotal = resExpenseList.reduce((acc, expense) => {
-    return Number.parseFloat(acc) + Number.parseFloat(expense.price);
+    return expense.type === "Expense" ? Number.parseFloat(acc) + Number.parseFloat(expense.price) : Number.parseFloat(acc) + 0
   }, 0);
   return (
     <div>

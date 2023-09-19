@@ -1,25 +1,47 @@
 import React from "react";
-import { addExpenseAction } from "../../store/expense_slice";
+import { addExpenseAction, addIncomeAction, addExpenseIncome } from "../../store/expense_slice";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { Button } from "bootstrap";
 import "./Expensetracker.scss";
 import uuid from 'react-uuid';
+import { useSelector } from "react-redux";
+
 
 export default function ExpenseInput() {
   const [price, setprice] = useState("");
   const [expenseName, setexpenseName] = useState("");
   const [remSubmitBtn, setremSubmitBtn] = useState(false);
+  const resReviewIncome = useSelector((store) => store.EXPENSE.income);
+
 
   const dispatch = useDispatch();
-  const Submit = (e) => {
+  const SubmitExpense = (e) => {
     e.preventDefault();
     const id = uuid();
-    dispatch(addExpenseAction({id, price, expenseName }));
+    let type="Expense"
+    dispatch(addExpenseAction({id, price, expenseName, type  }));
     setprice("");
     setexpenseName("");
     
   };
+  const SubmitIncome = (e) => {
+    e.preventDefault();
+    const id = uuid();
+    let type="Income"
+
+    let incomeVal = Number(resReviewIncome)+Number(price)
+    dispatch(addExpenseIncome(Number(incomeVal)));
+    dispatch(addIncomeAction({id, price, expenseName, type }));
+    console.log("resReviewIncome",resReviewIncome)
+    console.log("price",price)
+    console.log("incomeVal",incomeVal)
+    
+    setprice("");
+    setexpenseName("");
+
+  };
+  
   const clearInput = (e) => {
     setprice("");
     setexpenseName("");
@@ -58,10 +80,17 @@ export default function ExpenseInput() {
         <div className="Expense_input_box">
           <button
             className="Expense_input_btn"
-            onClick={Submit}
+            onClick={SubmitExpense}
             disabled={!price || !expenseName}
           >
             Add Expense
+          </button>
+          <button
+            className="Expense_input_btn"
+            onClick={SubmitIncome}
+            disabled={!price || !expenseName}
+          >
+            Add Income
           </button>
           <button className="Expense_input_btn" onClick={clearInput}>
             Clear

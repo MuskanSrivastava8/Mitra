@@ -8,6 +8,11 @@ export default function ExpenseBalance() {
     const spendTotal = resExpenseList.reduce((acc, expense) => {
       return Number.parseFloat(acc) + Number.parseFloat(expense.price);
     }, 0);
+    // const spendTotal = resExpenseList.reduce((acc, expense) => {
+    //   return expense.type === "Expense"
+    //     ? Number.parseFloat(acc) + Number.parseFloat(expense.price)
+    //     : Number.parseFloat(acc) - Number.parseFloat(expense.price);
+    // }, 0);
     const BalanceTotal = resReviewIncome-spendTotal
   return (
     <div>

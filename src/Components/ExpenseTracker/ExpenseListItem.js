@@ -14,6 +14,7 @@ export default function ExpenseListItem({ item }) {
   const dispatch = useDispatch();
   const [price, setprice] = useState("");
   const [expenseName, setexpenseName] = useState("");
+  // const [id, setid] = useState("");
   const [deletenow, setdeletenow] = useState(false);
   const [editid, seteditid] = useState("");
   const [showInputBox, setshowInputBox] = useState(false);
@@ -30,6 +31,12 @@ export default function ExpenseListItem({ item }) {
     setprice(item.price);
     setdeletenow(!deletenow);
   };
+  // const Submit = (e) => {
+  //   // setexpenseName(item.expenseName);
+  //   // setprice(item.price);
+  //   setid(item.ID)
+  //   setdeletenow(!deletenow);
+  // // };
   const editItem = (e) => {
     setshowInputBox(true);
     setshowCheckIcon(true);
@@ -68,6 +75,8 @@ export default function ExpenseListItem({ item }) {
   useEffect(() => {
     let query = { price, expenseName };
     dispatch(deleteExpenseIncome(query));
+    // dispatch(deleteExpenseIncome(id));
+
   }, [deletenow]);
 
   return (

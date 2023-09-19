@@ -10,6 +10,9 @@ export const expenseSlice = createSlice({
     addExpenseAction: (currentSlice, action) => {
       currentSlice.expenseList.push(action.payload);
     },
+    addIncomeAction: (currentSlice, action) => {
+      currentSlice.expenseList.push(action.payload);
+    },
     addExpenseIncome: (currentSlice, action) => {
       currentSlice.income = action.payload;
     },
@@ -43,5 +46,5 @@ export const expenseSlice = createSlice({
     },
   },
 });
-export const { addExpenseAction, addExpenseIncome, deleteExpenseIncome, saveEditExpenseIncome, saveEditExpenseIncomePrice } =
+export const { addExpenseAction, addIncomeAction, addExpenseIncome, deleteExpenseIncome, saveEditExpenseIncome, saveEditExpenseIncomePrice } =
   expenseSlice.actions;
