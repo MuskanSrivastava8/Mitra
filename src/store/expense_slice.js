@@ -33,7 +33,15 @@ export const expenseSlice = createSlice({
         }
       })
     },
+    saveEditExpenseIncomePrice: (currentSlice, action) => {
+      currentSlice.expenseList.forEach((item)=>{
+        if(item.id===action.payload.ID){
+          item.price=action.payload.editPrice
+          
+        }
+      })
+    },
   },
 });
-export const { addExpenseAction, addExpenseIncome, deleteExpenseIncome, saveEditExpenseIncome } =
+export const { addExpenseAction, addExpenseIncome, deleteExpenseIncome, saveEditExpenseIncome, saveEditExpenseIncomePrice } =
   expenseSlice.actions;

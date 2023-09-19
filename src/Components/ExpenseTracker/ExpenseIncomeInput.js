@@ -14,20 +14,19 @@ export default function ExpenseIncomeInput() {
   return (
     <React.Fragment>
       <div className="Expense_Income_Input">
-      
         <input
           type="text"
+          class="form-control"
           defaultValue={resIncome}
           id="expenseIncome"
-          name="expenseIncome"
           placeholder="Income"
+          name="expenseIncome"
           onChange={(e) => setincomeVal(e.target.value)}
         />
       </div>
 
-      <div className="Expense_Income_add_btn">    
-        <span
-        onClick={submit}>Save Income</span>
+      <div className="Expense_Income_add_btn">
+        <span onClick={submit}>Save Income</span>
       </div>
     </React.Fragment>
   );
