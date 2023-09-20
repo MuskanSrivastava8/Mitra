@@ -91,6 +91,23 @@
     box-shadow: 10px 10px 50px blue;
 }
 
+.Balance_only {
+    background-color: rgb(247, 247, 28);
+    margin: 2%;
+    padding: 10.1%;
+    border: 1px solid yellow;
+    border-radius: 14px;
+    cursor: pointer;
+    border: 1px solid yellow;
+    box-shadow: 5px 5px 50px yellow;
+    
+}
+
+.Balance_only:hover{
+    border: 1px solid rgb(186, 204, 23);
+    box-shadow: 10px 10px 50px rgb(207, 190, 34);
+}
+
 .Expense_Income_input {
 
     display: flex;
@@ -169,6 +186,13 @@
     background-color: #f60000;
     margin-right: 4px;
 }
+.Expense_expand_list_btn {
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #f60000;
+    margin-right: 4px;
+    
+}
 .Expense_edit_name_item_btn{
     border-radius: 50%;
     cursor: pointer;
@@ -224,7 +248,7 @@
 
     //Iphone XR
     .Expense_content{
-        padding: 6%;
+        padding: 12%;
     }
     .Expense_container{
         width: 100%;

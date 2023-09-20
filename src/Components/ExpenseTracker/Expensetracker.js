@@ -7,6 +7,7 @@ import Footer from "../Footer/Footer";
 import ExpenseIncomeDetails from "./ExpenseIncomeDetails";
 import ExpenseSum from "./ExpenseSum";
 import ExpenseBalance from "./ExpenseBalance";
+import BalanceSum from "./BalanceSum";
 
 export default function Expensetracker() {
   return (
@@ -20,13 +21,16 @@ export default function Expensetracker() {
             <div className="Expense_only">
               <ExpenseSum />
             </div>
+            <div className="Balance_only">
+              <BalanceSum />
+            </div>
           </div>
           <div className="Expense_Income_input">
             <ExpenseIncomeInput />
           </div>
-          <div className="Expense_Balance">
+          {/* <div className="Expense_Balance">
             <ExpenseBalance />
-          </div>
+          </div> */}
           <div className="Expense_Input">
             <ExpenseInput />
           </div>

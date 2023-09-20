@@ -17,8 +17,6 @@ useEffect(()=>{
 
 })
 
-
-
   return (
     <div>
       <h4>Expense</h4>
