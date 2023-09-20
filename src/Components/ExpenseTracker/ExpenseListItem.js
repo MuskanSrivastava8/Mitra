@@ -114,7 +114,7 @@ export default function ExpenseListItem({ item }) {
                   </button>
                 ) : null}
               </th>
-              <td width="40%">
+              <td width="30%">
                 {showInputBoxPrice ? (
                   <input
                     type="text"

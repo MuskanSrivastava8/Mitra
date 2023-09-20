@@ -13,7 +13,7 @@ const rowSelected = (e)=> {
           <thead class="table-dark">
             <tr >
               <th width="40%" scope="col">Item</th>
-              <th width="40%" scope="col">Price</th>
+              <th width="30%" scope="col">Price</th>
               <th width="40%" scope="col">Edit</th>
               
             </tr>

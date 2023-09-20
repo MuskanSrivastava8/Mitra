@@ -109,8 +109,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #626970;;
-    border-radius: 10px;
+   // background-color: #626970;;
+    //border-radius: 10px;
 }
 .Expense_Income_add_btn {
     border: 1px solid white;
@@ -130,7 +130,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
 }
 
 .Expense_input_name {
@@ -184,7 +184,7 @@
     padding: 1%;
     margin-top: 4%;
     margin-bottom: 4%;
-    width: 80%;
+    width: 90%;
 }
 .Expense_History_table_container {
     // background-color: white;
@@ -213,7 +213,9 @@
     .ExpenseTracker_footer{
         width: 105%; 
     }
-
+    .Expense_History{
+        width: 100%;
+    }
     
 
 }
@@ -230,6 +232,10 @@
     }
     .ExpenseTracker_footer{
         width: 100%; 
+    }
+    .Expense_delete_item_btn {
+        border-radius: 50%;
+        font-size: 123%;
     }
     
 }
