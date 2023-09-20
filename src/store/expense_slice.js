@@ -5,6 +5,7 @@ export const expenseSlice = createSlice({
   initialState: {
     expenseList: [],
     income: 1000,
+    expense : 0,
   },
   reducers: {
     addExpenseAction: (currentSlice, action) => {
@@ -43,7 +44,15 @@ export const expenseSlice = createSlice({
         }
       })
     },
+    updateIncome: (currentSlice, action) => {
+      currentSlice.income = action.payload.Price;
+    },
+    updateExpense: (currentSlice, action) => {
+      console.log("called")
+      currentSlice.expense = action.payload
+    },
+    
   },
 });
-export const { addExpenseAction, addIncomeAction, addExpenseIncome, deleteExpenseIncome, saveEditExpenseIncome, saveEditExpenseIncomePrice } =
+export const { addExpenseAction, addIncomeAction, addExpenseIncome, deleteExpenseIncome, saveEditExpenseIncome, saveEditExpenseIncomePrice, updateIncome, updateExpense } =
   expenseSlice.actions;

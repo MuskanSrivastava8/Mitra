@@ -4,11 +4,14 @@ import {
   deleteExpenseIncome,
   saveEditExpenseIncome,
   saveEditExpenseIncomePrice,
+  updateIncome,
 } from "../../store/expense_slice";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { GrEdit } from "react-icons/gr";
 import { AiOutlineCheck } from "react-icons/ai";
+import { useSelector } from "react-redux";
+
 
 export default function ExpenseListItem({ item }) {
   const dispatch = useDispatch();
@@ -20,11 +23,18 @@ export default function ExpenseListItem({ item }) {
   const [editPrice, seteditPrice] = useState("");
   const [showCheckIconPrice, setshowCheckIconPrice] = useState(false);
   const [showDeleteEditIconPrice, setshowDeleteEditIconPrice] = useState(false);
+  const resReviewIncome = useSelector((store) => store.EXPENSE.income);
 
   const Submit = (e) => {
     let ID = item.id;
     let query = {ID };
-    console.log("ID",ID)
+    let Price = Number.parseFloat(resReviewIncome) - Number.parseFloat(item.price)
+    let Type = item.type
+    let query_Price = {Price}
+    
+    if(Type === "Income"){
+      dispatch(updateIncome(query_Price))
+    }
     dispatch(deleteExpenseIncome(query));
    };
   
