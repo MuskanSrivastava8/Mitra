@@ -10,8 +10,8 @@ import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { GrEdit } from "react-icons/gr";
 import { AiOutlineCheck } from "react-icons/ai";
+import { BsGraphUpArrow, BsGraphDownArrow } from "react-icons/bs";
 import { useSelector } from "react-redux";
-
 
 export default function ExpenseListItem({ item }) {
   const dispatch = useDispatch();
@@ -27,17 +27,18 @@ export default function ExpenseListItem({ item }) {
 
   const Submit = (e) => {
     let ID = item.id;
-    let query = {ID };
-    let Price = Number.parseFloat(resReviewIncome) - Number.parseFloat(item.price)
-    let Type = item.type
-    let query_Price = {Price}
-    
-    if(Type === "Income"){
-      dispatch(updateIncome(query_Price))
+    let query = { ID };
+    let Price =
+      Number.parseFloat(resReviewIncome) - Number.parseFloat(item.price);
+    let Type = item.type;
+    let query_Price = { Price };
+
+    if (Type === "Income") {
+      dispatch(updateIncome(query_Price));
     }
     dispatch(deleteExpenseIncome(query));
-   };
-  
+  };
+
   const editItem = (e) => {
     setshowInputBox(true);
     setshowCheckIcon(true);
@@ -73,6 +74,7 @@ export default function ExpenseListItem({ item }) {
     setshowInputBoxPrice(false);
   };
 
+
   return (
     <React.Fragment>
       <div className="Expense_History_row_container">
@@ -87,11 +89,13 @@ export default function ExpenseListItem({ item }) {
                     id="editExpenseName"
                     placeholder={item.expenseName}
                     name="editExpenseName"
-                    // value={expenseName}
                     onChange={(e) => seteditName(e.target.value)}
                   />
                 ) : (
                   item.expenseName
+                )}
+                {item.type === "Income" ? <BsGraphUpArrow style={{ color: "green" , marginLeft: "10%"}} /> : (
+                  <BsGraphDownArrow style={{ color: "red", marginLeft: "10%"}} />
                 )}
                 {showCheckIcon ? (
                   <button
@@ -124,6 +128,7 @@ export default function ExpenseListItem({ item }) {
                 ) : (
                   item.price
                 )}
+
                 {showCheckIconPrice ? (
                   <button
                     className="Expense_edit_name_item_btn"
@@ -140,7 +145,12 @@ export default function ExpenseListItem({ item }) {
                     X
                   </button>
                 ) : null}
+                
+
+              
+                
               </td>
+
               <td width="40%">
                 <button className="Expense_delete_item_btn" onClick={Submit}>
                   X
@@ -148,7 +158,10 @@ export default function ExpenseListItem({ item }) {
                 <button className="Expense_edit_item_btn" onClick={editItem}>
                   <GrEdit style={{ color: "white" }} />
                 </button>
+
               </td>
+ 
+       
             </tr>
           </tbody>
         </table>

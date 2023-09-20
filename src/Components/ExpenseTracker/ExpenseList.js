@@ -15,13 +15,13 @@ const rowSelected = (e)=> {
               <th width="40%" scope="col">Item</th>
               <th width="40%" scope="col">Price</th>
               <th width="40%" scope="col">Edit</th>
+              
             </tr>
           </thead>
         </table>
             {items.map((item, index) => (
               <ExpenseListItem key={item+index} item={item} />
             ))}
-
       </div>
     </React.Fragment>
   );
