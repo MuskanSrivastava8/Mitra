@@ -48,7 +48,6 @@ export const expenseSlice = createSlice({
       currentSlice.income = action.payload.Price;
     },
     updateExpense: (currentSlice, action) => {
-      console.log("called")
       currentSlice.expense = action.payload
     },
     

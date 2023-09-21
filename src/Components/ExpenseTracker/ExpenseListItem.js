@@ -12,6 +12,8 @@ import { GrEdit } from "react-icons/gr";
 import { AiOutlineCheck } from "react-icons/ai";
 import { BsGraphUpArrow, BsGraphDownArrow } from "react-icons/bs";
 import { useSelector } from "react-redux";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function ExpenseListItem({ item }) {
   const dispatch = useDispatch();
@@ -57,8 +59,9 @@ export default function ExpenseListItem({ item }) {
     setshowDeleteEditIcon(false);
     let ID = item.id;
     let query = { ID, editName };
-    dispatch(saveEditExpenseIncome(query));
+    if(editName.length>0) {dispatch(saveEditExpenseIncome(query))}
     setshowInputBox(false);
+    toast.success("Item updated");
   };
   const deleteEditRespPrice = () => {
     setshowCheckIconPrice(false);
@@ -70,10 +73,11 @@ export default function ExpenseListItem({ item }) {
     setshowDeleteEditIconPrice(false);
     let ID = item.id;
     let query = { ID, editPrice };
-    dispatch(saveEditExpenseIncomePrice(query));
-    setshowInputBoxPrice(false);
-  };
+        if(editPrice.length>0) {dispatch(saveEditExpenseIncomePrice(query))}
 
+    setshowInputBoxPrice(false);
+    toast.success("Price updated");
+  };
 
   return (
     <React.Fragment>
@@ -94,8 +98,14 @@ export default function ExpenseListItem({ item }) {
                 ) : (
                   item.expenseName
                 )}
-                {item.type === "Income" ? <BsGraphUpArrow style={{ color: "green" , marginLeft: "10%"}} /> : (
-                  <BsGraphDownArrow style={{ color: "red", marginLeft: "10%"}} />
+                {item.type === "Income" ? (
+                  <BsGraphUpArrow
+                    style={{ color: "green", marginLeft: "10%" }}
+                  />
+                ) : (
+                  <BsGraphDownArrow
+                    style={{ color: "red", marginLeft: "10%" }}
+                  />
                 )}
                 {showCheckIcon ? (
                   <button
@@ -145,10 +155,6 @@ export default function ExpenseListItem({ item }) {
                     X
                   </button>
                 ) : null}
-                
-
-              
-                
               </td>
 
               <td width="40%">
@@ -158,13 +164,11 @@ export default function ExpenseListItem({ item }) {
                 <button className="Expense_edit_item_btn" onClick={editItem}>
                   <GrEdit style={{ color: "white" }} />
                 </button>
-
               </td>
- 
-       
             </tr>
           </tbody>
         </table>
+        <ToastContainer />
       </div>
     </React.Fragment>
   );

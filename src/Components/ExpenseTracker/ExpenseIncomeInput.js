@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addExpenseIncome } from "../../store/expense_slice";
 import "./Expensetracker.scss";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 export default function ExpenseIncomeInput() {
   const [incomeVal, setincomeVal] = useState();
@@ -9,6 +12,7 @@ export default function ExpenseIncomeInput() {
   const dispatch = useDispatch();
   const submit = () => {
     dispatch(addExpenseIncome(Number(incomeVal)));
+    toast.success(`New income is ${incomeVal}`);
   };
   const resIncome = useSelector((store) => store.EXPENSE.income);
   return (
@@ -19,15 +23,16 @@ export default function ExpenseIncomeInput() {
           class="form-control"
           defaultValue={resIncome}
           id="expenseIncome"
-          placeholder="Income"
+          placeholder={incomeVal}
           name="expenseIncome"
           onChange={(e) => setincomeVal(e.target.value)}
         />
       </div>
 
-      <div className="Expense_Income_add_btn">
-        <span onClick={submit}>Save Income</span>
+      <div >
+        <button className="Expense_Income_add_btn" onClick={submit} disabled={!incomeVal}>Edit Income</button>
       </div>
+      <ToastContainer />
     </React.Fragment>
   );
 }
