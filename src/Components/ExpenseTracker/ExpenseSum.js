@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import "./Expensetracker.scss";
 import { useDispatch } from "react-redux";
 import { updateExpense } from "../../store/expense_slice";
-
+import { TfiShoppingCart } from "react-icons/tfi";
 
 export default function ExpenseSum() {
   const resExpenseList = useSelector((store) => store.EXPENSE.expenseList);
@@ -21,6 +21,7 @@ useEffect(()=>{
     <div>
       <h4>Expense</h4>
       &#8377;{spendTotal}
+      <TfiShoppingCart style={{color: "red", marginLeft: "10%" }}/>
     </div>
   );
 }

@@ -18,14 +18,10 @@ export default function ExpenseList({ items }) {
   return (
     <React.Fragment>
       <div className="Expense_History_table_container">
-      <button
-                  className="Expense_expand_list_btn"
-                  onClick={showExpenseTable}
-                >
-                  {showIcon ? <MdOutlineExpandLess/> : <MdOutlineExpandMore />}
-                </button>
+        <button className="Expense_expand_list_btn" onClick={showExpenseTable}>
+          {showIcon ? <MdOutlineExpandLess /> : <MdOutlineExpandMore />}
+        </button>
         <table class="table table-striped table-dark">
-
           <thead class="table-dark">
             <tr>
               <th width="40%" scope="col">
@@ -36,7 +32,6 @@ export default function ExpenseList({ items }) {
               </th>
               <th width="40%" scope="col">
                 Edit
-
               </th>
             </tr>
           </thead>

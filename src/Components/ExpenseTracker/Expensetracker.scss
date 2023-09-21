@@ -60,10 +60,9 @@
     background-color: red;
     margin: 2%;
     padding: 10%;
-    border: 1px solid red;
+    border: 1px solid rgb(133, 11, 11);
     border-radius: 14px;
     cursor: pointer;
-    border: 1px solid #7c0000;
     box-shadow: 5px 5px 50px yellow;
 
 }
@@ -82,10 +81,9 @@
     background-color: blue;
     margin: 2%;
     padding: 10.1%;
-    border: 1px solid blue;
+    border: 1px solid rgb(47, 47, 161);
     border-radius: 14px;
     cursor: pointer;
-    border: 1px solid #063171;
     box-shadow: 5px 5px 50px yellow;
 
 }
@@ -96,13 +94,12 @@
 }
 
 .Balance_only {
-    background-color: rgb(247, 247, 28);
+    background-color: rgb(197, 197, 71);
     margin: 2%;
     padding: 10.1%;
-    border: 1px solid yellow;
+    border: 1px solid rgb(133, 133, 10);
     border-radius: 14px;
     cursor: pointer;
-    border: 1px solid yellow;
     box-shadow: 5px 5px 50px yellow;
 
 }
@@ -136,7 +133,6 @@
 
 .Expense_Income_add_btn {
 
-    border: 1px solid white;
     border-radius: 50px;
     cursor: pointer;
     background-color: #f60000;
@@ -171,13 +167,14 @@
 }
 
 .Expense_input_btn {
-    border: 1px solid white;
+    // border: 1px solid white;
     border-radius: 50px;
     cursor: pointer;
     background-color: #f60000;
     color: white;
     margin-right: 4px;
 }
+
 
 .Expense_delete_item_btn {
     border-radius: 50%;
