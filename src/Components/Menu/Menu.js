@@ -19,10 +19,10 @@ export default function Menu() {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item href="/Mitra/Intro">Home</Dropdown.Item>
-              <Dropdown.Item href="/Mitra/Portfolio">Portfolio</Dropdown.Item>
-              <Dropdown.Item href="/Mitra/Knowyourshow">Knowyourshow</Dropdown.Item>
-              <Dropdown.Item href="/Mitra/Expensetracker">TrackExpense</Dropdown.Item>
+              <Dropdown.Item ><NavLink className="dropdownMenuItem" to={"/Portfolio"}>Portfolio</NavLink></Dropdown.Item>
+              <Dropdown.Item ><NavLink className="dropdownMenuItem" to={"/Intro"}>Intro</NavLink></Dropdown.Item>
+              <Dropdown.Item><NavLink className="dropdownMenuItem" to={"/Knowyourshow"}>Knowyourshow</NavLink></Dropdown.Item>
+              <Dropdown.Item><NavLink className="dropdownMenuItem" to={"/Expensetracker"}>Expensetracker</NavLink></Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </div>
