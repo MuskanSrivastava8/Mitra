@@ -38,7 +38,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer_message">
-          © 2021 Company, Inc. All rights reserved.
+          © 2023 Company, Inc. All rights reserved.
         </div>
       {/* </div> */}
     </React.Fragment>

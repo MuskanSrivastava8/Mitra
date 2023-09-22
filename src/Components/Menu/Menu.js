@@ -3,7 +3,8 @@ import { NavLink } from "react-router-dom";
 import "./Menu.scss";
 import { TbCircleLetterM } from "react-icons/tb";
 import Dropdown from "react-bootstrap/Dropdown";
-import { AiFillHome } from "react-icons/ai";
+import { AiOutlineHome } from "react-icons/ai";
+
 
 export default function Menu() {
   return (
@@ -25,6 +26,10 @@ export default function Menu() {
               <Dropdown.Item><NavLink className="dropdownMenuItem" to={"/Expensetracker"}>Expense Tracker clone</NavLink></Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
+        </div>
+        <div className="menu_item_mobile_view">
+
+          <NavLink to={"/Intro"}>Home</NavLink>
         </div>
         <div className="menu_item">
           <NavLink to={"/Intro"}> Home</NavLink>

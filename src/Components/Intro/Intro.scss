@@ -19,7 +19,7 @@
 .intro_content_box {
     background-color: #000000;
     opacity: 0.8;
-    padding: 8px;
+    padding: 4%;
     border: 1px solid white;
     border-radius: 10px;
     margin: 4%;
@@ -41,6 +41,10 @@
     font-weight: 600;
 }
 
+.introLine {
+    font-size: 1.1rem;
+}
+
 .intro_content_box button {
     color: white;
     background-color: red;
@@ -48,6 +52,7 @@
     font-size: 1.2rem;
     border-radius: 11px;
 }
+
 .Intro_footer {
     position: fixed;
     bottom: 0;
@@ -61,6 +66,7 @@
     color: white;
     font-family: system-ui;
 }
+
 .Intro_name_text {
     color: red;
     font-size: 1.8rem;
@@ -86,19 +92,24 @@
         width: 70%;
         height: 240px;
     }
+
     .intro_container {
         width: 105%;
     }
+
     .welcome_text {
         font-size: 2.8rem;
     }
+
     .greeting_text {
         font-weight: 600;
         font-size: 1.5rem;
     }
+
     .intro_content_box {
         margin-left: 4%;
         margin-right: 7%;
+        padding: 8%;
     }
 
 }
@@ -109,9 +120,11 @@
     .intro_container {
         width: 100%;
     }
+
     .welcome_text {
         font-size: 1.8rem;
     }
+
     .greeting_text {
         font-weight: 600;
         font-size: 1.2rem;
@@ -128,7 +141,7 @@
 @media only screen and (max-width: 376px) {
 
     //Iphone SE
-    
+
 }
 
 //D17B88 ,D999B9 B8B3E9 90E0F3 75F4F4 // 414535

@@ -7,30 +7,52 @@ import Footer from "../Footer/Footer";
 
 export default function Intro() {
   const [portfolioView, setportfolioView] = useState(false);
-  const btn_clicked = () => {
+  const [KYSView, setKYSView] = useState(false);
+  const [ETView, setETView] = useState(false);
+
+  const showKYS = () => {
+    setKYSView(true);
+  };
+  const showET = () => {
+    setETView(true);
+  };
+  const showPortfolio = () => {
     setportfolioView(true);
   };
   return (
     <React.Fragment>
       {portfolioView ? <Navigate to="/Portfolio" replace={true} /> : null}
+      {KYSView ? <Navigate to="/Knowyourshow" replace={true} /> : null}
+      {ETView ? <Navigate to="/Expensetracker" replace={true} /> : null}
+
       <div className="intro_container">
         <div className="intro_content_box">
           <p className="welcome_text">Welcome</p>
           <p className="greeting_text">
-            Hello, Myself
+            Greetings, I'm
             <span className="Intro_name_text">
               {" "}
-              <b>Muskan</b>
+              <b> Muskan.</b>
             </span>
-            <br></br>I am frontend developer, with experience of 2+ Years
+            <div className="introLine">
+              <br></br>I am a front-end developer with two or more years of
+              experience.
+              <br></br>I applied my experience in front-end development to these
+              projects.
+            </div>
           </p>
           <p>
-            <button onClick={btn_clicked} className="btn-lg">
-              Gets started
+            <button onClick={showKYS} className="btn-lg">
+              IMDb Clone
+            </button>{" "}
+            <button onClick={showET} className="btn-lg">
+              Expense Tracker
+            </button>{" "}
+            <button onClick={showPortfolio} className="btn-lg">
+              Portfolio
             </button>
           </p>
         </div>
-
         <div className="Intro_footer">
           <Footer />
         </div>
