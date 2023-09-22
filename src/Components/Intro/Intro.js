@@ -22,7 +22,7 @@ export default function Intro() {
               {" "}
               <b>Muskan</b>
             </span>
-            <br></br>I am frontend developer, with experience of 1.8 months
+            <br></br>I am frontend developer, with experience of 2+ Years
           </p>
           <p>
             <button onClick={btn_clicked} className="btn-lg">

@@ -6,24 +6,24 @@ import { BsFillMortarboardFill } from "react-icons/bs";
 import { BsCodeSlash } from "react-icons/bs";
 import { BsTrophy } from "react-icons/bs";
 import { BsPencilSquare } from "react-icons/bs";
+import { Button } from "@material-ui/core";
 
 export default function Summary() {
   const [showCordianView, setshowCordianView] = useState(true);
   const [cardView, setcardView] = useState("");
-
-  // const [cordianView, setcordianView] = useState("");
-
-
   const toggleView = () => {
     setshowCordianView(!showCordianView);
-    // if(showCordianView){
-    //   setcardView(true)
-    // }
   };
   return (
     <React.Fragment>
-      <button onClick={toggleView}>{showCordianView ? "List View" : "Card View"}</button>
-      
+      <Button
+        variant="contained"
+        size="small"
+        color="success"
+        onClick={toggleView}
+      >
+        {showCordianView ? "List View" : "Card View"}
+      </Button>
       {showCordianView ? (
         <div className="summary_container">
           <div className="row_1">
@@ -63,6 +63,7 @@ export default function Summary() {
                       <h5>Project Experience (TCS)</h5>
                     </div>
                     <div className="points_details">
+                      <p>Hubble Connect : React Developer</p>
                       <p>Medline : React Developer</p>
                       <p>E2open : Application Developer</p>
                     </div>
@@ -90,8 +91,8 @@ export default function Summary() {
                       <h1>Activities</h1>
                     </div>
                     <div className="points_details">
-                      <p>T-factor : 1.8</p>
-                      <p>iEvolve score : 1320</p>
+                      <p>T-factor : 2.2</p>
+                      <p>iEvolve score : 1320+</p>
                     </div>
                   </div>
                 </div>
@@ -227,8 +228,20 @@ export default function Summary() {
                 aria-labelledby="panelsStayOpen-headingTwo"
               >
                 <div class="accordion-body">
-                  <p>Medline : React Developer</p>
-                  <p>E2open : Application Developer</p>
+                <div className="points_heading">
+                      <h5>Project Experience (TCS)</h5>
+                    </div>
+                    <div className="points_details">
+                      <p>Hubble Connect : React Developer</p>
+                      <p>Medline : React Developer</p>
+                      <p>E2open : Application Developer</p>
+                    </div>
+                    <div className="points_heading">
+                      <h5>Personal Project</h5>
+                    </div>
+                    <div className="points_details">
+                      <p>Mitra</p>
+                    </div>
                 </div>
               </div>
             </div>
@@ -251,8 +264,8 @@ export default function Summary() {
                 aria-labelledby="panelsStayOpen-headingThree"
               >
                 <div class="accordion-body">
-                  <p>T-factor : 1.8</p>
-                  <p>iEvolve score : 1320</p>
+                  <p>T-factor : 2.2</p>
+                  <p>iEvolve score : 1320+</p>
                 </div>
               </div>
             </div>
