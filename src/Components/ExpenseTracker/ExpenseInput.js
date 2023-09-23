@@ -6,6 +6,8 @@ import { Button } from "bootstrap";
 import "./Expensetracker.scss";
 import uuid from 'react-uuid';
 import { useSelector } from "react-redux";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 export default function ExpenseInput() {
@@ -23,6 +25,7 @@ export default function ExpenseInput() {
     dispatch(addExpenseAction({id, price, expenseName, type  }));
     setprice("");
     setexpenseName("");
+    toast.success("New Expense added");
     
   };
   const SubmitIncome = (e) => {
@@ -35,6 +38,7 @@ export default function ExpenseInput() {
     dispatch(addIncomeAction({id, price, expenseName, type }));
     setprice("");
     setexpenseName("");
+    toast.success("New Income added");
 
   };
   
