@@ -57,10 +57,10 @@
 }
 
 .Income_only {
-    background-color: red;
+    background-color: rgb(224, 221, 12);
     margin: 2%;
     padding: 10%;
-    border: 1px solid rgb(133, 11, 11);
+    border: 1px solid rgb(92, 83, 3);
     border-radius: 14px;
     cursor: pointer;
     box-shadow: 5px 5px 50px yellow;
@@ -78,10 +78,10 @@
 }
 
 .Expense_only {
-    background-color: blue;
+    background-color: red;
     margin: 2%;
     padding: 10.1%;
-    border: 1px solid rgb(47, 47, 161);
+    border: 1px solid rgb(163, 44, 23);
     border-radius: 14px;
     cursor: pointer;
     box-shadow: 5px 5px 50px yellow;
@@ -94,13 +94,13 @@
 }
 
 .Balance_only {
-    background-color: rgb(197, 197, 71);
+    background-color: rgb(109, 233, 37);
     margin: 2%;
     padding: 10.1%;
-    border: 1px solid rgb(133, 133, 10);
+    border: 1px solid rgb(33, 116, 13);
     border-radius: 14px;
     cursor: pointer;
-    box-shadow: 5px 5px 50px yellow;
+    box-shadow: 5px 5px 50px rgb(16, 206, 89);
 
 }
 

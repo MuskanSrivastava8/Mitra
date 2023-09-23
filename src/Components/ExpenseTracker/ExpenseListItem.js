@@ -59,7 +59,9 @@ export default function ExpenseListItem({ item }) {
     setshowDeleteEditIcon(false);
     let ID = item.id;
     let query = { ID, editName };
-    if(editName.length>0) {dispatch(saveEditExpenseIncome(query))}
+    if (editName.length > 0) {
+      dispatch(saveEditExpenseIncome(query));
+    }
     setshowInputBox(false);
     toast.success("Item updated");
   };
@@ -73,7 +75,9 @@ export default function ExpenseListItem({ item }) {
     setshowDeleteEditIconPrice(false);
     let ID = item.id;
     let query = { ID, editPrice };
-        if(editPrice.length>0) {dispatch(saveEditExpenseIncomePrice(query))}
+    if (editPrice.length > 0) {
+      dispatch(saveEditExpenseIncomePrice(query));
+    }
 
     setshowInputBoxPrice(false);
     toast.success("Price updated");
@@ -132,7 +136,6 @@ export default function ExpenseListItem({ item }) {
                     id="editprice"
                     placeholder={item.price}
                     name="editprice"
-                    // value={price}
                     onChange={(e) => seteditPrice(e.target.value)}
                   />
                 ) : (

@@ -1,53 +1,66 @@
 import React from "react";
-import { addExpenseAction, addIncomeAction, addExpenseIncome } from "../../store/expense_slice";
+import {
+  addExpenseAction,
+  addIncomeAction,
+  addExpenseIncome,
+} from "../../store/expense_slice";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { Button } from "bootstrap";
 import "./Expensetracker.scss";
-import uuid from 'react-uuid';
+import uuid from "react-uuid";
 import { useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 
 export default function ExpenseInput() {
   const [price, setprice] = useState("");
   const [expenseName, setexpenseName] = useState("");
   const [remSubmitBtn, setremSubmitBtn] = useState(false);
   const resReviewIncome = useSelector((store) => store.EXPENSE.income);
-
+  const resExpense = useSelector((store) => store.EXPENSE.expense);
 
   const dispatch = useDispatch();
   const SubmitExpense = (e) => {
     e.preventDefault();
     const id = uuid();
-    let type="Expense"
-    dispatch(addExpenseAction({id, price, expenseName, type  }));
-    setprice("");
-    setexpenseName("");
-    toast.success("New Expense added");
-    
+    let type = "Expense";
+    if (!isNaN(price)) {
+      dispatch(addExpenseAction({ id, price, expenseName, type }));
+      setprice("");
+      setexpenseName("");
+      toast.success("New Expense added");
+      if ((resExpense + Number.parseFloat(price)) > resReviewIncome) {
+        toast.error("Expense exceeded Income");
+      }
+    } else {
+      toast.error("Add valid price");
+    }
   };
   const SubmitIncome = (e) => {
     e.preventDefault();
     const id = uuid();
-    let type="Income"
+    let type = "Income";
 
-    let incomeVal = Number(resReviewIncome)+Number(price)
-    dispatch(addExpenseIncome(Number(incomeVal)));
-    dispatch(addIncomeAction({id, price, expenseName, type }));
-    setprice("");
-    setexpenseName("");
-    toast.success("New Income added");
-
+    let incomeVal = Number(resReviewIncome) + Number(price);
+    if (!isNaN(price)) {
+      dispatch(addExpenseIncome(Number(incomeVal)));
+      dispatch(addIncomeAction({ id, price, expenseName, type }));
+      setprice("");
+      setexpenseName("");
+      toast.success("New Income added");
+      if (resExpense > (resReviewIncome + Number.parseFloat(price))) {
+        toast.error("Expense exceeded Income");
+      }
+    } else {
+      toast.error("Add valid price");
+    }
   };
-  
+
   const clearInput = (e) => {
     setprice("");
     setexpenseName("");
   };
-
-
 
   return (
     <React.Fragment>
