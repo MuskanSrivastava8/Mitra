@@ -84,7 +84,7 @@ export default function ExpenseInput() {
             type="text"
             class="form-control"
             id="price"
-            placeholder="100"
+            placeholder="Ex. 100"
             name="price"
             value={price}
             onChange={(e) => setprice(e.target.value)}

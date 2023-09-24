@@ -21,7 +21,7 @@ useEffect(()=>{
     <div>
       <h4>Expense</h4>
       &#8377;{spendTotal}
-      <TfiShoppingCart style={{color: "red", marginLeft: "10%" }}/>
+      <TfiShoppingCart style={{color: "white", marginLeft: "10%" }}/>
     </div>
   );
 }

@@ -15,12 +15,11 @@ export default function Portfolio() {
             <span className="name_text">Muskan Srivastava</span>
             <span className="occupation">
               <span>
-                I'm Frontend Developer at TCS. I have 1.8 year of Experience.
-              </span>
+              I've been a front-end developer at TCS for more than two years.              </span>
               <br></br>
               <span>
                 {" "}
-                My skills are React, Javascript, SCSS, Redux and Typescript.
+                React, Javascript, SCSS, Redux, and typescript are among my skills.
               </span>
             </span>
             <div className="address">

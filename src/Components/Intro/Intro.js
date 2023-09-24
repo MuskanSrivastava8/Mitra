@@ -4,6 +4,8 @@ import "./Intro.scss";
 import { Navigate } from "react-router-dom";
 import footer from "../Footer/Footer";
 import Footer from "../Footer/Footer";
+import { BsBoxArrowUpRight } from "react-icons/bs";
+
 
 export default function Intro() {
   const [portfolioView, setportfolioView] = useState(false);
@@ -43,13 +45,13 @@ export default function Intro() {
           </p>
           <p>
             <button onClick={showKYS} className="btn-lg">
-              IMDb Clone
+              IMDb Clone <BsBoxArrowUpRight/>
             </button>{" "}
             <button onClick={showET} className="btn-lg">
-              Expense Tracker
+              Expense Tracker <BsBoxArrowUpRight/>
             </button>{" "}
             <button onClick={showPortfolio} className="btn-lg">
-              Portfolio
+              Portfolio <BsBoxArrowUpRight/>
             </button>
           </p>
         </div>

@@ -22,7 +22,7 @@
 .portfolio_details {
     height: 60%;
     width: 100%;
-    background-color: #e9e7eb;
+    background-color: aliceblue;
 }
 
 .name {
@@ -218,6 +218,7 @@ td {
 
 .points_details {
     color: #000000;
+    font-size: .8rem;
 }
 
 @media only screen and (max-width: 904px) {
@@ -257,11 +258,6 @@ td {
     .name_text {
         font-size: 1.8rem;
     }
-
-    .points_details {
-        font-size: 1.8rem;
-    }
-
     .center {
         font-size: 2rem;
     }
@@ -301,7 +297,6 @@ td {
         font-size: 1.8rem;
     }
     .points_details {
-        font-size: 1.2rem;
         color: black;
         font-weight: 700;
     }

@@ -42,7 +42,7 @@ export default function Summary() {
                     </div>
                     <div className="points_details">
                       <p>
-                        React, Javascript, Typescript, Redux, Sass, HTML, CSS
+                        React, Javascript, Typescript, Redux, Sass, HTML, CSS and Jest 
                       </p>
                     </div>
                   </div>
@@ -71,7 +71,7 @@ export default function Summary() {
                       <h5>Personal Project</h5>
                     </div>
                     <div className="points_details">
-                      <p>Mitra</p>
+                      <p>Expense tracker, IMDb clone, Portfolio</p>
                     </div>
                   </div>
                 </div>
@@ -205,7 +205,7 @@ export default function Summary() {
                 aria-labelledby="panelsStayOpen-headingOne"
               >
                 <div class="accordion-body">
-                  React, Javascript, Typescript, Redux, Sass, HTML, CSS
+                  React, Javascript, Typescript, Redux, Sass, HTML, CSS and Jest 
                 </div>
               </div>
             </div>
@@ -240,7 +240,7 @@ export default function Summary() {
                       <h5>Personal Project</h5>
                     </div>
                     <div className="points_details">
-                      <p>Mitra</p>
+                    <p>Expense tracker, IMDb clone, Portfolio</p>
                     </div>
                 </div>
               </div>

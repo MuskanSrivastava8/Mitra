@@ -8,7 +8,9 @@ export default function HistoryExpenseList() {
   const [showNoDataFound, setshowNoDataFound] = useState(true);
 
   const NoDataFound = () => {
-    return <div style={{color:"gray"}}> No history found</div>;
+    return <>
+      <div style={{color:"gray", fontSize:".8rem"}}> No history found, add new expense.</div>
+    </>
   };
   useEffect(() => {
     if (resItems.length > 0) {
