@@ -30,7 +30,7 @@ export default function ExpenseIncomeInput() {
       </div>
 
       <div >
-        <button className="Expense_Income_add_btn" onClick={submit} disabled={!incomeVal}>Edit Income</button>
+        <button className="Expense_Income_add_btn" onClick={submit} disabled={!incomeVal}>Save Income</button>
       </div>
       <ToastContainer />
     </React.Fragment>
