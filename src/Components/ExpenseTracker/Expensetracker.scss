@@ -20,7 +20,7 @@
     margin-bottom: 2%;
     background-color: #080808;
     height: 100%;
-    min-width: 40%;
+    min-width: 60%;
     border: 1px solid white;
     border-radius: 2rem;
     opacity: .8;
@@ -53,11 +53,11 @@
     align-items: center;
     // background: blue;
     padding: 4%;
-    width: 72%;
+    //width: 72%;
 }
 
 .Income_only {
-    background-color: rgb(224, 221, 12);
+   // background-color: rgb(224, 221, 12);
     margin: 2%;
     padding: 10%;
     border: 1px solid rgb(92, 83, 3);
@@ -79,14 +79,14 @@
 }
 
 .Expense_only {
-    background-color: red;
+    //background-color: red;
     margin: 2%;
     padding: 10.1%;
     border: 1px solid rgb(163, 44, 23);
     border-radius: 50%;
     cursor: pointer;
     font-size: .8rem;
-    box-shadow: 5px 5px 50px yellow;
+    box-shadow: 5px 5px 50px red;
 
 }
 
@@ -96,7 +96,7 @@
 }
 
 .Balance_only {
-    background-color: rgb(109, 233, 37);
+   // background-color: rgb(109, 233, 37);
     margin: 2%;
     padding: 10.1%;
     border: 1px solid rgb(33, 116, 13);
@@ -152,7 +152,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // align-items: center;
+    align-items: center;
 }
 
 .Expense_input_name {
@@ -182,7 +182,7 @@
 .Expense_delete_item_btn {
     border-radius: 50%;
     cursor: pointer;
-    background-color: #f60000;
+    background-color: #3887fb;
     color: black;
     margin-right: 4px;
 }
@@ -190,14 +190,14 @@
 .Expense_edit_item_btn {
     border-radius: 50%;
     cursor: pointer;
-    background-color: #f60000;
+    background-color: #3887fb;
     margin-right: 4px;
 }
 
 .Expense_expand_list_btn {
     border-radius: 50%;
     cursor: pointer;
-    background-color: #f60000;
+    background-color: #3887fb;
     margin-right: 4px;
 
 }
@@ -205,12 +205,13 @@
 .Expense_edit_name_item_btn {
     border-radius: 50%;
     cursor: pointer;
-    background-color: #f60000;
+    background-color: #3887fb;
     margin-right: 4px;
 }
 
 .Expense_input_box {
     padding: 2%;
+    margin: 4%
 
 }
 
@@ -242,6 +243,8 @@
     //ipad
     .Expense_content {
         padding: 15%;
+        min-width: 40%;
+
     }
 
     .Expense_container {

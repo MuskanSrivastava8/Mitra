@@ -15,7 +15,7 @@ export default function Menu() {
         </div>
         <div className="dropdownMenu_item">
           <Dropdown>
-            <Dropdown.Toggle variant="success" id="dropdown-basic">
+            <Dropdown.Toggle variant="primary" id="dropdown-basic">
               Menu
             </Dropdown.Toggle>
 
@@ -29,20 +29,29 @@ export default function Menu() {
         </div>
         <div className="menu_item_mobile_view">
 
-          <NavLink to={"/Intro"}>Home</NavLink>
+          
+          <button type="button" class="btn btn-primary"><NavLink to={"/Intro"}>Home</NavLink></button>
         </div>
         <div className="menu_item">
-          <NavLink to={"/Intro"}> Home</NavLink>
+        <button type="button" class="btn btn-primary"><NavLink to={"/Intro"}> Home</NavLink></button>
+          
         </div>
         <div className="menu_item">
-          <NavLink to={"/Portfolio"}>Portfolio</NavLink>
+        <button type="button" class="btn btn-primary"><NavLink to={"/Portfolio"}>Portfolio</NavLink></button>
+          
         </div>
         <div className="menu_item">
-          <NavLink to={"/Knowyourshow"}>IMDb clone</NavLink>
+        <button type="button" class="btn btn-primary"><NavLink to={"/Knowyourshow"}>IMDb clone</NavLink></button>
+          
         </div>
         <div className="menu_item">
-          <NavLink to={"/Expensetracker"}>Expense Tracker clone</NavLink>
+        <button type="button" class="btn btn-primary"><NavLink to={"/Expensetracker"}>Expense Tracker clone</NavLink></button>
+          
         </div>
+        {/* <div className="menu_item">
+        <button type="button" class="btn btn-primary"><NavLink to={"/Expensetracker"}>Expense Tracker clone</NavLink></button>
+          
+        </div> */}
       </div>
     </React.Fragment>
   );

@@ -30,7 +30,7 @@ export default function ExpenseInput() {
       setprice("");
       setexpenseName("");
       toast.success("New Expense added");
-      if ((resExpense + Number.parseFloat(price)) > resReviewIncome) {
+      if (resExpense + Number.parseFloat(price) > resReviewIncome) {
         toast.error("Expense exceeded Income");
       }
     } else {
@@ -49,7 +49,7 @@ export default function ExpenseInput() {
       setprice("");
       setexpenseName("");
       toast.success("New Income added");
-      if (resExpense > (resReviewIncome + Number.parseFloat(price))) {
+      if (resExpense > resReviewIncome + Number.parseFloat(price)) {
         toast.error("Expense exceeded Income");
       }
     } else {
@@ -92,6 +92,32 @@ export default function ExpenseInput() {
         </div>
         <div className="Expense_input_box">
           <button
+            type="button"
+            class="btn btn-primary btn-sm"
+            style={{ margin: "2%" }}
+            onClick={SubmitExpense}
+            disabled={!price || !expenseName}
+          >
+            Add Expense
+          </button>
+          <button
+            type="button"
+            style={{ margin: "2%" }}
+            class="btn btn-primary btn-sm"
+            onClick={SubmitIncome}
+            disabled={!price || !expenseName}
+          >
+            Add Income
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary btn-sm"
+            style={{ margin: "2%" }}
+            onClick={clearInput}
+          >
+            Clear
+          </button>
+          {/* <button
             className="Expense_input_btn"
             onClick={SubmitExpense}
             disabled={!price || !expenseName}
@@ -107,7 +133,7 @@ export default function ExpenseInput() {
           </button>
           <button className="Expense_input_btn" onClick={clearInput}>
             Clear
-          </button>
+          </button> */}
         </div>
       </div>
     </React.Fragment>

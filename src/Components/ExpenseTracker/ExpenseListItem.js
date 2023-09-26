@@ -116,7 +116,7 @@ export default function ExpenseListItem({ item }) {
                     className="Expense_edit_name_item_btn"
                     onClick={saveItemName}
                   >
-                    <AiOutlineCheck />
+                    <AiOutlineCheck style={{color:"white"}}/>
                   </button>
                 ) : null}
                 {showDeleteEditIcon ? (
@@ -147,7 +147,7 @@ export default function ExpenseListItem({ item }) {
                     className="Expense_edit_name_item_btn"
                     onClick={saveItemPrice}
                   >
-                    <AiOutlineCheck />
+                    <AiOutlineCheck style={{color:"white"}}/>
                   </button>
                 ) : null}
                 {showDeleteEditIconPrice ? (
