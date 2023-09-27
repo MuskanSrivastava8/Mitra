@@ -65,7 +65,7 @@ export default function ExpenseInput() {
   return (
     <React.Fragment>
       <div className="Expense_input_container">
-        <div class="form-group">
+        <div class="form-group" className="Form_style">
           <label for="formGroupExampleInput">Item</label>
           <input
             type="text"
@@ -78,7 +78,7 @@ export default function ExpenseInput() {
           />
         </div>
 
-        <div class="form-group">
+        <div class="form-group" className="Form_style">
           <label for="formGroupExampleInput">Price</label>
           <input
             type="text"
@@ -112,8 +112,9 @@ export default function ExpenseInput() {
           <button
             type="button"
             class="btn btn-primary btn-sm"
-            style={{ margin: "2%" }}
+            style={{ margin: "2%"  , padding:"7%" }}
             onClick={clearInput}
+            disabled={!price || !expenseName}
           >
             Clear
           </button>
