@@ -16,14 +16,9 @@ export default function Summary() {
   };
   return (
     <React.Fragment>
-      <Button
-        variant="contained"
-        size="small"
-        color="success"
-        onClick={toggleView}
-      >
+      <button type="button" class="btn btn-primary" onClick={toggleView}>
         {showCordianView ? "List View" : "Card View"}
-      </Button>
+      </button>
       {showCordianView ? (
         <div className="summary_container">
           <div className="row_1">
@@ -42,7 +37,8 @@ export default function Summary() {
                     </div>
                     <div className="points_details">
                       <p>
-                        React, Javascript, Typescript, Redux, Sass, HTML, CSS and Jest 
+                        React, Javascript, Typescript, Redux, Sass, HTML, CSS
+                        and Jest
                       </p>
                     </div>
                   </div>
@@ -205,7 +201,7 @@ export default function Summary() {
                 aria-labelledby="panelsStayOpen-headingOne"
               >
                 <div class="accordion-body">
-                  React, Javascript, Typescript, Redux, Sass, HTML, CSS and Jest 
+                  React, Javascript, Typescript, Redux, Sass, HTML, CSS and Jest
                 </div>
               </div>
             </div>
@@ -228,20 +224,20 @@ export default function Summary() {
                 aria-labelledby="panelsStayOpen-headingTwo"
               >
                 <div class="accordion-body">
-                <div className="points_heading">
-                      <h5>Project Experience (TCS)</h5>
-                    </div>
-                    <div className="points_details">
-                      <p>Hubble Connect : React Developer</p>
-                      <p>Medline : React Developer</p>
-                      <p>E2open : Application Developer</p>
-                    </div>
-                    <div className="points_heading">
-                      <h5>Personal Project</h5>
-                    </div>
-                    <div className="points_details">
+                  <div className="points_heading">
+                    <h5>Project Experience (TCS)</h5>
+                  </div>
+                  <div className="points_details">
+                    <p>Hubble Connect : React Developer</p>
+                    <p>Medline : React Developer</p>
+                    <p>E2open : Application Developer</p>
+                  </div>
+                  <div className="points_heading">
+                    <h5>Personal Project</h5>
+                  </div>
+                  <div className="points_details">
                     <p>Expense tracker, IMDb clone, Portfolio</p>
-                    </div>
+                  </div>
                 </div>
               </div>
             </div>

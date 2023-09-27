@@ -47,12 +47,12 @@
 
 .intro_content_box button {
     color: white;
-    background-color: red;
+    //background-color: red;
     border: 0px;
     font-size: 1.2rem;
     border-radius: 11px;
     padding: 1%;
-    margin : 1%
+    margin: 1%
 }
 
 .Intro_footer {
@@ -130,6 +130,10 @@
     .greeting_text {
         font-weight: 600;
         font-size: 1.2rem;
+    }
+
+    .intro_content_box button {
+        padding: 2%;
     }
 
 }

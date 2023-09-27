@@ -44,7 +44,10 @@ export default function Intro() {
             </div>
           </p>
           <p>
-            <button onClick={showKYS} className="btn-lg">
+          <button type="button" class="btn btn-primary" onClick={showKYS}>IMDb Clone <BsBoxArrowUpRight/></button>
+          <button type="button" class="btn btn-primary" onClick={showET}>Expense Tracker <BsBoxArrowUpRight/></button>
+          <button type="button" class="btn btn-primary" onClick={showPortfolio}>Portfolio <BsBoxArrowUpRight/></button>
+            {/* <button onClick={showKYS} className="btn-lg">
               IMDb Clone <BsBoxArrowUpRight/>
             </button>{" "}
             <button onClick={showET} className="btn-lg">
@@ -52,7 +55,7 @@ export default function Intro() {
             </button>{" "}
             <button onClick={showPortfolio} className="btn-lg">
               Portfolio <BsBoxArrowUpRight/>
-            </button>
+            </button> */}
           </p>
         </div>
         <div className="Intro_footer">

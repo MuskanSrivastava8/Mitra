@@ -5,7 +5,6 @@ import { TbCircleLetterM } from "react-icons/tb";
 import Dropdown from "react-bootstrap/Dropdown";
 import { AiOutlineHome } from "react-icons/ai";
 
-
 export default function Menu() {
   return (
     <React.Fragment>
@@ -20,33 +19,53 @@ export default function Menu() {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item ><NavLink className="dropdownMenuItem" to={"/Portfolio"}>Portfolio</NavLink></Dropdown.Item>
-              <Dropdown.Item ><NavLink className="dropdownMenuItem" to={"/Intro"}>Intro</NavLink></Dropdown.Item>
-              <Dropdown.Item><NavLink className="dropdownMenuItem" to={"/Knowyourshow"}>IMDb clone</NavLink></Dropdown.Item>
-              <Dropdown.Item><NavLink className="dropdownMenuItem" to={"/Expensetracker"}>Expense Tracker clone</NavLink></Dropdown.Item>
+              <Dropdown.Item>
+                <NavLink className="dropdownMenuItem" to={"/Intro"}>
+                  Home
+                </NavLink>
+              </Dropdown.Item>
+              <Dropdown.Item>
+                <NavLink className="dropdownMenuItem" to={"/Knowyourshow"}>
+                  IMDb clone
+                </NavLink>
+              </Dropdown.Item>
+              <Dropdown.Item>
+                <NavLink className="dropdownMenuItem" to={"/Expensetracker"}>
+                  Expense Tracker clone
+                </NavLink>
+              </Dropdown.Item>
+              <Dropdown.Item>
+                <NavLink className="dropdownMenuItem" to={"/Portfolio"}>
+                  About Us
+                </NavLink>
+              </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </div>
         <div className="menu_item_mobile_view">
-
-          
-          <button type="button" class="btn btn-primary"><NavLink to={"/Intro"}>Home</NavLink></button>
+          <button type="button" class="btn btn-primary">
+            <NavLink to={"/Intro"}>Home</NavLink>
+          </button>
         </div>
         <div className="menu_item">
-        <button type="button" class="btn btn-primary"><NavLink to={"/Intro"}> Home</NavLink></button>
-          
+          <button type="button" class="btn btn-primary">
+            <NavLink to={"/Intro"}> Home</NavLink>
+          </button>
         </div>
         <div className="menu_item">
-        <button type="button" class="btn btn-primary"><NavLink to={"/Portfolio"}>Portfolio</NavLink></button>
-          
+          <button type="button" class="btn btn-primary">
+            <NavLink to={"/Knowyourshow"}>IMDb clone</NavLink>
+          </button>
         </div>
         <div className="menu_item">
-        <button type="button" class="btn btn-primary"><NavLink to={"/Knowyourshow"}>IMDb clone</NavLink></button>
-          
+          <button type="button" class="btn btn-primary">
+            <NavLink to={"/Expensetracker"}>Expense Tracker clone</NavLink>
+          </button>
         </div>
         <div className="menu_item">
-        <button type="button" class="btn btn-primary"><NavLink to={"/Expensetracker"}>Expense Tracker clone</NavLink></button>
-          
+          <button type="button" class="btn btn-primary">
+            <NavLink to={"/Portfolio"}>About Us</NavLink>
+          </button>
         </div>
         {/* <div className="menu_item">
         <button type="button" class="btn btn-primary"><NavLink to={"/Expensetracker"}>Expense Tracker clone</NavLink></button>
