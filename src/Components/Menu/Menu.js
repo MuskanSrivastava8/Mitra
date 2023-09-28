@@ -36,7 +36,7 @@ export default function Menu() {
               </Dropdown.Item>
               <Dropdown.Item>
                 <NavLink className="dropdownMenuItem" to={"/Portfolio"}>
-                  About Us
+                  About Me
                 </NavLink>
               </Dropdown.Item>
             </Dropdown.Menu>
@@ -48,29 +48,70 @@ export default function Menu() {
           </button>
         </div>
         <div className="menu_item">
-          <button type="button" class="btn btn-primary">
-            <NavLink to={"/Intro"}> Home</NavLink>
+          <button
+            type="button"
+            class="btn btn-primary"
+            style={{ padding: "2px" }}
+          >
+            <NavLink
+              to={"/Intro"}
+              style={({ isActive }) => ({
+                color: isActive ? "Red" : "White",
+              })}
+            >
+              {" "}
+              Home
+            </NavLink>
           </button>
         </div>
         <div className="menu_item">
-          <button type="button" class="btn btn-primary">
-            <NavLink to={"/Knowyourshow"}>IMDb clone</NavLink>
+          <button
+            type="button"
+            class="btn btn-primary"
+            style={{ padding: "2px" }}
+          >
+            <NavLink
+              to={"/Knowyourshow"}
+              style={({ isActive }) => ({
+                color: isActive ? "Red" : "White",
+              })}
+            >
+              IMDb clone
+            </NavLink>
           </button>
         </div>
         <div className="menu_item">
-          <button type="button" class="btn btn-primary">
-            <NavLink to={"/Expensetracker"}>Expense Tracker clone</NavLink>
+          <button
+            type="button"
+            class="btn btn-primary"
+            style={{ padding: "2px" }}
+          >
+            <NavLink
+              to={"/Expensetracker"}
+              style={({ isActive }) => ({
+                color: isActive ? "Red" : "White",
+              })}
+            >
+              Expense Tracker clone
+            </NavLink>
           </button>
         </div>
         <div className="menu_item">
-          <button type="button" class="btn btn-primary">
-            <NavLink to={"/Portfolio"}>About Us</NavLink>
+          <button
+            type="button"
+            class="btn btn-primary"
+            style={{ padding: "2px" }}
+          >
+            <NavLink
+              to={"/Portfolio"}
+              style={({ isActive }) => ({
+                color: isActive ? "Red" : "White",
+              })}
+            >
+              About Me
+            </NavLink>
           </button>
         </div>
-        {/* <div className="menu_item">
-        <button type="button" class="btn btn-primary"><NavLink to={"/Expensetracker"}>Expense Tracker clone</NavLink></button>
-          
-        </div> */}
       </div>
     </React.Fragment>
   );
