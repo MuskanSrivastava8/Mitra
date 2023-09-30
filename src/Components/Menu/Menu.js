@@ -1,14 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Menu.scss";
 import { TbCircleLetterM } from "react-icons/tb";
+import { BsSun } from "react-icons/bs";
 import Dropdown from "react-bootstrap/Dropdown";
-import { AiOutlineHome } from "react-icons/ai";
+import { MdDarkMode } from "react-icons/md";
+import { useDispatch } from "react-redux";
+import { dark_mode_Action, light_mode_Action } from "../../store/theme_slice";
+import { useSelector } from "react-redux";
+
 
 export default function Menu() {
+  const dispatch = useDispatch();
+  var darkModeRes = useSelector((store) => store.THEME.dark_mode);
+  var lightkModeRes = useSelector((store) => store.THEME.light_mode);
+
+  const [darkMode, setdarkMode] = useState(true);
+
+  const changeTheme = () => {
+    setdarkMode(!darkMode);
+    if (darkMode) {
+      dispatch(dark_mode_Action(true));
+      dispatch(light_mode_Action(false));
+    } else {
+      dispatch(light_mode_Action(true));
+      dispatch(dark_mode_Action(false));
+    }
+  };
   return (
     <React.Fragment>
-      <div className="menu_container">
+      <div className={darkModeRes ?"menu_container_dark" : "menu_container_light"}>
         <div className="menu_logo">
           <TbCircleLetterM className="letter_M" />
         </div>
@@ -134,6 +155,16 @@ export default function Menu() {
             >
               About Me
             </NavLink>
+          </button>
+        </div>
+        <div className="theme_icon">
+          <button
+            type="button"
+            class="btn btn-primary"
+            style={{ padding: "2px" }}
+            onClick={changeTheme}
+          >
+            {darkMode ? <MdDarkMode /> : <BsSun/>}
           </button>
         </div>
       </div>
