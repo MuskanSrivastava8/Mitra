@@ -20,22 +20,46 @@ export default function Menu() {
 
             <Dropdown.Menu>
               <Dropdown.Item>
-                <NavLink className="dropdownMenuItem" to={"/Intro"}>
+                <NavLink
+                  className="dropdownMenuItem"
+                  to={"/Intro"}
+                  style={({ isActive }) => ({
+                    color: isActive ? "Red" : "Gray",
+                  })}
+                >
                   Home
                 </NavLink>
               </Dropdown.Item>
               <Dropdown.Item>
-                <NavLink className="dropdownMenuItem" to={"/Knowyourshow"}>
+                <NavLink
+                  className="dropdownMenuItem"
+                  to={"/Knowyourshow"}
+                  style={({ isActive }) => ({
+                    color: isActive ? "Red" : "Gray",
+                  })}
+                >
                   IMDb clone
                 </NavLink>
               </Dropdown.Item>
               <Dropdown.Item>
-                <NavLink className="dropdownMenuItem" to={"/Expensetracker"}>
+                <NavLink
+                  className="dropdownMenuItem"
+                  to={"/Expensetracker"}
+                  style={({ isActive }) => ({
+                    color: isActive ? "Red" : "Gray",
+                  })}
+                >
                   Expense Tracker clone
                 </NavLink>
               </Dropdown.Item>
               <Dropdown.Item>
-                <NavLink className="dropdownMenuItem" to={"/Portfolio"}>
+                <NavLink
+                  className="dropdownMenuItem"
+                  to={"/Portfolio"}
+                  style={({ isActive }) => ({
+                    color: isActive ? "Red" : "Gray",
+                  })}
+                >
                   About Me
                 </NavLink>
               </Dropdown.Item>

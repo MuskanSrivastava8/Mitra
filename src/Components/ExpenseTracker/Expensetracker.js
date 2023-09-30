@@ -6,12 +6,8 @@ import ExpenseInput from "./ExpenseInput";
 import Footer from "../Footer/Footer";
 import ExpenseIncomeDetails from "./ExpenseIncomeDetails";
 import ExpenseSum from "./ExpenseSum";
-import ExpenseBalance from "./ExpenseBalance";
 import BalanceSum from "./BalanceSum";
-import { useSelector } from "react-redux";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useEffect } from "react";
 
 export default function Expensetracker() {
   return (

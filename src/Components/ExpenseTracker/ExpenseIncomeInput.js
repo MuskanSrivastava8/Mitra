@@ -12,7 +12,7 @@ export default function ExpenseIncomeInput() {
   const dispatch = useDispatch();
   const submit = () => {
     dispatch(addExpenseIncome(Number(incomeVal)));
-    toast.success(`New income is ${incomeVal}`);
+    toast.success(`New income is ${incomeVal}`,{autoClose: 1500});
   };
   const resIncome = useSelector((store) => store.EXPENSE.income);
   return (

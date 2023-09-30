@@ -63,7 +63,7 @@ export default function ExpenseListItem({ item }) {
       dispatch(saveEditExpenseIncome(query));
     }
     setshowInputBox(false);
-    toast.success("Item updated");
+    toast.success("Item updated",{autoClose: 1500});
   };
   const deleteEditRespPrice = () => {
     setshowCheckIconPrice(false);
@@ -80,7 +80,7 @@ export default function ExpenseListItem({ item }) {
     }
 
     setshowInputBoxPrice(false);
-    toast.success("Price updated");
+    toast.success("Price updated",{autoClose: 1500});
   };
 
   return (

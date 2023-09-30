@@ -29,12 +29,12 @@ export default function ExpenseInput() {
       dispatch(addExpenseAction({ id, price, expenseName, type }));
       setprice("");
       setexpenseName("");
-      toast.success("New Expense added");
+      toast.success("New Expense added",{autoClose: 1500});
       if (resExpense + Number.parseFloat(price) > resReviewIncome) {
-        toast.error("Expense exceeded Income");
+        toast.error("Expense exceeded Income",{autoClose: 1500});
       }
     } else {
-      toast.error("Add valid price");
+      toast.error("Add valid price",{autoClose: 1500});
     }
   };
   const SubmitIncome = (e) => {
@@ -48,12 +48,12 @@ export default function ExpenseInput() {
       dispatch(addIncomeAction({ id, price, expenseName, type }));
       setprice("");
       setexpenseName("");
-      toast.success("New Income added");
+      toast.success("New Income added",{autoClose: 1500});
       if (resExpense > resReviewIncome + Number.parseFloat(price)) {
-        toast.error("Expense exceeded Income");
+        toast.error("Expense exceeded Income",{autoClose: 1500});
       }
     } else {
-      toast.error("Add valid price");
+      toast.error("Add valid price",{autoClose: 1500});
     }
   };
 

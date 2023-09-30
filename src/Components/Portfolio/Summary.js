@@ -6,7 +6,8 @@ import { BsFillMortarboardFill } from "react-icons/bs";
 import { BsCodeSlash } from "react-icons/bs";
 import { BsTrophy } from "react-icons/bs";
 import { BsPencilSquare } from "react-icons/bs";
-import { Button } from "@material-ui/core";
+import { FaList } from "react-icons/fa";
+import { BsFillCreditCard2FrontFill } from "react-icons/bs";
 
 export default function Summary() {
   const [showCordianView, setshowCordianView] = useState(true);
@@ -16,9 +17,12 @@ export default function Summary() {
   };
   return (
     <React.Fragment>
-      <button type="button" class="btn btn-primary" onClick={toggleView}>
-        {showCordianView ? "List View" : "Card View"}
-      </button>
+      <div className="Sticky_btn">
+        <button type="button" class="btn btn-primary" onClick={toggleView}>
+          {showCordianView ? <FaList/>:<BsFillCreditCard2FrontFill/>}
+        </button>
+      </div>
+
       {showCordianView ? (
         <div className="summary_container">
           <div className="row_1">

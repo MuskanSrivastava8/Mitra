@@ -58,6 +58,11 @@
     display: flex;
     margin-top: 2%;
 }
+.Sticky_btn{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 25%;
+}
 
 .menu_item_contact {
     margin: 0.8%;
