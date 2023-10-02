@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Menu.scss";
 import { TbCircleLetterM } from "react-icons/tb";
 import { BsSun } from "react-icons/bs";
 import Dropdown from "react-bootstrap/Dropdown";
-import { MdDarkMode } from "react-icons/md";
+import { BsMoonStars } from "react-icons/bs";
 import { useDispatch } from "react-redux";
 import { dark_mode_Action, light_mode_Action } from "../../store/theme_slice";
 import { useSelector } from "react-redux";
@@ -17,7 +17,10 @@ export default function Menu() {
   const [darkMode, setdarkMode] = useState(true);
 
   const changeTheme = () => {
-    setdarkMode(!darkMode);
+    setdarkMode(!darkMode); 
+  };
+  console.log("darkMode",darkMode)
+  useEffect(()=>{
     if (darkMode) {
       dispatch(dark_mode_Action(true));
       dispatch(light_mode_Action(false));
@@ -25,7 +28,7 @@ export default function Menu() {
       dispatch(light_mode_Action(true));
       dispatch(dark_mode_Action(false));
     }
-  };
+  },[darkMode])
   return (
     <React.Fragment>
       <div className={darkModeRes ?"menu_container_dark" : "menu_container_light"}>
@@ -160,13 +163,13 @@ export default function Menu() {
           <button
             type="button"
             class="btn btn-primary"
-            style={{ padding: "2px" }}
+            className={darkModeRes ?"theme_icon_light" : "theme_icon_dark"}
             onClick={changeTheme}
           >
-            {darkMode ? <MdDarkMode /> : <BsSun/>}
+        {darkMode ? <BsSun style={{color :"white", size:"10"}} />: <BsMoonStars /> }
           </button>
         </div>
       </div>
-    </React.Fragment>
+    </React.Fragment> 
   );
 }

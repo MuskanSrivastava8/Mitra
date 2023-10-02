@@ -13,28 +13,24 @@ import { useSelector } from "react-redux";
 
 export default function Expensetracker() {
     var darkModeRes = useSelector((store) => store.THEME.dark_mode);
-
   return (
     <React.Fragment>
       <div className="Expense_container">
-        <div className="Expense_content">
+        <div className={darkModeRes ?"Expense_content_dark" : "Expense_content_light"}>
           <div className="Income_Expense">
-            <div className="Income_only">
+            <div className={darkModeRes ?"Income_only_dark" : "Income_only_light"}>
               <ExpenseIncomeDetails />
             </div>
-            <div className="Expense_only">
+            <div className={darkModeRes ?"Expense_only_dark" : "Expense_only_light"}>
               <ExpenseSum />
             </div>
-            <div className="Balance_only">
+            <div className={darkModeRes ?"Balance_only_dark" : "Balance_only_light"}>
               <BalanceSum />
             </div>
           </div>
           <div className="Expense_Income_input">
             <ExpenseIncomeInput />
           </div>
-          {/* <div className="Expense_Balance">
-            <ExpenseBalance />
-          </div> */}
           <div className="Expense_Input">
             <ExpenseInput />
           </div>

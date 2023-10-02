@@ -5,13 +5,17 @@ import { GrLinkedinOption } from "react-icons/gr";
 import { GrMailOption } from "react-icons/gr";
 import { FiPhoneCall } from "react-icons/fi";
 import Footer from "../Footer/Footer";
+import { useSelector } from "react-redux";
+
 
 export default function Portfolio() {
+  var darkModeRes = useSelector((store) => store.THEME.dark_mode);
+
   return (
     <React.Fragment>
       <div className="portfolio_container">
         <div className="intro">
-          <div className="name">
+          <div className={darkModeRes ?"name_dark" : "name_light"}>
             <span className="name_text">Muskan Srivastava</span>
             <span className="occupation">
               <span>
@@ -49,11 +53,11 @@ export default function Portfolio() {
             </div>
           </div>
         </div>
-        <div className="portfolio_details">
+        <div className={darkModeRes ?"portfolio_details_dark" : "portfolio_details_light"}>
           <Summary />
         </div>
       </div>
-      <div className="Portfolio_footer">
+      <div className={darkModeRes ?"Portfolio_footer_dark" : "Portfolio_footer_light"}>
         <Footer/>
         </div>
     </React.Fragment>

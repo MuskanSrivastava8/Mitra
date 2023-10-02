@@ -6,11 +6,17 @@ import "./Expensetracker.scss";
 export default function HistoryExpenseList() {
   const resItems = useSelector((store) => store.EXPENSE.expenseList);
   const [showNoDataFound, setshowNoDataFound] = useState(true);
+  var darkModeRes = useSelector((store) => store.THEME.dark_mode);
 
   const NoDataFound = () => {
-    return <>
-      <div style={{color:"gray", fontSize:".8rem"}}> No history found, add new expense.</div>
-    </>
+    return (
+      <>
+        <div style={{ color: "gray", fontSize: ".8rem" }}>
+          {" "}
+          No history found, add new expense.
+        </div>
+      </>
+    );
   };
   useEffect(() => {
     if (resItems.length > 0) {
@@ -22,7 +28,9 @@ export default function HistoryExpenseList() {
   return (
     <div className="Exp_History_box">
       <div>
-        <h4>Expense History</h4>
+        <h4 style={{ color: darkModeRes ? "white" : "black" }}>
+          Expense History
+        </h4>
       </div>
       {showNoDataFound ? (
         <NoDataFound />

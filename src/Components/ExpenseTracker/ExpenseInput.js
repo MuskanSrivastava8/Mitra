@@ -19,6 +19,7 @@ export default function ExpenseInput() {
   const [remSubmitBtn, setremSubmitBtn] = useState(false);
   const resReviewIncome = useSelector((store) => store.EXPENSE.income);
   const resExpense = useSelector((store) => store.EXPENSE.expense);
+  var darkModeRes = useSelector((store) => store.THEME.dark_mode);
 
   const dispatch = useDispatch();
   const SubmitExpense = (e) => {
@@ -65,7 +66,7 @@ export default function ExpenseInput() {
   return (
     <React.Fragment>
       <div className="Expense_input_container">
-        <div class="form-group" className="Form_style">
+        <div class="form-group"className={darkModeRes ?"Form_style_dark" : "Form_style_light"}>
           <label for="formGroupExampleInput">Item</label>
           <input
             type="text"
@@ -78,7 +79,7 @@ export default function ExpenseInput() {
           />
         </div>
 
-        <div class="form-group" className="Form_style">
+        <div class="form-group" className={darkModeRes ?"Form_style_dark" : "Form_style_light"}>
           <label for="formGroupExampleInput">Price</label>
           <input
             type="text"

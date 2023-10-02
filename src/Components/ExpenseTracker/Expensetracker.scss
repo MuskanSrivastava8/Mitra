@@ -10,26 +10,14 @@
     background-size: cover;
     // width: 100%;
 }
-
-.Expense_content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    background-color: #080808;
-    height: 100%;
-    min-width: 80%;
-    border: 1px solid white;
-    border-radius: 2rem;
-    opacity: .8;
-    box-shadow: 10px 20px 80px 10px rgb(236, 77, 215);
+.Form_style_dark{
+    width: 60%;
+}
+.Form_style_light{
+    color: rgb(0, 0, 0);
+    width: 60%;
 }
 
-.Expense_content:hover {
-    box-shadow: 10px 10px 50px blueviolet
-}
 // theme based Styling 
 .ExpenseTracker_footer_dark {
     bottom: 0;
@@ -59,6 +47,106 @@
     padding-top: .4%;
     padding-bottom: .4%;
 }
+.Expense_content_dark {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: #080808;
+    height: 100%;
+    min-width: 80%;
+    border: 1px solid white;
+    border-radius: 2rem;
+    opacity: .8;
+    box-shadow: 10px 20px 80px 10px rgb(236, 77, 215);
+}
+
+.Expense_content_dark:hover {
+    box-shadow: 10px 10px 50px blueviolet
+}
+.Expense_content_light {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: #b1a9a9;
+    height: 100%;
+    min-width: 80%;
+    border: 1px solid white;
+    border-radius: 2rem;
+    opacity: .8;
+    box-shadow: 10px 20px 80px 10px rgb(236, 77, 215);
+}
+
+.Expense_content_light:hover {
+    box-shadow: 10px 10px 50px blueviolet
+}
+.Income_only_dark {
+    // background-color: rgb(224, 221, 12);
+     margin: 2%;
+     padding: 10%;
+     border: 1px solid rgb(92, 83, 3);
+     border-radius:50%;
+     cursor: pointer;
+     font-size: .8rem;
+     box-shadow: 5px 5px 50px yellow;
+ 
+ }
+ .Income_only_light {
+     background-color:#494e53;
+     margin: 2%;
+     padding: 10%;
+     border: 1px solid rgb(92, 83, 3);
+     border-radius:50%;
+     cursor: pointer;
+     font-size: .8rem;
+     box-shadow: 5px 5px 50px yellow;
+ 
+ }
+ .Expense_only_dark {
+    //background-color: red;
+    margin: 2%;
+    padding: 10.1%;
+    border: 1px solid rgb(163, 44, 23);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: .8rem;
+    box-shadow: 5px 5px 50px red;
+
+}
+.Expense_only_light {
+    background-color: #494e53;
+    margin: 2%;
+    padding: 10.1%;
+    border: 1px solid rgb(163, 44, 23);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: .8rem;
+    box-shadow: 5px 5px 50px red;
+}
+.Balance_only_dark {
+    margin: 2%;
+    padding: 10.1%;
+    border: 1px solid rgb(33, 116, 13);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: .8rem;
+    box-shadow: 5px 5px 50px rgb(16, 206, 89);
+}
+.Balance_only_light {
+    background-color: #494e53;
+    margin: 2%;
+    padding: 10.1%;
+    border: 1px solid rgb(33, 116, 13);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: .8rem;
+    box-shadow: 5px 5px 50px rgb(16, 206, 89);
+}
 // theme based Styling 
 .Income_Expense {
     display: flex;
@@ -70,19 +158,12 @@
     //width: 72%;
 }
 
-.Income_only {
-   // background-color: rgb(224, 221, 12);
-    margin: 2%;
-    padding: 10%;
-    border: 1px solid rgb(92, 83, 3);
-    border-radius:50%;
-    cursor: pointer;
-    font-size: .8rem;
-    box-shadow: 5px 5px 50px yellow;
 
+.Income_only_dark:hover {
+    border: 1px solid rgb(186, 204, 23);
+    //box-shadow: 10px 10px 50px red;
 }
-
-.Income_only:hover {
+.Income_only_light:hover {
     border: 1px solid rgb(186, 204, 23);
     //box-shadow: 10px 10px 50px red;
 }
@@ -92,38 +173,20 @@
     box-shadow: 10px 10px 50px red;
 }
 
-.Expense_only {
-    //background-color: red;
-    margin: 2%;
-    padding: 10.1%;
-    border: 1px solid rgb(163, 44, 23);
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: .8rem;
-    box-shadow: 5px 5px 50px red;
 
-}
 
-.Expense_only:hover {
+.Expense_only_dark:hover {
     border: 1px solid rgb(199, 107, 84);
-    //box-shadow: 10px 10px 50px blue;
+}
+.Expense_only_light:hover {
+    border: 1px solid rgb(199, 107, 84);
 }
 
-.Balance_only {
-   // background-color: rgb(109, 233, 37);
-    margin: 2%;
-    padding: 10.1%;
-    border: 1px solid rgb(33, 116, 13);
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: .8rem;
-    box-shadow: 5px 5px 50px rgb(16, 206, 89);
-
-}
-
-.Balance_only:hover {
+.Balance_only_dark:hover {
     border: 1px solid rgb(186, 204, 23);
-    //box-shadow: 10px 10px 50px rgb(207, 190, 34);
+}
+.Balance_only_light:hover {
+    border: 1px solid rgb(186, 204, 23);
 }
 
 .Expense_Income_input {
@@ -169,9 +232,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.Form_style{
-    width: 60%;
 }
 
 .Expense_input_name {
@@ -266,10 +326,13 @@
 @media only screen and (max-width: 904px) {
 
     //ipad
-    .Expense_content {
+    .Expense_content_dark {
         padding: 15%;
         min-width: 40%;
-
+    }
+    .Expense_content_light {
+        padding: 15%;
+        min-width: 40%;
     }
 
     .Expense_container {
@@ -294,7 +357,10 @@
 @media only screen and (max-width: 414px) {
     
     //Iphone XR
-    .Expense_content {
+    .Expense_content_dark {
+        padding: 14%;
+    }
+    .Expense_content_light {
         padding: 14%;
     }
 
@@ -317,7 +383,10 @@
     .Income_Expense {
         width: 62%;
     }
-    .Form_style{
+    .Form_style_dark{
+        width: 88%;
+    }
+    .Form_style_light{
         width: 88%;
     }
     .Expense_input_box {
