@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
-
+import { useSelector } from "react-redux";
 
 export default function Search({ onClick }) {
+  var darkModeRes = useSelector((store) => store.THEME.dark_mode);
   const [searchInput, setsearchInput] = useState("");
   const search_now = (e) => {
     if (e.key === "Enter" && e.target.value.trim() !== "") {
@@ -21,7 +22,7 @@ export default function Search({ onClick }) {
       <div className="search_container">
         <input
           onKeyUp={search_now}
-          className="search_box"
+          className={darkModeRes ?"search_box_dark" : "search_box_light"}
           type="text"
           onChange={handleChange}
           value={searchInput}

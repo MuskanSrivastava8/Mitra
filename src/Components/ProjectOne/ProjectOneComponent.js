@@ -9,11 +9,14 @@ import Tv_Icon from "./Image/Tv_Icon.png";
 import RecommendList from "./ProjectOneComponent/RecommendList";
 import Search from "./ProjectOneComponent/Search";
 import Footer from "../Footer/Footer";
+import { useSelector } from "react-redux";
+
 
 const ProjectOneComponent = () => {
   const [currTVShow, setcurrTVShow] = useState();
   const [recommendationList, setRecommendationList] = useState([]);
   const [show, setshow] = useState(false);
+  var darkModeRes = useSelector((store) => store.THEME.dark_mode);
 
   useEffect(() => {
     fetchPopulars();
@@ -105,7 +108,7 @@ const ProjectOneComponent = () => {
             </div>
           </div>
         </div>
-        <div className="Knowyourshow_footer">
+        <div className={darkModeRes ?"Knowyourshow_footer_dark" : "Knowyourshow_footer_light"}>
         <Footer/>
         </div>
       </div>

@@ -13,7 +13,6 @@ import { useSelector } from "react-redux";
 export default function Menu() {
   const dispatch = useDispatch();
   var darkModeRes = useSelector((store) => store.THEME.dark_mode);
-  var lightkModeRes = useSelector((store) => store.THEME.light_mode);
 
   const [darkMode, setdarkMode] = useState(true);
 

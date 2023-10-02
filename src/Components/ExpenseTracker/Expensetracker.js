@@ -8,8 +8,12 @@ import ExpenseIncomeDetails from "./ExpenseIncomeDetails";
 import ExpenseSum from "./ExpenseSum";
 import BalanceSum from "./BalanceSum";
 import "react-toastify/dist/ReactToastify.css";
+import { useSelector } from "react-redux";
+
 
 export default function Expensetracker() {
+    var darkModeRes = useSelector((store) => store.THEME.dark_mode);
+
   return (
     <React.Fragment>
       <div className="Expense_container">
@@ -39,7 +43,7 @@ export default function Expensetracker() {
           </div>
         </div>
       </div>
-      <div className="ExpenseTracker_footer">
+      <div className={darkModeRes ?"ExpenseTracker_footer_dark" : "ExpenseTracker_footer_light"}>
         <Footer />
       </div>
     </React.Fragment>

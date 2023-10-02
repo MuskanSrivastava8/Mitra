@@ -3,9 +3,12 @@ import "./TvShowDetails.scss";
 import Rating from "./Rating";
 import { countries } from "country-data";
 import { TiMediaRecord } from "react-icons/ti";
-import { BsFillPersonFill } from "react-icons/bs";
+import { useSelector } from "react-redux";
+
 
 export default function TvShowDetails({ tvShow }) {
+
+  var darkModeRes = useSelector((store) => store.THEME.dark_mode);
   const ratingRes = tvShow.vote_average / 2;
   const maxLenOverview = 250;
   const languageNames = new Intl.DisplayNames(["en"], {
@@ -18,7 +21,7 @@ export default function TvShowDetails({ tvShow }) {
     <React.Fragment>
       <div className="title">{tvShow.name}</div>
       <div className="details_container">
-        <div className="rating_container">
+        <div className={darkModeRes ?"rating_container_dark" : "rating_container_light"}>
           <div className="star_icon">
             <span className="star_icon_res">
               <Rating ratingData={ratingRes} />
@@ -29,7 +32,7 @@ export default function TvShowDetails({ tvShow }) {
             <span class="star_icon_popup">Rating</span>
           </div>
         </div>
-        <div className="points_container">
+        <div className={darkModeRes ?"points_container_dark" : "points_container_light"}>
           <div className="air_date">
             {tvShow.first_air_date.slice(0, 4)}{" "}
             <span class="air_date_text">On-Air year</span>

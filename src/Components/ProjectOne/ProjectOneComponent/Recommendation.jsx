@@ -1,7 +1,9 @@
 import React from "react";
 import { SMALL_IMG_COVER_BASE_URL } from "../config/UrlConstant";
+import { useSelector } from "react-redux";
 
 export default function Recommendation({ recommendationList, onClick_item }) {
+  var darkModeRes = useSelector((store) => store.THEME.dark_mode);
   const titleLen = 20;
   const itemSelected = () => {
     onClick_item(recommendationList);
@@ -15,7 +17,7 @@ export default function Recommendation({ recommendationList, onClick_item }) {
             alt="recommendationList.name"
           ></img>
         </div>
-        <div className="recommend_title_box">
+        <div className={darkModeRes ?"recommend_title_box_dark" : "recommend_title_box_light"}>
           <div className="title_text">
             {" "}
             {recommendationList.name.length > titleLen
