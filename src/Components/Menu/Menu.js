@@ -31,7 +31,7 @@ export default function Menu() {
     <React.Fragment>
       <div className={darkModeRes ?"menu_container_dark" : "menu_container_light"}>
         <div className="menu_logo">
-          <TbCircleLetterM className="letter_M" />
+          <TbCircleLetterM className={darkModeRes ?"letter_M_dark" : "letter_M_light"}/>
         </div>
         <div className="dropdownMenu_item">
           <Dropdown>

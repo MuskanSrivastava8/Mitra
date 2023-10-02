@@ -5,12 +5,15 @@ import { Navigate } from "react-router-dom";
 import footer from "../Footer/Footer";
 import Footer from "../Footer/Footer";
 import { BsBoxArrowUpRight } from "react-icons/bs";
+import { useSelector } from "react-redux";
+
 
 
 export default function Intro() {
   const [portfolioView, setportfolioView] = useState(false);
   const [KYSView, setKYSView] = useState(false);
   const [ETView, setETView] = useState(false);
+  var darkModeRes = useSelector((store) => store.THEME.dark_mode);
 
   const showKYS = () => {
     setKYSView(true);
@@ -28,7 +31,7 @@ export default function Intro() {
       {ETView ? <Navigate to="/Expensetracker" replace={true} /> : null}
 
       <div className="intro_container">
-        <div className="intro_content_box">
+        <div className={darkModeRes ?"intro_content_box_dark" : "intro_content_box_light"}>
           <p className="welcome_text">Welcome</p>
           <p className="greeting_text">
             Greetings, I'm
@@ -47,18 +50,9 @@ export default function Intro() {
           <button type="button" class="btn btn-primary" onClick={showKYS}>IMDb Clone <BsBoxArrowUpRight/></button>
           <button type="button" class="btn btn-primary" onClick={showET}>Expense Tracker <BsBoxArrowUpRight/></button>
           <button type="button" class="btn btn-primary" onClick={showPortfolio}>Portfolio <BsBoxArrowUpRight/></button>
-            {/* <button onClick={showKYS} className="btn-lg">
-              IMDb Clone <BsBoxArrowUpRight/>
-            </button>{" "}
-            <button onClick={showET} className="btn-lg">
-              Expense Tracker <BsBoxArrowUpRight/>
-            </button>{" "}
-            <button onClick={showPortfolio} className="btn-lg">
-              Portfolio <BsBoxArrowUpRight/>
-            </button> */}
           </p>
         </div>
-        <div className="Intro_footer">
+        <div className={darkModeRes ?"Intro_footer_dark" : "Intro_footer_light"}>
           <Footer />
         </div>
       </div>

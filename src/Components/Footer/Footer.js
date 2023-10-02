@@ -3,10 +3,12 @@ import "./footer.scss";
 import { GrLinkedinOption } from "react-icons/gr";
 import { AiOutlineMail } from "react-icons/ai";
 import { FiPhoneCall } from "react-icons/fi";
+import { useSelector } from "react-redux";
 
 export default function Footer() {
-  const style_contact = { color: "white", fontSize: "1.5em" }
-
+  var darkModeRes = useSelector((store) => store.THEME.dark_mode);
+  const style_contact_dark = { color: "white", fontSize: "1.5em" }
+  const style_contact_light = { color: "black", fontSize: "1.5em" }
   return (
     <React.Fragment>
       {/* <div className="footer_container"> */}
@@ -18,7 +20,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <GrLinkedinOption style={style_contact}/>
+                <GrLinkedinOption style={darkModeRes ? style_contact_dark : style_contact_light}/>
               </a>
             </div>
             <div className="footer_menu_item_contact">
@@ -27,12 +29,12 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <AiOutlineMail style={style_contact}/>
+                <AiOutlineMail style={darkModeRes ? style_contact_dark : style_contact_light}/>
               </a>
             </div>
             <div className="footer_menu_item_contact">
               <a href="tel:87567XXXX4" target="_blank" rel="noreferrer">
-                <FiPhoneCall style={style_contact} />
+                <FiPhoneCall style={darkModeRes ? style_contact_dark : style_contact_light} />
               </a>
             </div>
           </div>

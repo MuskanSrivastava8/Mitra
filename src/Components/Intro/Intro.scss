@@ -16,18 +16,6 @@
 
 }
 
-.intro_content_box {
-    background-color: #0d6efd4d;
-    opacity: 0.8;
-    padding: 4%;
-    border: 1px solid gray;
-    border-radius: 10px;
-    margin: 4%;
-    color: white;
-    font-size: 1.2rem;
-    font-family: system-ui;
-    font-weight: 600;
-}
 
 .welcome_text {
     font-weight: 900;
@@ -45,17 +33,9 @@
     font-size: 1.1rem;
 }
 
-.intro_content_box button {
-    color: white;
-    //background-color: red;
-    border: 0px;
-    font-size: 1.2rem;
-    border-radius: 11px;
-    padding: 1%;
-    margin: 1%
-}
 
-.Intro_footer {
+// theme based Styling 
+.Intro_footer_dark {
     position: fixed;
     bottom: 0;
     height: 10%;
@@ -68,6 +48,62 @@
     color: white;
     font-family: system-ui;
 }
+.Intro_footer_light {
+    position: fixed;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+    background-color: #efe6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(2, 2, 2);
+    font-family: system-ui;
+}
+.intro_content_box_dark {
+    background-color: rgb(0 102 255 / 43%);
+    opacity: 0.8;
+    padding: 4%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: 4%;
+    color: white;
+    font-size: 1.2rem;
+    font-family: system-ui;
+    font-weight: 600;
+}
+.intro_content_box_light {
+    background-color: hsla(216, 97%, 75%, 0.302);
+    opacity: 0.8;
+    padding: 4%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: 4%;
+    color: black;
+    font-size: 1.2rem;
+    font-family: system-ui;
+    font-weight: 600;
+}
+.intro_content_box_dark button {
+    color: white;
+    //background-color: red;
+    border: 0px;
+    font-size: 1.2rem;
+    border-radius: 11px;
+    padding: 1%;
+    margin: 1%
+}
+.intro_content_box_light button {
+    color: white;
+    //background-color: red;
+    border: 0px;
+    font-size: 1.2rem;
+    border-radius: 11px;
+    padding: 1%;
+    margin: 1%
+}
+// theme based Styling 
 
 .Intro_name_text {
     color: red;
@@ -108,7 +144,12 @@
         font-size: 1.5rem;
     }
 
-    .intro_content_box {
+    .intro_content_box_dark {
+        margin-left: 4%;
+        margin-right: 7%;
+        padding: 8%;
+    }
+    .intro_content_box_light {
         margin-left: 4%;
         margin-right: 7%;
         padding: 8%;
@@ -132,9 +173,14 @@
         font-size: 1.2rem;
     }
 
-    .intro_content_box button {
+    .intro_content_box_light button {
         padding: 2%;
     }
+
+    .intro_content_box_dark button {
+        padding: 2%;
+    }
+
 
 }
 
