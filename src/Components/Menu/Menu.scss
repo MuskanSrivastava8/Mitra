@@ -36,16 +36,66 @@
 }
 
 // theme based Styling 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color:#1c6cfb;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-moon {color: #f1c40f;}
+
+.fa-sun {color: #f39c12;}
+
+.checkbox-label .ball {
+  background-color: #f39c12;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
+
+/*  Support me if you like it */
+.support {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+}
+
+.support a {
+  color: #292c35;
+  font-size: 32px;
+  backface-visibility: hidden;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.support a:hover{
+  transform: scale(1.1);
+}
 
 .menu_item {
     margin: 0.8%;
-    // font-size: 1.0rem;
-    // font-family: system-ui;
-    // font-weight: 600;
-    // background-color: rgb(0 137 8);
-    // border-color: transparent;
-    // border-radius: 6px;
-    //padding: 0.4%;
 }
 
 .menu_item a {
@@ -104,6 +154,8 @@
     right: 2%;
     display: none;
 }
+
+
 
 @media only screen and (max-width: 904px) {
 
@@ -175,6 +227,11 @@
     .menu_item a {
         font-size: .8rem;
     }
+    .toggle_mobile_view{
+        position: absolute;
+        top: 3.7%;
+        right: 25%;
+    }
 
 }
 
@@ -191,6 +248,11 @@
     .menu_logo {
         top: 3.1%;
     }
+    .toggle_mobile_view{
+        position: absolute;
+        top: 3.7%;
+        right: 25%;
+    }
 
 
 }
@@ -203,5 +265,10 @@
     }
     .letter_M_light {
         font-Size: 2rem;
+    }
+    .toggle_mobile_view{
+        position: absolute;
+        top: 3.7%;
+        right: 25%;
     }
 }

@@ -9,18 +9,14 @@ import { useDispatch } from "react-redux";
 import { dark_mode_Action, light_mode_Action } from "../../store/theme_slice";
 import { useSelector } from "react-redux";
 
-
 export default function Menu() {
   const dispatch = useDispatch();
   var darkModeRes = useSelector((store) => store.THEME.dark_mode);
-
   const [darkMode, setdarkMode] = useState(true);
-
-  const changeTheme = () => {
-    setdarkMode(!darkMode); 
-  };
-  console.log("darkMode",darkMode)
-  useEffect(()=>{
+  const checkHandler = () => {
+    setdarkMode(!darkMode)
+  }
+  useEffect(() => {
     if (darkMode) {
       dispatch(dark_mode_Action(true));
       dispatch(light_mode_Action(false));
@@ -28,12 +24,16 @@ export default function Menu() {
       dispatch(light_mode_Action(true));
       dispatch(dark_mode_Action(false));
     }
-  },[darkMode])
+  }, [darkMode]);
   return (
     <React.Fragment>
-      <div className={darkModeRes ?"menu_container_dark" : "menu_container_light"}>
+      <div
+        className={darkModeRes ? "menu_container_dark" : "menu_container_light"}
+      >
         <div className="menu_logo">
-          <TbCircleLetterM className={darkModeRes ?"letter_M_dark" : "letter_M_light"}/>
+          <TbCircleLetterM
+            className={darkModeRes ? "letter_M_dark" : "letter_M_light"}
+          />
         </div>
         <div className="dropdownMenu_item">
           <Dropdown>
@@ -88,11 +88,6 @@ export default function Menu() {
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-        </div>
-        <div className="menu_item_mobile_view">
-          <button type="button" class="btn btn-primary">
-            <NavLink to={"/Intro"}>Home</NavLink>
-          </button>
         </div>
         <div className="menu_item">
           <button
@@ -159,17 +154,15 @@ export default function Menu() {
             </NavLink>
           </button>
         </div>
-        <div className="theme_icon">
-          <button
-            type="button"
-            class="btn btn-primary"
-            className={darkModeRes ?"theme_icon_light" : "theme_icon_dark"}
-            onClick={changeTheme}
-          >
-        {darkMode ? <BsSun style={{color :"white", size:"10"}} />: <BsMoonStars /> }
-          </button>
+        <div className="toggle_mobile_view">
+          <input type="checkbox" class="checkbox" id="checkbox"  checked={darkMode} onChange={checkHandler}/>
+          <label for="checkbox" class="checkbox-label">
+            <BsSun style={{ color: "yellow", size: "10" }} />
+            <BsMoonStars />
+            <span class="ball"></span>
+          </label>
         </div>
       </div>
-    </React.Fragment> 
+    </React.Fragment>
   );
 }
