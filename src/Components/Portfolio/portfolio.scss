@@ -79,15 +79,32 @@
     border-color: transparent;
     margin: 8%;
 }
-// theme based Styling 
 
-
-.name_text {
+.name_text_dark {
     font-size: 1.8rem;
-    color: #610000;
+    color: #ffffff;
     font-weight: 650;
     font-family: emoji;
 }
+.name_text_light {
+    font-size: 1.8rem;
+    color: #111111;
+    font-weight: 650;
+    font-family: emoji;
+}
+
+.card_heading_dark {
+    margin-bottom: 40%;
+    color: black;
+}
+.card_heading_light {
+    margin-bottom: 40%
+
+}
+// theme based Styling 
+
+
+
 
 .occupation {
     font-size: 1.2rem;
@@ -188,7 +205,10 @@
     backface-visibility: hidden;
     border: 1px solid #dad1d1;
     border-radius: 28px;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .flip-card-front {
@@ -205,7 +225,7 @@
 }
 
 .flip-card-back {
-    background-color: #B8B3E9;
+    background-color:#9a92e4;
     color: white;
     transform: rotateY(180deg);
 }
@@ -220,9 +240,6 @@
     font-family: System-ui;
 }
 
-.card_heading {
-    margin-bottom: 40%
-}
 
 table {
     width: 180px;
@@ -252,7 +269,7 @@ td {
 
 .points_details {
     color: #000000;
-    font-size: .8rem;
+    font-size: 1rem;
 }
 
 @media only screen and (max-width: 904px) {
@@ -290,7 +307,10 @@ td {
         width: 105%;
     }
 
-    .name_text {
+    .name_text_dark {
+        font-size: 1.8rem;
+    }
+    .name_text_light {
         font-size: 1.8rem;
     }
     .center {
@@ -318,7 +338,10 @@ td {
         width: 70%;
         height: 200px;
     }
-    .name_text {
+    .name_text_dark {
+        font-size: 1.8rem;
+    }
+    .name_text_light {
         font-size: 1.8rem;
     }
     .occupation {
@@ -334,7 +357,7 @@ td {
     }
     .points_details {
         color: black;
-        font-weight: 700;
+        font-weight: 400;
     }
     .center {
         font-size: 1.2rem;

@@ -154,7 +154,7 @@ export default function Menu() {
             </NavLink>
           </button>
         </div>
-        <div className="toggle_mobile_view">
+        <div className="toggle_btn">
           <input type="checkbox" class="checkbox" id="checkbox"  checked={darkMode} onChange={checkHandler}/>
           <label for="checkbox" class="checkbox-label">
             <BsSun style={{ color: "yellow", size: "10" }} />

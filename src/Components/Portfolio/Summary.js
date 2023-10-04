@@ -8,6 +8,7 @@ import { BsTrophy } from "react-icons/bs";
 import { BsPencilSquare } from "react-icons/bs";
 import { FaList } from "react-icons/fa";
 import { BsFillCreditCard2FrontFill } from "react-icons/bs";
+import { useSelector } from "react-redux";
 
 export default function Summary() {
   const [showCordianView, setshowCordianView] = useState(true);
@@ -15,6 +16,7 @@ export default function Summary() {
   const toggleView = () => {
     setshowCordianView(!showCordianView);
   };
+  var darkModeRes = useSelector((store) => store.THEME.dark_mode);
   return (
     <React.Fragment>
       <div className="Sticky_btn">
@@ -31,8 +33,8 @@ export default function Summary() {
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
                     <div className="card_text">
-                      <div className="card_heading">Skill</div>
-                      <AiOutlineLaptop />
+                      <div className={darkModeRes ? "card_heading_dark" : "card_heading_light"}>Skill</div>
+                      <AiOutlineLaptop style={{color: darkModeRes ?"black": "white"}} />
                     </div>
                   </div>
                   <div class="flip-card-back">
@@ -41,7 +43,7 @@ export default function Summary() {
                     </div>
                     <div className="points_details">
                       <p>
-                        React, Javascript, Typescript, Redux, Sass, HTML, CSS
+                        React, Javascript, Typescript, Redux toolkit, Sass, Media query, HTML, CSS
                         and Jest
                       </p>
                     </div>
@@ -54,8 +56,8 @@ export default function Summary() {
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
                     <div className="card_text">
-                      <div className="card_heading">Project</div>
-                      <BsCodeSlash />
+                      <div className={darkModeRes ? "card_heading_dark" : "card_heading_light"}>Project</div>
+                      <BsCodeSlash style={{color: darkModeRes ?"black": "white"}} />
                     </div>
                   </div>
                   <div class="flip-card-back">
@@ -82,8 +84,8 @@ export default function Summary() {
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
                     <div className="card_text">
-                      <div className="card_heading">Activities</div>
-                      <BsPencilSquare />
+                      <div className={darkModeRes ? "card_heading_dark" : "card_heading_light"}>Activities</div>
+                      <BsPencilSquare style={{color: darkModeRes ?"black": "white"}}  />
                     </div>
                   </div>
                   <div class="flip-card-back">
@@ -105,8 +107,8 @@ export default function Summary() {
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
                     <div className="card_text">
-                      <div className="card_heading">Education</div>
-                      <BsFillMortarboardFill />
+                      <div className={darkModeRes ? "card_heading_dark" : "card_heading_light"}>Education</div>
+                      <BsFillMortarboardFill  style={{color: darkModeRes ?"black": "white"}} />
                     </div>
                   </div>
                   <div class="flip-card-back">
@@ -143,8 +145,8 @@ export default function Summary() {
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
                     <div className="card_text">
-                      <div className="card_heading">Awards</div>
-                      <BsTrophy />
+                      <div className={darkModeRes ? "card_heading_dark" : "card_heading_light"}>Awards</div>
+                      <BsTrophy style={{color: darkModeRes ?"black": "white"}} />
                     </div>
                   </div>
                   <div class="flip-card-back">
@@ -165,8 +167,8 @@ export default function Summary() {
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
                     <div className="card_text">
-                      <div className="card_heading">Contact</div>
-                      <BsFillEnvelopeAtFill />
+                      <div className={darkModeRes ? "card_heading_dark" : "card_heading_light"}>Contact</div>
+                      <BsFillEnvelopeAtFill style={{color: darkModeRes ?"black": "white"}}  />
                     </div>
                   </div>
                   <div class="flip-card-back">

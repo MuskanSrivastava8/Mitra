@@ -16,7 +16,7 @@ export default function Portfolio() {
       <div className="portfolio_container">
         <div className="intro">
           <div className={darkModeRes ?"name_dark" : "name_light"}>
-            <span className="name_text">Muskan Srivastava</span>
+            <span className={darkModeRes ?"name_text_dark" : "name_text_light"}>Muskan Srivastava</span>
             <span className="occupation">
               <span>
               I've been a front-end developer at TCS for more than two years.              </span>
