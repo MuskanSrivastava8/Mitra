@@ -2,8 +2,11 @@ import React from "react";
 import "./footer.scss";
 import { GrLinkedinOption } from "react-icons/gr";
 import { AiOutlineMail } from "react-icons/ai";
+import { BsGithub } from "react-icons/bs";
+import { BsFillSuitHeartFill } from "react-icons/bs";
 import { FiPhoneCall } from "react-icons/fi";
 import { useSelector } from "react-redux";
+
 
 export default function Footer() {
   var darkModeRes = useSelector((store) => store.THEME.dark_mode);
@@ -20,7 +23,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <GrLinkedinOption style={darkModeRes ? style_contact_dark : style_contact_light}/>
+                <GrLinkedinOption style={{ color: "blue", fontSize: "1.5em" }}/>
               </a>
             </div>
             <div className="footer_menu_item_contact">
@@ -29,18 +32,26 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <AiOutlineMail style={darkModeRes ? style_contact_dark : style_contact_light}/>
+                <AiOutlineMail style={{ color: "red", fontSize: "1.5em" }}/>
               </a>
             </div>
             <div className="footer_menu_item_contact">
               <a href="tel:87567XXXX4" target="_blank" rel="noreferrer">
-                <FiPhoneCall style={darkModeRes ? style_contact_dark : style_contact_light} />
+                <FiPhoneCall style={{ color: "green", fontSize: "1.5em" }} />
+              </a>
+            </div>
+            <div className="footer_menu_item_contact">
+              <a href="https://github.com/MuskanSrivastava8" target="_blank" rel="noreferrer">
+                <BsGithub style={{ color: darkModeRes ? "white" : "black" , fontSize: "1.5em" }} />
               </a>
             </div>
           </div>
         </div>
         <div className="footer_message">
           © 2023 Company, Inc. All rights reserved.
+        </div>
+        <div className="footer_message">
+          Made by Muskan with <BsFillSuitHeartFill style={{ color: "red", fontSize: "1.2em" }}/>
         </div>
       {/* </div> */}
     </React.Fragment>

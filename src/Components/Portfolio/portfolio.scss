@@ -271,6 +271,10 @@ td {
     color: #000000;
     font-size: 1rem;
 }
+.points_details_project{
+    color: #000000;
+    font-size: .8rem; 
+}
 
 @media only screen and (max-width: 904px) {
 
@@ -356,6 +360,10 @@ td {
         font-size: 1.8rem;
     }
     .points_details {
+        color: black;
+        font-weight: 400;
+    }
+    .points_details_project{
         color: black;
         font-weight: 400;
     }

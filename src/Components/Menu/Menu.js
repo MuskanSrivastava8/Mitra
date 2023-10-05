@@ -14,8 +14,8 @@ export default function Menu() {
   var darkModeRes = useSelector((store) => store.THEME.dark_mode);
   const [darkMode, setdarkMode] = useState(true);
   const checkHandler = () => {
-    setdarkMode(!darkMode)
-  }
+    setdarkMode(!darkMode);
+  };
   useEffect(() => {
     if (darkMode) {
       dispatch(dark_mode_Action(true));
@@ -155,10 +155,16 @@ export default function Menu() {
           </button>
         </div>
         <div className="toggle_btn">
-          <input type="checkbox" class="checkbox" id="checkbox"  checked={darkMode} onChange={checkHandler}/>
+          <input
+            type="checkbox"
+            class="checkbox"
+            id="checkbox"
+            checked={darkMode}
+            onChange={checkHandler}
+          />
           <label for="checkbox" class="checkbox-label">
-            <BsSun style={{ color: "yellow", size: "10" }} />
-            <BsMoonStars />
+            <BsSun style={{ color: "orange", size: "10" }} />
+            <BsMoonStars style={{ color: "gray" }} />
             <span class="ball"></span>
           </label>
         </div>

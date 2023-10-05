@@ -1,5 +1,6 @@
 .footer_contact {
-    width: 8%;
+    width: 20%;
+    margin-top: 2%;
 }
 
 .footer_address {
@@ -15,6 +16,11 @@
     padding-left: 4%;
     padding-right: 4%;
     border-radius: 8px;
+}
+.footer_message{
+    margin: .1%;
+    // font-family: math;
+    font-size: .8rem;
 }
 
 @media only screen and (max-width: 904px) {

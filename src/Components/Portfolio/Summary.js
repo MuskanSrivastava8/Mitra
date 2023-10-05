@@ -64,7 +64,7 @@ export default function Summary() {
                     <div className="points_heading">
                       <h5>Project Experience (TCS)</h5>
                     </div>
-                    <div className="points_details">
+                    <div className="points_details_project">
                       <p>Hubble Connect : React Developer</p>
                       <p>Medline : React Developer</p>
                       <p>E2open : Application Developer</p>
@@ -72,7 +72,7 @@ export default function Summary() {
                     <div className="points_heading">
                       <h5>Personal Project</h5>
                     </div>
-                    <div className="points_details">
+                    <div className="points_details_project">
                       <p>Expense tracker, IMDb clone, Portfolio</p>
                     </div>
                   </div>
@@ -233,7 +233,7 @@ export default function Summary() {
                   <div className="points_heading">
                     <h5>Project Experience (TCS)</h5>
                   </div>
-                  <div className="points_details">
+                  <div className="points_details" style={{fontSize : "1px"}}>
                     <p>Hubble Connect : React Developer</p>
                     <p>Medline : React Developer</p>
                     <p>E2open : Application Developer</p>
