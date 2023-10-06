@@ -82,7 +82,7 @@ export default function Menu() {
                   style={({ isActive }) => ({
                     color: isActive ? "Red" : "Gray",
                   })}
-                >
+                                  >
                   About Me
                 </NavLink>
               </Dropdown.Item>
@@ -92,14 +92,13 @@ export default function Menu() {
         <div className="menu_item">
           <button
             type="button"
-            class="btn btn-primary"
-            style={{ padding: "2px" }}
+            class="btn btn-primary"       
+            className={darkModeRes ? "MenuStyle_dark" : "MenuStyle_light"}
           >
             <NavLink
               to={"/Intro"}
               style={({ isActive }) => ({
-                color: isActive ? "Red" : "White",
-              })}
+                color: isActive ? ( darkModeRes ? "#1c6cfb" : "#1c6cfb") : darkModeRes ? "White" : "Black",              })}
             >
               {" "}
               Home
@@ -110,13 +109,12 @@ export default function Menu() {
           <button
             type="button"
             class="btn btn-primary"
-            style={{ padding: "2px" }}
+            className={darkModeRes ? "MenuStyle_dark" : "MenuStyle_light"}
           >
             <NavLink
               to={"/Knowyourshow"}
               style={({ isActive }) => ({
-                color: isActive ? "Red" : "White",
-              })}
+                color: isActive ? ( darkModeRes ? "#1c6cfb" : "#1c6cfb") : darkModeRes ? "White" : "Black",              })}
             >
               IMDb clone
             </NavLink>
@@ -126,13 +124,12 @@ export default function Menu() {
           <button
             type="button"
             class="btn btn-primary"
-            style={{ padding: "2px" }}
+            className={darkModeRes ? "MenuStyle_dark" : "MenuStyle_light"}
           >
             <NavLink
               to={"/Expensetracker"}
               style={({ isActive }) => ({
-                color: isActive ? "Red" : "White",
-              })}
+                color: isActive ? ( darkModeRes ? "#1c6cfb" : "#1c6cfb") : darkModeRes ? "White" : "Black",              })}
             >
               Expense Tracker clone
             </NavLink>
@@ -142,13 +139,12 @@ export default function Menu() {
           <button
             type="button"
             class="btn btn-primary"
-            style={{ padding: "2px" }}
+            className={darkModeRes ? "MenuStyle_dark" : "MenuStyle_light"}
           >
             <NavLink
               to={"/Portfolio"}
               style={({ isActive }) => ({
-                color: isActive ? "Red" : "White",
-              })}
+                color: isActive ? ( darkModeRes ? "#1c6cfb" : "#1c6cfb") : darkModeRes ? "White" : "Black"   })}
             >
               About Me
             </NavLink>
