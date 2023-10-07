@@ -95,11 +95,10 @@
 
 .card_heading_dark {
     margin-bottom: 40%;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 .card_heading_light {
-    margin-bottom: 40%
-
+    margin-bottom: 40%;
 }
 // theme based Styling 
 
@@ -187,7 +186,7 @@
     transition: transform 0.6s;
     transform-style: preserve-3d;
     box-shadow: 0 14px 30px 0 rgba(0, 0, 0, 0.9);
-    border: 1px solid #dad1d1;
+    //border: 1px solid #dad1d1;
     border-radius: 28px;
 
 }
@@ -196,8 +195,8 @@
     transform: rotateY(180deg);
 }
 
-.flip-card-front,
-.flip-card-back {
+.flip-card-front,.flip-card-front_skill,.flip-card-front_Project,.flip-card-front_Activities,.flip-card-front_Education,
+.flip-card-front_Awards,.flip-card-front_Contact,.flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -223,7 +222,76 @@
     background-size: cover;
 
 }
+.flip-card-front_skill {
+    // background-color: #bbb;
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(217, 217, 217, 0.431372549);
+    background-image: url(skill.jpg);
+    background-size: cover;
 
+}
+.flip-card-front_Project {
+    // background-color: #bbb;
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(217, 217, 217, 0.431372549);
+    background-image: url(project.jpg);
+    background-size: cover;
+
+}
+.flip-card-front_Activities {
+    // background-color: #bbb;
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(217, 217, 217, 0.431372549);
+    background-image: url(activities.jpg);
+    background-size: cover;
+
+}
+.flip-card-front_Education {
+    // background-color: #bbb;
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(217, 217, 217, 0.431372549);
+    background-image: url(education.jpg);
+    background-size: cover;
+
+}
+.flip-card-front_Awards {
+    // background-color: #bbb;
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(217, 217, 217, 0.431372549);
+    background-image: url(awards.jpg);
+    background-size: cover;
+
+}
+.flip-card-front_Contact{
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(217, 217, 217, 0.431372549);
+    background-image: url(mail.jpg);
+    background-size: cover;
+}
 .flip-card-back {
     background-color:#9a92e4;
     color: white;
@@ -238,6 +306,8 @@
     color: white;
     font-size: 1.4rem;
     font-family: System-ui;
+    font-weight: 900;
+    font-size: 1.8rem;
 }
 
 

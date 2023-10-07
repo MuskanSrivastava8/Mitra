@@ -31,10 +31,10 @@ export default function Summary() {
             <div className="summary_box">
               <div class="flip-card">
                 <div class="flip-card-inner">
-                  <div class="flip-card-front">
+                  <div class="flip-card-front_skill">
                     <div className="card_text">
                       <div className={darkModeRes ? "card_heading_dark" : "card_heading_light"}>Skill</div>
-                      <AiOutlineLaptop style={{color: darkModeRes ?"black": "white"}} />
+                      <AiOutlineLaptop style={{color: darkModeRes ?"white": "white"}} />
                     </div>
                   </div>
                   <div class="flip-card-back">
@@ -54,10 +54,10 @@ export default function Summary() {
             <div className="summary_box">
               <div class="flip-card">
                 <div class="flip-card-inner">
-                  <div class="flip-card-front">
+                  <div class="flip-card-front_Project">
                     <div className="card_text">
                       <div className={darkModeRes ? "card_heading_dark" : "card_heading_light"}>Project</div>
-                      <BsCodeSlash style={{color: darkModeRes ?"black": "white"}} />
+                      <BsCodeSlash style={{color: darkModeRes ?"white": "white"}} />
                     </div>
                   </div>
                   <div class="flip-card-back">
@@ -82,10 +82,10 @@ export default function Summary() {
             <div className="summary_box">
               <div class="flip-card">
                 <div class="flip-card-inner">
-                  <div class="flip-card-front">
+                  <div class="flip-card-front_Activities">
                     <div className="card_text">
                       <div className={darkModeRes ? "card_heading_dark" : "card_heading_light"}>Activities</div>
-                      <BsPencilSquare style={{color: darkModeRes ?"black": "white"}}  />
+                      <BsPencilSquare style={{color: darkModeRes ?"white": "white"}}  />
                     </div>
                   </div>
                   <div class="flip-card-back">
@@ -105,10 +105,10 @@ export default function Summary() {
             <div className="summary_box">
               <div class="flip-card">
                 <div class="flip-card-inner">
-                  <div class="flip-card-front">
+                  <div class="flip-card-front_Education">
                     <div className="card_text">
                       <div className={darkModeRes ? "card_heading_dark" : "card_heading_light"}>Education</div>
-                      <BsFillMortarboardFill  style={{color: darkModeRes ?"black": "white"}} />
+                      <BsFillMortarboardFill  style={{color: darkModeRes ?"white": "white"}} />
                     </div>
                   </div>
                   <div class="flip-card-back">
@@ -143,10 +143,10 @@ export default function Summary() {
             <div className="summary_box">
               <div class="flip-card">
                 <div class="flip-card-inner">
-                  <div class="flip-card-front">
+                  <div class="flip-card-front_Awards">
                     <div className="card_text">
                       <div className={darkModeRes ? "card_heading_dark" : "card_heading_light"}>Awards</div>
-                      <BsTrophy style={{color: darkModeRes ?"black": "white"}} />
+                      <BsTrophy style={{color: darkModeRes ?"white": "white"}} />
                     </div>
                   </div>
                   <div class="flip-card-back">
@@ -165,10 +165,10 @@ export default function Summary() {
             <div className="summary_box">
               <div class="flip-card">
                 <div class="flip-card-inner">
-                  <div class="flip-card-front">
+                  <div class="flip-card-front_Contact">
                     <div className="card_text">
                       <div className={darkModeRes ? "card_heading_dark" : "card_heading_light"}>Contact</div>
-                      <BsFillEnvelopeAtFill style={{color: darkModeRes ?"black": "white"}}  />
+                      <BsFillEnvelopeAtFill style={{color: darkModeRes ?"white": "white"}}  />
                     </div>
                   </div>
                   <div class="flip-card-back">
