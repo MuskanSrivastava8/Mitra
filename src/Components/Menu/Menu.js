@@ -8,11 +8,17 @@ import { BsMoonStars } from "react-icons/bs";
 import { useDispatch } from "react-redux";
 import { dark_mode_Action, light_mode_Action } from "../../store/theme_slice";
 import { useSelector } from "react-redux";
+import MuskanResume from "./MuskanResume.pdf";
+import { BsDownload } from "react-icons/bs";
+import { MdOutlineFileDownloadDone } from "react-icons/md";
+
 
 export default function Menu() {
   const dispatch = useDispatch();
   var darkModeRes = useSelector((store) => store.THEME.dark_mode);
   const [darkMode, setdarkMode] = useState(true);
+  const [downloaded, setdownloaded] = useState(false);
+
   const checkHandler = () => {
     setdarkMode(!darkMode);
   };
@@ -25,6 +31,18 @@ export default function Menu() {
       dispatch(dark_mode_Action(false));
     }
   }, [darkMode]);
+  const onButtonClick = () => {
+    fetch(MuskanResume).then((response) => {
+      response.blob().then((blob) => {
+        const fileURL = window.URL.createObjectURL(blob);
+        let alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = "Muskan_Resume.pdf";
+        alink.click();
+        setdownloaded(true);
+      });
+    });
+  };
   return (
     <React.Fragment>
       <div
@@ -82,9 +100,21 @@ export default function Menu() {
                   style={({ isActive }) => ({
                     color: isActive ? "Red" : "Gray",
                   })}
-                                  >
+                >
                   About Me
                 </NavLink>
+              </Dropdown.Item>
+              <Dropdown.Item>
+              {/* <a
+              
+              class="btn btn-primary"
+              onClick={onButtonClick}
+            >
+             Resume
+            </a> */}
+            <div onClick={onButtonClick} style={{color : "gray"}}>
+            Resume {downloaded ? <MdOutlineFileDownloadDone style={{color : "green"}}/> : <BsDownload />}
+            </div>
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
@@ -92,13 +122,20 @@ export default function Menu() {
         <div className="menu_item">
           <button
             type="button"
-            class="btn btn-primary"       
+            class="btn btn-primary"
             className={darkModeRes ? "MenuStyle_dark" : "MenuStyle_light"}
           >
             <NavLink
               to={"/Intro"}
               style={({ isActive }) => ({
-                color: isActive ? ( darkModeRes ? "#1c6cfb" : "#1c6cfb") : darkModeRes ? "White" : "Black",              })}
+                color: isActive
+                  ? darkModeRes
+                    ? "#1c6cfb"
+                    : "#1c6cfb"
+                  : darkModeRes
+                  ? "White"
+                  : "Black",
+              })}
             >
               {" "}
               Home
@@ -114,7 +151,14 @@ export default function Menu() {
             <NavLink
               to={"/Knowyourshow"}
               style={({ isActive }) => ({
-                color: isActive ? ( darkModeRes ? "#1c6cfb" : "#1c6cfb") : darkModeRes ? "White" : "Black",              })}
+                color: isActive
+                  ? darkModeRes
+                    ? "#1c6cfb"
+                    : "#1c6cfb"
+                  : darkModeRes
+                  ? "White"
+                  : "Black",
+              })}
             >
               IMDb clone
             </NavLink>
@@ -129,7 +173,14 @@ export default function Menu() {
             <NavLink
               to={"/Expensetracker"}
               style={({ isActive }) => ({
-                color: isActive ? ( darkModeRes ? "#1c6cfb" : "#1c6cfb") : darkModeRes ? "White" : "Black",              })}
+                color: isActive
+                  ? darkModeRes
+                    ? "#1c6cfb"
+                    : "#1c6cfb"
+                  : darkModeRes
+                  ? "White"
+                  : "Black",
+              })}
             >
               Expense Tracker clone
             </NavLink>
@@ -144,7 +195,14 @@ export default function Menu() {
             <NavLink
               to={"/Portfolio"}
               style={({ isActive }) => ({
-                color: isActive ? ( darkModeRes ? "#1c6cfb" : "#1c6cfb") : darkModeRes ? "White" : "Black"   })}
+                color: isActive
+                  ? darkModeRes
+                    ? "#1c6cfb"
+                    : "#1c6cfb"
+                  : darkModeRes
+                  ? "White"
+                  : "Black",
+              })}
             >
               About Me
             </NavLink>
