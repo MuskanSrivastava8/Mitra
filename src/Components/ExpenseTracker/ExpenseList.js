@@ -9,7 +9,6 @@ export default function ExpenseList({ items }) {
   };
   const [showTable, setshowTable] = useState(true);
   const [showIcon, setshowIcon] = useState(true);
-  const [hideIcon, sethideIcon] = useState(true);
 
   const showExpenseTable = () => {
     setshowTable(!showTable);

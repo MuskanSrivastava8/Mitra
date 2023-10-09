@@ -8,7 +8,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 export default function ExpenseIncomeInput() {
   const [incomeVal, setincomeVal] = useState();
-  const [textupdate, settextupdate] = useState("Edit Income");
   const dispatch = useDispatch();
   const submit = () => {
     dispatch(addExpenseIncome(Number(incomeVal)));

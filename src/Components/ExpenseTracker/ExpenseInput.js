@@ -6,7 +6,6 @@ import {
 } from "../../store/expense_slice";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-import { Button } from "bootstrap";
 import "./Expensetracker.scss";
 import uuid from "react-uuid";
 import { useSelector } from "react-redux";
@@ -16,7 +15,6 @@ import "react-toastify/dist/ReactToastify.css";
 export default function ExpenseInput() {
   const [price, setprice] = useState("");
   const [expenseName, setexpenseName] = useState("");
-  const [remSubmitBtn, setremSubmitBtn] = useState(false);
   const resReviewIncome = useSelector((store) => store.EXPENSE.income);
   const resExpense = useSelector((store) => store.EXPENSE.expense);
   var darkModeRes = useSelector((store) => store.THEME.dark_mode);
@@ -119,23 +117,6 @@ export default function ExpenseInput() {
           >
             Clear
           </button>
-          {/* <button
-            className="Expense_input_btn"
-            onClick={SubmitExpense}
-            disabled={!price || !expenseName}
-          >
-            Add Expense
-          </button>
-          <button
-            className="Expense_input_btn"
-            onClick={SubmitIncome}
-            disabled={!price || !expenseName}
-          >
-            Add Income
-          </button>
-          <button className="Expense_input_btn" onClick={clearInput}>
-            Clear
-          </button> */}
         </div>
       </div>
     </React.Fragment>
