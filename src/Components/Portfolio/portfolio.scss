@@ -67,7 +67,13 @@
     flex-direction: column;
     border-color: transparent;
     margin: 8%;
+    animation-name: example;
+  animation-duration: 2s;
 }
+@keyframes example {
+    from {background-color: rgba(180, 206, 245, 0.3);;}
+    to {background-color: rgba(30, 115, 243, 0.3);;}
+  }
 .name_light {
     background-color: rgba(253, 253, 253, 0.3);
     opacity: 0.7;
@@ -113,8 +119,13 @@
     background-color: white;
     border: 1px solid #998b8b;
     border-radius: 10px;
+    animation-name: occupationAnimation;
+  animation-duration: 2s;
 }
-
+@keyframes occupationAnimation {
+    from {background-color: rgba(30, 115, 243, 0.3);;}
+    to {background-color: white;;}
+  }
 .address {
     display: flex;
     margin-top: 2%;

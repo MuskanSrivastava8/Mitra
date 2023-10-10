@@ -19,13 +19,13 @@ export default function Summary() {
   var darkModeRes = useSelector((store) => store.THEME.dark_mode);
   return (
     <React.Fragment>
-      <div className="Sticky_btn">
+      {/* <div className="Sticky_btn">
         <button type="button" class="btn btn-primary" onClick={toggleView}>
           {showCordianView ? <FaList/>:<BsFillCreditCard2FrontFill/>}
         </button>
-      </div>
+      </div> */}
 
-      {showCordianView ? (
+      
         <div className="summary_container">
           <div className="row_1">
             <div className="summary_box">
@@ -185,8 +185,8 @@ export default function Summary() {
             </div>
           </div>
         </div>
-      ) : (
-        <div>
+      
+        {/* <div>
           <div class="accordion" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
               <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -363,8 +363,8 @@ export default function Summary() {
               </div>
             </div>
           </div>
-        </div>
-      )}
+        </div> */}
+      
     </React.Fragment>
   );
 }
