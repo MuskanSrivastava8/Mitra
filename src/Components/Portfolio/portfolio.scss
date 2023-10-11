@@ -59,7 +59,7 @@
 }
 .name_dark {
     background-color: rgba(30, 115, 243, 0.3);
-    opacity: 0.7;
+    //opacity: 0.7;
     padding: 8px;
     border: 0.5px solid #847cd0;
     border-radius: 10px;
@@ -68,11 +68,13 @@
     border-color: transparent;
     margin: 8%;
     animation-name: example;
-  animation-duration: 2s;
+  animation-duration: 2.5s;
 }
 @keyframes example {
-    from {background-color: rgba(180, 206, 245, 0.3);;}
-    to {background-color: rgba(30, 115, 243, 0.3);;}
+    from {    background-color: rgba(180, 206, 245, 0.3);
+        opacity: 0;}
+    to {background-color: rgba(30, 115, 243, 0.3);
+        opacity: 1;}
   }
 .name_light {
     background-color: rgba(253, 253, 253, 0.3);
@@ -102,17 +104,14 @@
 .card_heading_dark {
     margin-bottom: 40%;
     color: rgb(255, 255, 255);
-}
+      }
 .card_heading_light {
     margin-bottom: 40%;
 }
 // theme based Styling 
-
-
-
-
 .occupation {
     font-size: 1.2rem;
+    opacity: .8;
     color: #000000;
     font-weight: 500;
     font-family: inherit;
@@ -120,7 +119,7 @@
     border: 1px solid #998b8b;
     border-radius: 10px;
     animation-name: occupationAnimation;
-  animation-duration: 2s;
+  animation-duration: 2.5s;
 }
 @keyframes occupationAnimation {
     from {background-color: rgba(30, 115, 243, 0.3);;}
@@ -129,7 +128,13 @@
 .address {
     display: flex;
     margin-top: 2%;
-}
+    animation-name: addressAnimation;
+    animation-duration: 2.5s;
+      }
+    @keyframes addressAnimation {
+    from {background-color:white;;}
+    to {background-color:  rgba(30, 115, 243, 0.3);;}
+  }
 .Sticky_btn{
     position: -webkit-sticky; /* Safari */
     position: sticky;

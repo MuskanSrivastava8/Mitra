@@ -32,7 +32,7 @@ export default function Portfolio() {
                 skills.
               </span>
             </span>
-            <div className="address">
+            <div className="address" id="contact_icons">
               <div className="menu_item_contact">
                 <a
                   href="https://www.linkedin.com/in/muskan-srivastava-123b23199"
