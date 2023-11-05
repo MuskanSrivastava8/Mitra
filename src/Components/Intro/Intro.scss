@@ -62,7 +62,7 @@
     font-family: system-ui;
 }
 .intro_content_box_dark {
-    background-color: rgb(0 102 255 / 43%);
+    background-color: rgba(32, 32, 32, 0.43);
     opacity: 0.8;
     padding: 4%;
     border: 1px solid gray;
@@ -74,7 +74,7 @@
     font-weight: 600;
 }
 .intro_content_box_light {
-    background-color: hsla(216, 97%, 75%, 0.302);
+    background-color: hsla(217, 36%, 91%, 0.302);
     opacity: 0.8;
     padding: 4%;
     border: 1px solid gray;

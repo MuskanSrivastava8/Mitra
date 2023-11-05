@@ -10,16 +10,16 @@
 
 .footer_menu_item_contact {
     margin: 0.8%;
-    // border-color: transparent;
-    // background-color: #fff;
     cursor: pointer;
     padding-left: 4%;
     padding-right: 4%;
     border-radius: 8px;
 }
+.footer_menu_item_contact:hover {
+    background-color: rgb(179, 174, 174);
+}
 .footer_message{
     margin: .1%;
-    // font-family: math;
     font-size: .8rem;
 }
 .footer_messages{
