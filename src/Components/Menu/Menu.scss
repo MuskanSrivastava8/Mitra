@@ -120,7 +120,26 @@
 .menu_item :hover {
     color: gray;
 }
-
+.Profile_container_dark{
+    background-color: #1c6cfb;
+    border-radius: 4rem;
+    padding: 0.4rem;
+    font-size: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    font-family: system-ui;
+    color: white;
+}
+.Profile_container_light{
+    background-color: #1c6cfb;
+    border-radius: 4rem;
+    padding: 0.4rem;
+    font-size: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    font-family: system-ui;
+    
+}
 .menu_item_mobile_view {
 
     position: absolute;
@@ -159,6 +178,11 @@
 .menu_logo {
     position: absolute;
     left: 2%;
+    display: flex;
+    cursor: pointer;
+}
+.menu_logo :hover {
+    color: gray;
 }
 
 .dropdownMenu_item {

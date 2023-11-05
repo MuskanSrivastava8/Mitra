@@ -11,6 +11,7 @@ import { useSelector } from "react-redux";
 import MuskanResume from "./MuskanResume.pdf";
 import { BsDownload } from "react-icons/bs";
 import { MdOutlineFileDownloadDone } from "react-icons/md";
+import Profile from "./Profile";
 
 
 export default function Menu() {
@@ -18,6 +19,8 @@ export default function Menu() {
   var darkModeRes = useSelector((store) => store.THEME.dark_mode);
   const [darkMode, setdarkMode] = useState(true);
   const [downloaded, setdownloaded] = useState(false);
+  const [showProfile, setshowProfile] = useState(true);
+
 
   const checkHandler = () => {
     setdarkMode(!darkMode);
@@ -43,15 +46,21 @@ export default function Menu() {
       });
     });
   };
+  
+  const LogoClicked = ()=> {
+    setshowProfile(!showProfile)
+  }
   return (
     <React.Fragment>
       <div
         className={darkModeRes ? "menu_container_dark" : "menu_container_light"}
       >
-        <div className="menu_logo">
+        
+        <div className="menu_logo" onClick={LogoClicked}>
           <TbCircleLetterM
             className={darkModeRes ? "letter_M_dark" : "letter_M_light"}
           />
+          {showProfile && <Profile/>}
         </div>
         <div className="dropdownMenu_item">
           <Dropdown>
