@@ -7,6 +7,7 @@ import Menu from "./Menu/Menu";
 import Intro from "./Intro/Intro";
 import ProjectOneComponent from "./ProjectOne/ProjectOneComponent";
 import Expensetracker from "./ExpenseTracker/Expensetracker";
+import Footer from "./Footer/Footer";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <Route exact path="/Expensetracker" element={<Expensetracker />} />
         <Route path="*" element={<Help />} />
       </Routes>
+      <Footer/>
     </React.Fragment>
   );
 }

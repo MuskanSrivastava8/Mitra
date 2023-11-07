@@ -1,5 +1,5 @@
 .intro_container {
-    height: 82vh;
+    //height: 82vh;
     width: 100%;
     background-image: url(bg_large.jpg);
     background-color: #D17B88;
@@ -33,34 +33,6 @@
     font-size: 1.1rem;
 }
 
-
-// theme based Styling 
-.Intro_footer_dark {
-    position: fixed;
-    bottom: 0;
-   // height: 10%;
-    width: 100%;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: white;
-    font-family: system-ui;
-}
-.Intro_footer_light {
-    position: fixed;
-    bottom: 0;
-   // height: 10%;
-    width: 100%;
-    background-color: #efe6e6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: rgb(2, 2, 2);
-    font-family: system-ui;
-}
 .intro_content_box_dark {
     background-color: rgba(32, 32, 32, 0.43);
     opacity: 0.8;
@@ -73,6 +45,7 @@
     font-family: system-ui;
     font-weight: 600;
 }
+
 .intro_content_box_light {
     background-color: hsla(217, 36%, 91%, 0.302);
     opacity: 0.8;
@@ -85,6 +58,7 @@
     font-family: system-ui;
     font-weight: 600;
 }
+
 .intro_content_box_dark button {
     color: white;
     //background-color: red;
@@ -94,6 +68,7 @@
     padding: 1%;
     margin: 1%
 }
+
 .intro_content_box_light button {
     color: white;
     //background-color: red;
@@ -103,12 +78,42 @@
     padding: 1%;
     margin: 1%
 }
+
 // theme based Styling 
 
 .Intro_name_text {
     color: red;
     font-size: 1.8rem;
 }
+
+.Project_card_container {
+    display: flex;
+}
+
+.Project_card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    margin: .2rem;
+    padding: .6rem;
+    width: -webkit-fill-available;
+    border-radius: 1rem;
+}
+
+.Project_img {
+    background-color: gray;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Project_detail {
+    background-color: rgb(241, 135, 135);
+    font-size: .8rem;
+    padding: 1rem;
+}
+
 
 @media only screen and (max-width: 904px) {
 
@@ -149,6 +154,7 @@
         margin-right: 7%;
         padding: 8%;
     }
+
     .intro_content_box_light {
         margin-left: 4%;
         margin-right: 7%;
@@ -162,6 +168,17 @@
     //Iphone XR
     .intro_container {
         width: 100%;
+    }
+    .Project_card_container {
+        //display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .Project_card {
+        margin: .4rem;
+    }
+    .Project_detail{
+        font-size: 1rem;
     }
 
     .welcome_text {

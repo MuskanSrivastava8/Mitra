@@ -108,9 +108,6 @@ const ProjectOneComponent = () => {
             </div>
           </div>
         </div>
-        <div className={darkModeRes ?"Knowyourshow_footer_dark" : "Knowyourshow_footer_light"}>
-        <Footer/>
-        </div>
       </div>
     </React.Fragment>
   );

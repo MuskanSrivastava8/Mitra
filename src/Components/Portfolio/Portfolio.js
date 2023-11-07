@@ -83,13 +83,6 @@ export default function Portfolio() {
           <Summary />
         </div>
       </div>
-      <div
-        className={
-          darkModeRes ? "Portfolio_footer_dark" : "Portfolio_footer_light"
-        }
-      >
-        <Footer />
-      </div>
     </React.Fragment>
   );
 }

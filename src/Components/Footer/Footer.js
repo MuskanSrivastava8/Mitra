@@ -14,7 +14,9 @@ export default function Footer() {
   const style_contact_light = { color: "black", fontSize: "1.5em" }
   return (
     <React.Fragment>
-      {/* <div className="footer_container"> */}
+      <div
+          className={darkModeRes ? "Intro_footer_dark" : "Intro_footer_light"}
+        >
         <div className="footer_contact">
           <div className="footer_address">
             <div className="footer_menu_item_contact">
@@ -53,7 +55,7 @@ export default function Footer() {
         <div className="footer_messages">
           Made by Muskan with <BsFillSuitHeartFill style={{ color: "red", fontSize: "1.2em" }}/>
         </div>
-      {/* </div> */}
+      </div>      
     </React.Fragment>
   );
 }

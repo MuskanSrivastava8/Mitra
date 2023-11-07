@@ -28,7 +28,32 @@
     font-size: .8rem;
     color: gray;
 }
-
+.Intro_footer_dark {
+    position: relative;
+    bottom: 0;
+   // height: 10%;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-family: system-ui;
+}
+.Intro_footer_light {
+    position: relative;
+    bottom: 0;
+   // height: 10%;
+    width: 100%;
+    background-color: #efe6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(2, 2, 2);
+    font-family: system-ui;
+}
 @media only screen and (max-width: 904px) {
     //Ipad
 

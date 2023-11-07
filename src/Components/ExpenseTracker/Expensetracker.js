@@ -39,9 +39,6 @@ export default function Expensetracker() {
           </div>
         </div>
       </div>
-      <div className={darkModeRes ?"ExpenseTracker_footer_dark" : "ExpenseTracker_footer_light"}>
-        <Footer />
-      </div>
     </React.Fragment>
   );
 }
