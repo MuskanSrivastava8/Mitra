@@ -176,7 +176,7 @@ export default function Summary() {
                       <h1>Contact</h1>
                     </div>
                     <div className="points_details">
-                      <p>875XXXXXX4</p>
+                      <p>8756XXXXX4</p>
                       <p>muskan.srivastava@tcs.com</p>
                     </div>
                   </div>
