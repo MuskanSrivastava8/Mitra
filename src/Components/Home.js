@@ -8,6 +8,7 @@ import Intro from "./Intro/Intro";
 import ProjectOneComponent from "./ProjectOne/ProjectOneComponent";
 import Expensetracker from "./ExpenseTracker/Expensetracker";
 import Footer from "./Footer/Footer";
+import TicTacToe from "./TicTacToe/TicTacToe";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Route exact path="/Portfolio" element={<Portfolio />} />
         <Route path="/Knowyourshow" element={<ProjectOneComponent />} />
         <Route exact path="/Expensetracker" element={<Expensetracker />} />
+        <Route exact path="/TicTacToe" element={<TicTacToe />} />
         <Route path="*" element={<Help />} />
       </Routes>
       <Footer/>

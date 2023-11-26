@@ -114,6 +114,17 @@ export default function Menu() {
                 </NavLink>
               </Dropdown.Item>
               <Dropdown.Item>
+                <NavLink
+                  className="dropdownMenuItem"
+                  to={"/TicTacToe"}
+                  style={({ isActive }) => ({
+                    color: isActive ? "Red" : "Gray",
+                  })}
+                >
+                  Tic Tac Toe
+                </NavLink>
+              </Dropdown.Item>
+              <Dropdown.Item>
               {/* <a
               
               class="btn btn-primary"
@@ -214,6 +225,28 @@ export default function Menu() {
               })}
             >
               About Me
+            </NavLink>
+          </button>
+        </div>
+        <div className="menu_item">
+          <button
+            type="button"
+            class="btn btn-primary"
+            className={darkModeRes ? "MenuStyle_dark" : "MenuStyle_light"}
+          >
+            <NavLink
+              to={"/TicTacToe"}
+              style={({ isActive }) => ({
+                color: isActive
+                  ? darkModeRes
+                    ? "#1c6cfb"
+                    : "#1c6cfb"
+                  : darkModeRes
+                  ? "White"
+                  : "Black",
+              })}
+            >
+              Tic Tac Toe
             </NavLink>
           </button>
         </div>
