@@ -67,7 +67,7 @@ const TicTacToe = () => {
   }
 
   return (
-    <div className="App">
+    <div className="App" >
       <ScoreBoard scores={scores} xPlaying={xPlaying} />
       <Board board={board} onClick={gameOver ? resetBoard : handleBoxClick} />
       <ResetButton resetBoard={resetBoard} />
