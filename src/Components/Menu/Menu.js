@@ -102,17 +102,7 @@ export default function Menu() {
                   Expense Tracker clone
                 </NavLink>
               </Dropdown.Item>
-              <Dropdown.Item>
-                <NavLink
-                  className="dropdownMenuItem"
-                  to={"/Portfolio"}
-                  style={({ isActive }) => ({
-                    color: isActive ? "Red" : "Gray",
-                  })}
-                >
-                  About Me
-                </NavLink>
-              </Dropdown.Item>
+              
               <Dropdown.Item>
                 <NavLink
                   className="dropdownMenuItem"
@@ -125,13 +115,17 @@ export default function Menu() {
                 </NavLink>
               </Dropdown.Item>
               <Dropdown.Item>
-              {/* <a
-              
-              class="btn btn-primary"
-              onClick={onButtonClick}
-            >
-             Resume
-            </a> */}
+                <NavLink
+                  className="dropdownMenuItem"
+                  to={"/Portfolio"}
+                  style={({ isActive }) => ({
+                    color: isActive ? "Red" : "Gray",
+                  })}
+                >
+                  About Me
+                </NavLink>
+              </Dropdown.Item>
+              <Dropdown.Item>
             <div onClick={onButtonClick} style={{color : "gray"}}>
             Resume {downloaded ? <MdOutlineFileDownloadDone style={{color : "green"}}/> : <BsDownload />}
             </div>
@@ -205,6 +199,28 @@ export default function Menu() {
               Expense Tracker clone
             </NavLink>
           </button>
+        </div>      
+        <div className="menu_item">
+          <button
+            type="button"
+            class="btn btn-primary"
+            className={darkModeRes ? "MenuStyle_dark" : "MenuStyle_light"}
+          >
+            <NavLink
+              to={"/TicTacToe"}
+              style={({ isActive }) => ({
+                color: isActive
+                  ? darkModeRes
+                    ? "#1c6cfb"
+                    : "#1c6cfb"
+                  : darkModeRes
+                  ? "White"
+                  : "Black",
+              })}
+            >
+              Tic Tac Toe
+            </NavLink>
+          </button>
         </div>
         <div className="menu_item">
           <button
@@ -225,28 +241,6 @@ export default function Menu() {
               })}
             >
               About Me
-            </NavLink>
-          </button>
-        </div>
-        <div className="menu_item">
-          <button
-            type="button"
-            class="btn btn-primary"
-            className={darkModeRes ? "MenuStyle_dark" : "MenuStyle_light"}
-          >
-            <NavLink
-              to={"/TicTacToe"}
-              style={({ isActive }) => ({
-                color: isActive
-                  ? darkModeRes
-                    ? "#1c6cfb"
-                    : "#1c6cfb"
-                  : darkModeRes
-                  ? "White"
-                  : "Black",
-              })}
-            >
-              Tic Tac Toe
             </NavLink>
           </button>
         </div>

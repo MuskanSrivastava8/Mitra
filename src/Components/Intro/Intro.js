@@ -14,6 +14,7 @@ export default function Intro() {
   const [portfolioView, setportfolioView] = useState(false);
   const [KYSView, setKYSView] = useState(false);
   const [ETView, setETView] = useState(false);
+  const [GameView, setGameView] = useState(false);
   var darkModeRes = useSelector((store) => store.THEME.dark_mode);
   const [downloaded, setdownloaded] = useState(false);
 
@@ -22,6 +23,9 @@ export default function Intro() {
   };
   const showET = () => {
     setETView(true);
+  };
+  const showGame = () => {
+    setGameView(true);
   };
   const showPortfolio = () => {
     setportfolioView(true);
@@ -43,6 +47,9 @@ export default function Intro() {
       {portfolioView ? <Navigate to="/Portfolio" replace={true} /> : null}
       {KYSView ? <Navigate to="/Knowyourshow" replace={true} /> : null}
       {ETView ? <Navigate to="/Expensetracker" replace={true} /> : null}
+      {GameView ? <Navigate to="/TicTacToe" replace={true} /> : null}
+
+      
 
       <div className="intro_container">
         <div
@@ -69,6 +76,9 @@ export default function Intro() {
             </button>
             <button type="button" class="btn btn-primary" onClick={showET}>
               Expense Tracker <BsBoxArrowUpRight />
+            </button>
+            <button type="button" class="btn btn-primary" onClick={showGame}>
+              Tic Tac Toe <BsBoxArrowUpRight />
             </button>
             <button
               type="button"
@@ -130,6 +140,21 @@ export default function Intro() {
                   <p>CSS</p>
                   <a
                     href="https://github.com/MuskanSrivastava8/Mitra/tree/main/src/Components/Portfolio"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Source code <BsArrowUpRight />
+                  </a>
+                </div>
+              </div>
+              <div className="Project_card">
+                <div className="Project_img">
+                  <p>Tic Tac Toe</p>
+                </div>
+                <div className="Project_detail">
+                  <p>JS, Hooks</p>
+                  <a
+                    href="https://github.com/MuskanSrivastava8/Mitra/tree/main/src/Components/TicTacToe"
                     target="_blank"
                     rel="noreferrer"
                   >
