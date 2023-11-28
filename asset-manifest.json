@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Mitra/static/css/main.56ab79dd.css",
-    "main.js": "/Mitra/static/js/main.19c3b8f1.js",
+    "main.css": "/Mitra/static/css/main.ed269b5f.css",
+    "main.js": "/Mitra/static/js/main.4127c274.js",
     "static/js/787.8fedd6c6.chunk.js": "/Mitra/static/js/787.8fedd6c6.chunk.js",
     "static/media/education.jpg": "/Mitra/static/media/education.37218ce4c9639dc0ae1e.jpg",
     "static/media/mail.jpg": "/Mitra/static/media/mail.47b0548bad2895c55c92.jpg",
@@ -16,12 +16,12 @@
     "static/media/portfolio_summary_small.jpg": "/Mitra/static/media/portfolio_summary_small.d92e4f9bf4faf83a24fc.jpg",
     "static/media/Tv_Icon.png": "/Mitra/static/media/Tv_Icon.c9e3b731e6d2cf17805e.png",
     "index.html": "/Mitra/index.html",
-    "main.56ab79dd.css.map": "/Mitra/static/css/main.56ab79dd.css.map",
-    "main.19c3b8f1.js.map": "/Mitra/static/js/main.19c3b8f1.js.map",
+    "main.ed269b5f.css.map": "/Mitra/static/css/main.ed269b5f.css.map",
+    "main.4127c274.js.map": "/Mitra/static/js/main.4127c274.js.map",
     "787.8fedd6c6.chunk.js.map": "/Mitra/static/js/787.8fedd6c6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.56ab79dd.css",
-    "static/js/main.19c3b8f1.js"
+    "static/css/main.ed269b5f.css",
+    "static/js/main.4127c274.js"
   ]
 }
