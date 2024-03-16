@@ -38,7 +38,7 @@ export default function Footer() {
               </a>
             </div>
             <div className="footer_menu_item_contact">
-              <a href="tel:87567XXXX4" target="_blank" rel="noreferrer">
+              <a href="tel:8756719954" target="_blank" rel="noreferrer">
                 <FiPhoneCall style={{ color: "green", fontSize: "1.5em" }} />
               </a>
             </div>

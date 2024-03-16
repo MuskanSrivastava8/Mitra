@@ -23,7 +23,7 @@ export default function Portfolio() {
             </span>
             <span className="occupation">
               <span>
-                I've been a front-end developer at TCS for more than two years.{" "}
+                I've been a front-end developer at TCS for 2.8 years.{" "}
               </span>
               <br></br>
               <span>
@@ -54,7 +54,7 @@ export default function Portfolio() {
                 </a>
               </div>
               <div className="menu_item_contact">
-                <a href="tel:87567XXXX4" target="_blank" rel="noreferrer">
+                <a href="tel:8756719954" target="_blank" rel="noreferrer">
                   <FiPhoneCall style={{ color: "green", fontSize: "1.5em" }} />
                 </a>
               </div>
