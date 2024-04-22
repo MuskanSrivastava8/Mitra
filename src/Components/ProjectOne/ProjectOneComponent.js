@@ -11,21 +11,31 @@ import Search from "./ProjectOneComponent/Search";
 import Footer from "../Footer/Footer";
 import { useSelector } from "react-redux";
 
-
 const ProjectOneComponent = () => {
   const [currTVShow, setcurrTVShow] = useState();
   const [recommendationList, setRecommendationList] = useState([]);
   const [show, setshow] = useState(false);
+  const [loadingshow, setLoadingshow] = useState(true);
+  const [loadingMessage, setloadingMessage] = useState("Loading....");
+
   var darkModeRes = useSelector((store) => store.THEME.dark_mode);
 
   useEffect(() => {
     fetchPopulars();
+    //setTimeout(showLoadingSpinner, 1000);
+    setTimeout(hideLoadingSpinner, 5000);
   }, []);
   function showSpinner() {
     setshow(true);
   }
   function hideSpinner() {
     setshow(false);
+  }
+  function showLoadingSpinner() {
+    setLoadingshow(true);
+  }
+  function hideLoadingSpinner() {
+    setLoadingshow(false);
   }
 
   useEffect(() => {
@@ -40,7 +50,7 @@ const ProjectOneComponent = () => {
     const popularTVShowList = await TvShowApi.fetchPopulars();
     if (popularTVShowList.length > 0) {
       setcurrTVShow(popularTVShowList[0]);
-    }
+          }
   }
 
   async function fetchRecommendations(tvShowId) {
@@ -73,40 +83,44 @@ const ProjectOneComponent = () => {
               : "black",
           }}
         >
-          <div class="container">
-            <div class="row">
-              <div class="col-6">
-                <div className="section_1">
-                  <Logo
-                    img={Tv_Icon}
-                    title={"TV show"}
-                    subtitle={"KNOW YOUR SHOW"}
-                  />
-                </div>
-              </div>
-              <div class="col-6">
-                <div className="section_2">
-                  <Search onClick={fetchByTitle} />
-                </div>
-              </div>
-              <div class="col-12">
-                <div className="section_3">
-                  {currTVShow && <TvShowDetails tvShow={currTVShow} />}
-                </div>
-              </div>
-              <div class="col-12">
-                <div className="section_4">
-                  {currTVShow && (
-                    <RecommendList
-                      onClickList={updateCurrentTvShow}
-                      tvShowList={recommendationList}
-                      showSpinner={show}
+          {loadingshow ? (
+            <div class="loader"></div>
+          ) : (
+            <div class="container">
+              <div class="row">
+                <div class="col-6">
+                  <div className="section_1">
+                    <Logo
+                      img={Tv_Icon}
+                      title={"TV show"}
+                      subtitle={"KNOW YOUR SHOW"}
                     />
-                  )}
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div className="section_2">
+                    <Search onClick={fetchByTitle} />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div className="section_3">
+                    {currTVShow && <TvShowDetails tvShow={currTVShow} />}
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div className="section_4">
+                    {currTVShow && (
+                      <RecommendList
+                        onClickList={updateCurrentTvShow}
+                        tvShowList={recommendationList}
+                        showSpinner={show}
+                      />
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </React.Fragment>

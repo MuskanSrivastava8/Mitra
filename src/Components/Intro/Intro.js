@@ -65,8 +65,8 @@ export default function Intro() {
               <b> Muskan.</b>
             </span>
             <div className="introLine">
-              <br></br>I am a front-end developer with 2.8 years of experience.
-              <br></br>Have applied my experience of front-end development to
+              <br></br>I am a frontend developer with 2.8 years of experience.
+              <br></br>Have applied my experience of frontend development to
               these projects.
             </div>
           </p>

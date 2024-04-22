@@ -23,7 +23,7 @@ export default function Portfolio() {
             </span>
             <span className="occupation">
               <span>
-                I've been a front-end developer at TCS for 2.8 years.{" "}
+                I've been a frontend developer at TCS for 2.8 years.{" "}
               </span>
               <br></br>
               <span>

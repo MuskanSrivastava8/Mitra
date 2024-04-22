@@ -13,14 +13,12 @@ import { BsDownload } from "react-icons/bs";
 import { MdOutlineFileDownloadDone } from "react-icons/md";
 import Profile from "./Profile";
 
-
 export default function Menu() {
   const dispatch = useDispatch();
   var darkModeRes = useSelector((store) => store.THEME.dark_mode);
   const [darkMode, setdarkMode] = useState(true);
   const [downloaded, setdownloaded] = useState(false);
   const [showProfile, setshowProfile] = useState(true);
-
 
   const checkHandler = () => {
     setdarkMode(!darkMode);
@@ -46,21 +44,20 @@ export default function Menu() {
       });
     });
   };
-  
-  const LogoClicked = ()=> {
-    setshowProfile(!showProfile)
-  }
+
+  const LogoClicked = () => {
+    setshowProfile(!showProfile);
+  };
   return (
     <React.Fragment>
       <div
         className={darkModeRes ? "menu_container_dark" : "menu_container_light"}
       >
-        
         <div className="menu_logo" onClick={LogoClicked}>
           <TbCircleLetterM
             className={darkModeRes ? "letter_M_dark" : "letter_M_light"}
           />
-          {showProfile && <Profile/>}
+          {showProfile && <Profile />}
         </div>
         <div className="dropdownMenu_item">
           <Dropdown>
@@ -80,17 +77,7 @@ export default function Menu() {
                   Home
                 </NavLink>
               </Dropdown.Item>
-              <Dropdown.Item>
-                <NavLink
-                  className="dropdownMenuItem"
-                  to={"/Knowyourshow"}
-                  style={({ isActive }) => ({
-                    color: isActive ? "Red" : "Gray",
-                  })}
-                >
-                  IMDb clone
-                </NavLink>
-              </Dropdown.Item>
+
               <Dropdown.Item>
                 <NavLink
                   className="dropdownMenuItem"
@@ -102,7 +89,7 @@ export default function Menu() {
                   Expense Tracker clone
                 </NavLink>
               </Dropdown.Item>
-              
+
               <Dropdown.Item>
                 <NavLink
                   className="dropdownMenuItem"
@@ -117,6 +104,18 @@ export default function Menu() {
               <Dropdown.Item>
                 <NavLink
                   className="dropdownMenuItem"
+                  to={"/Knowyourshow"}
+                  style={({ isActive }) => ({
+                    color: isActive ? "Red" : "Gray",
+                  })}
+                >
+                  IMDb clone
+                </NavLink>
+              </Dropdown.Item>
+
+              <Dropdown.Item>
+                <NavLink
+                  className="dropdownMenuItem"
                   to={"/Portfolio"}
                   style={({ isActive }) => ({
                     color: isActive ? "Red" : "Gray",
@@ -125,10 +124,16 @@ export default function Menu() {
                   About Me
                 </NavLink>
               </Dropdown.Item>
+
               <Dropdown.Item>
-            <div onClick={onButtonClick} style={{color : "gray"}}>
-            Resume {downloaded ? <MdOutlineFileDownloadDone style={{color : "green"}}/> : <BsDownload />}
-            </div>
+                <div onClick={onButtonClick} style={{ color: "gray" }}>
+                  Resume{" "}
+                  {downloaded ? (
+                    <MdOutlineFileDownloadDone style={{ color: "green" }} />
+                  ) : (
+                    <BsDownload />
+                  )}
+                </div>
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
@@ -156,28 +161,7 @@ export default function Menu() {
             </NavLink>
           </button>
         </div>
-        <div className="menu_item">
-          <button
-            type="button"
-            class="btn btn-primary"
-            className={darkModeRes ? "MenuStyle_dark" : "MenuStyle_light"}
-          >
-            <NavLink
-              to={"/Knowyourshow"}
-              style={({ isActive }) => ({
-                color: isActive
-                  ? darkModeRes
-                    ? "#1c6cfb"
-                    : "#1c6cfb"
-                  : darkModeRes
-                  ? "White"
-                  : "Black",
-              })}
-            >
-              IMDb clone
-            </NavLink>
-          </button>
-        </div>
+
         <div className="menu_item">
           <button
             type="button"
@@ -199,7 +183,7 @@ export default function Menu() {
               Expense Tracker clone
             </NavLink>
           </button>
-        </div>      
+        </div>
         <div className="menu_item">
           <button
             type="button"
@@ -219,6 +203,28 @@ export default function Menu() {
               })}
             >
               Tic Tac Toe
+            </NavLink>
+          </button>
+        </div>
+        <div className="menu_item">
+          <button
+            type="button"
+            class="btn btn-primary"
+            className={darkModeRes ? "MenuStyle_dark" : "MenuStyle_light"}
+          >
+            <NavLink
+              to={"/Knowyourshow"}
+              style={({ isActive }) => ({
+                color: isActive
+                  ? darkModeRes
+                    ? "#1c6cfb"
+                    : "#1c6cfb"
+                  : darkModeRes
+                  ? "White"
+                  : "Black",
+              })}
+            >
+              IMDb clone
             </NavLink>
           </button>
         </div>
