@@ -50,7 +50,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer_message">
-          © 2023 Company, Inc. All rights reserved.
+          © 2024 Company, Inc. All rights reserved.
         </div>
         <div className="footer_messages">
           Made by Muskan with <BsFillSuitHeartFill style={{ color: "red", fontSize: "1.2em" }}/>

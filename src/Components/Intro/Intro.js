@@ -65,20 +65,20 @@ export default function Intro() {
               <b> Muskan.</b>
             </span>
             <div className="introLine">
-              <br></br>I am a frontend developer with 2.8 years of experience.
-              <br></br>Have applied my experience of frontend development to
-              these projects.
+              <br></br>I have worked as a frontend developer for 2.8 years.
+              <br></br>I've utilised my frontend development knowledge on these projects.
             </div>
           </p>
           <p>
-            <button type="button" class="btn btn-primary" onClick={showKYS}>
-              IMDb Clone <BsBoxArrowUpRight />
-            </button>
+
             <button type="button" class="btn btn-primary" onClick={showET}>
               Expense Tracker <BsBoxArrowUpRight />
             </button>
             <button type="button" class="btn btn-primary" onClick={showGame}>
               Tic Tac Toe <BsBoxArrowUpRight />
+            </button>
+            <button type="button" class="btn btn-primary" onClick={showKYS}>
+              IMDb Clone <BsBoxArrowUpRight />
             </button>
             <button
               type="button"
