@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Mitra/static/css/main.ed269b5f.css",
-    "main.js": "/Mitra/static/js/main.27073f51.js",
+    "main.css": "/Mitra/static/css/main.4a2f9229.css",
+    "main.js": "/Mitra/static/js/main.d9e735f9.js",
     "static/js/787.8fedd6c6.chunk.js": "/Mitra/static/js/787.8fedd6c6.chunk.js",
     "static/media/education.jpg": "/Mitra/static/media/education.37218ce4c9639dc0ae1e.jpg",
     "static/media/mail.jpg": "/Mitra/static/media/mail.47b0548bad2895c55c92.jpg",
@@ -13,15 +13,15 @@
     "static/media/expense_bg.jpg": "/Mitra/static/media/expense_bg.20d0e66f2dbcef4129f6.jpg",
     "static/media/activities.jpg": "/Mitra/static/media/activities.ada05a02399caae6ba25.jpg",
     "static/media/portfolio_summary_small.jpg": "/Mitra/static/media/portfolio_summary_small.d92e4f9bf4faf83a24fc.jpg",
-    "static/media/MuskanResume.pdf": "/Mitra/static/media/MuskanResume.f893f428a72d087174f5.pdf",
+    "static/media/MuskanResume.pdf": "/Mitra/static/media/MuskanResume.afaaf21ac6dd2149c3bf.pdf",
     "static/media/Tv_Icon.png": "/Mitra/static/media/Tv_Icon.c9e3b731e6d2cf17805e.png",
     "index.html": "/Mitra/index.html",
-    "main.ed269b5f.css.map": "/Mitra/static/css/main.ed269b5f.css.map",
-    "main.27073f51.js.map": "/Mitra/static/js/main.27073f51.js.map",
+    "main.4a2f9229.css.map": "/Mitra/static/css/main.4a2f9229.css.map",
+    "main.d9e735f9.js.map": "/Mitra/static/js/main.d9e735f9.js.map",
     "787.8fedd6c6.chunk.js.map": "/Mitra/static/js/787.8fedd6c6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed269b5f.css",
-    "static/js/main.27073f51.js"
+    "static/css/main.4a2f9229.css",
+    "static/js/main.d9e735f9.js"
   ]
 }
