@@ -50,7 +50,7 @@ export default function Summary() {
                   </div>
                   <div className="points_details">
                     <p>
-                      React, Javascript, Typescript, Redux toolkit, Sass, Media
+                      React, Javascript, Typescript, Redux toolkit, Sass, Azure, Media
                       query, HTML, CSS and Jest
                     </p>
                   </div>
@@ -88,7 +88,8 @@ export default function Summary() {
                     <h5>Personal Project</h5>
                   </div>
                   <div className="points_details_project">
-                    <p>Expense tracker, IMDb clone, Portfolio</p>
+                    <p>Expense tracker, IMDb clone, Portfolio </p>
+                    <p>and E-commerce site</p>
                   </div>
                 </div>
               </div>

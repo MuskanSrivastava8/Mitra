@@ -65,7 +65,7 @@ export default function Intro() {
               <b> Muskan.</b>
             </span>
             <div className="introLine">
-              <br></br>I have worked as a frontend developer for 2.8 years.
+              <br></br>Frontend developer with { new Date().getFullYear() - 2021}+ Years of Experience
               <br></br>I've utilised my frontend development knowledge on these projects.
             </div>
           </p>

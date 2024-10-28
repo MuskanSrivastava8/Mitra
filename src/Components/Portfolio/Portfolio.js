@@ -23,13 +23,13 @@ export default function Portfolio() {
             </span>
             <span className="occupation">
               <span>
-              I've worked in TCS for 2.8 years as a frontend developer.
+              I've worked in TCS for 3+ years as a frontend developer.
 {" "}
               </span>
               <br></br>
               <span>
                 {" "}
-                React, Javascript, SCSS, Redux, and typescript are among my
+                React, Javascript, SCSS, Redux, Azure and typescript are among my
                 skills.
               </span>
             </span>
